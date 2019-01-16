@@ -1,0 +1,60 @@
+
+\section{Dealing with Modeloutput}
+
+\subsection{EURO-CORDEX-Data}
+A lot of information is stored at the homepage:\\
+e.g. User-Guide, Errata-page at \url{http://www.euro-cordex.net}
+
+\subsection{Remapping tools}
+\url{https://wiki.gerics.de/euro-cordex/RemappingMethods}
+
+\subsection{Download multiple files from a web page}
+
+example page: \url{http://exporter.nsc.liu.se/8d168f8152704e67968ea28b19ab712e/ICHEC-EC-EARTH/day/}
+{\small 
+\begin{verbatim}
+wget -r -nd -np -e robots=off -A.nc 
+    http://exporter.nsc.liu.se/8d168f8152704e67968ea28b19ab712e/ICHEC-EC-EARTH/day/
+\end{verbatim}}
+
+explanation:
+\begin{itemize}
+\item[-r] signifies that wget should recursively download data in any subdirectories it finds.
+\item[-l1] sets the maximum recursion to 1 level of subfolders.
+\item[-nd] copies all matching files to current directory. If two files have identical names it appends an extension.
+\item[-nc] does not download a file if it already exists.
+\item[-np] prevents files from parent directories from being downloaded.
+\item[-e robots=off] tells wget to ignore the robots.txt file. If this command is left out, the robots.txt file tells wget that it does not like web crawlers and this will prevent wget from working.
+\item[-A.nc] restricts downloading to the specified file types (with .nc suffix in this case)
+\end{itemize}
+
+\subsection{Troubleshooting}
+
+\subsubsection{Observations have a different grid resolution than REMO output}
+
+\textbf{Important}: You can only remap to the coarser grid, otherwise you recieve empty grid boxes!
+
+\textbf{Attention}: If grids are very similar, you can also recieve empty gridboxes by using cdo remap.
+
+Version 1: remap remo data to the grid of the observations (pay attention to different remapping
+methods for each variable and remember to use height correction for temperature,
+also see scripts in clidas and wiki-Page remapping tools.
+
+Version 2: If you want to compare area means, you can also remap your remo-mask with \texttt{remapnn} to the grid of the observations.
+
+Version 3: If you want to compare a single location to REMO output, consider the method of Standort Factsheets 
+
+
+\subsection{Useful \texttt{cdo} hints}
+
+\subsubsection{\texttt{cdo ensmean}}
+\texttt{cdo ensmean} only works if all rcm simulations are on an identical grid.
+Check grid with \texttt{cdo griddes}
+
+\subsubsection{\texttt{selindexbox} and keep rotated grid by using \texttt{cdo}}
+If you use \texttt{cdo} version 1.9.5 you can select rlon, rlat and you can even select a subgrid with \texttt{selindexbox} and still preserve rlon/rlat
+(this was not the case in earlierer cdo-versions, they would get grid of the rlon/rlat grid information and would only keep lat/lon grid)
+
+\subsubsection{Change rotated grid rlon/rlat to lon/lat}
+If you want to change the rlon/rlat of a remo-file to lat/lon grid, you can use \texttt{cdo setgridtype curvilinear}
+
