@@ -59,3 +59,16 @@ If you use \texttt{cdo} version 1.9.5 you can select rlon, rlat and you can even
 \subsubsection{Change rotated grid rlon/rlat to lon/lat}
 If you want to change the rlon/rlat of a remo-file to lat/lon grid, you can use \texttt{cdo setgridtype curvilinear}
 
+\subsection{Useful \texttt{netcdf file} hints}
+
+\subsubsection{Delete history}
+If you like to give away a data file or publish it in a publication and do not want to publish its history. 
+You can delete the whole history:
+ncatted -h -a history,global,d,, old-file.nc new-file.nc
+
+\subsubsection{Change unit}
+If you changed the unit of the data file from e.g. Celcius to Kelvin, you should also change the unit in the header
+have a look first how your variable is called  (ncdump -h) 
+e.g. Variable: tg
+ncatted -O -a units,tg,o,c,"Kelvin" -h file.nc
+
