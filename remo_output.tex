@@ -32,7 +32,7 @@ explanation:
 \item[-A.nc] restricts downloading to the specified file types (with .nc suffix in this case)
 \end{itemize}
 
-\subsection{Troubleshooting}
+\subsection{Comparing REMO output to Observations}
 
 \subsubsection{Observations have a different grid resolution than REMO output}
 
@@ -49,7 +49,15 @@ also see scripts in clidas and wiki-Page remapping tools.
 \item Version 3: If you want to compare a single location to REMO output, consider the method of Standort Factsheets 
 
 \textbf{Height correction} Comparing temperature values of two different kind of files, you need to apply a height correction. 
-Differences of the two orographie files \delta height times 0,0065 K.
+Differences of the two orographie files \Delta height times 0,0065 K.
+
+\subsubsection{Area mean of small catchments}
+
+e.g. For the Hamburg port area, the value is weighted (e.g. precipitation) of each grid cell with the fraction of that grid cell which covered the port area. 
+
+For this, Thomas Raub calculated the fraction of each grid cell which covered the catchment, see figure attached. 
+
+\figure
 
 \subsection{Useful \texttt{cdo} hints}
 \url{https://code.mpimet.mpg.de/projects/cdo/}
