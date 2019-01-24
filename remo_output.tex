@@ -8,10 +8,11 @@ e.g. User-Guide, Errata-page at \url{http://www.euro-cordex.net}
 \url{https://wiki.gerics.de/euro-cordex/RemappingMethods}
 
 \subsection{Plotting tool}
+\begin{itemize}
  \item For plotting results: e.g. PyPlotTools, documentation is in the ArcDoc
  
  \item Monitoring a REMO-RUN: e.g. Clidas, documentation is in the ArcDoc
-
+\end{itemize}
 \subsection{Download multiple files from a web page}
 
 example page: \url{http://exporter.nsc.liu.se/8d168f8152704e67968ea28b19ab712e/ICHEC-EC-EARTH/day/}
@@ -39,7 +40,7 @@ explanation:
 \textbf{Important}: You can only remap to the coarser grid, otherwise you recieve empty grid boxes!
 
 \textbf{Attention}: If grids are very similar, you can also recieve empty gridboxes by using cdo remap.
-
+\begin{enumerate}
 \item Version 1: remap remo data to the grid of the observations (pay attention to different remapping
 methods for each variable and remember to use height correction for temperature,
 also see scripts in clidas and wiki-Page remapping tools.
@@ -47,9 +48,10 @@ also see scripts in clidas and wiki-Page remapping tools.
 \item Version 2: If you want to compare area means, you can also remap your remo-mask with \texttt{remapnn} to the grid of the observations.
 
 \item Version 3: If you want to compare a single location to REMO output, consider the method of Standort Factsheets 
+\end{enumerate}
 
 \textbf{Height correction} Comparing temperature values of two different kind of files, you need to apply a height correction. 
-Differences of the two orographie files \Delta height times 0,0065 K.
+Differences of the two orographie files $\Delta height times 0,0065 K$.
 
 \subsubsection{Area mean of small catchments}
 
@@ -60,14 +62,14 @@ For this, Thomas Raub calculated the fraction of each grid cell which covered th
 \begin{figure} [h!tb]
 \begin{center}
 \includegraphics[width=5cm, natwidth=200, natheight=195]{./fig/krueckau_weights_REMOdetailliert.png} \\
-\caption{method of weighted mean for small areas}
+\caption{Method of weighted mean for small areas}
 \end{center}
 \end{figure}
 \figure
 
 %\subsubsection{Compare station data to REMO output}
 %has not been tested:
-\include{InterpolationStation.tex}
+%\include{InterpolationStation.tex}
 
 \subsection{Useful \texttt{cdo} hints}
 \url{https://code.mpimet.mpg.de/projects/cdo/}
