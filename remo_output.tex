@@ -7,6 +7,11 @@ e.g. User-Guide, Errata-page at \url{http://www.euro-cordex.net}
 \subsection{Remapping tools}
 \url{https://wiki.gerics.de/euro-cordex/RemappingMethods}
 
+\subsection{Plotting tool}
+ \item For plotting results: e.g. PyPlotTools, documentation is in the ArcDoc
+ 
+ \item Monitoring a REMO-RUN: e.g. Clidas, documentation is in the ArcDoc
+
 \subsection{Download multiple files from a web page}
 
 example page: \url{http://exporter.nsc.liu.se/8d168f8152704e67968ea28b19ab712e/ICHEC-EC-EARTH/day/}
@@ -35,18 +40,19 @@ explanation:
 
 \textbf{Attention}: If grids are very similar, you can also recieve empty gridboxes by using cdo remap.
 
-Version 1: remap remo data to the grid of the observations (pay attention to different remapping
+\item Version 1: remap remo data to the grid of the observations (pay attention to different remapping
 methods for each variable and remember to use height correction for temperature,
 also see scripts in clidas and wiki-Page remapping tools.
 
-Version 2: If you want to compare area means, you can also remap your remo-mask with \texttt{remapnn} to the grid of the observations.
+\item Version 2: If you want to compare area means, you can also remap your remo-mask with \texttt{remapnn} to the grid of the observations.
 
-Version 3: If you want to compare a single location to REMO output, consider the method of Standort Factsheets 
+\item Version 3: If you want to compare a single location to REMO output, consider the method of Standort Factsheets 
 
 \textbf{Height correction} Comparing temperature values of two different kind of files, you need to apply a height correction. 
 Differences of the two orographie files \delta height times 0,0065 K.
 
 \subsection{Useful \texttt{cdo} hints}
+\url{https://code.mpimet.mpg.de/projects/cdo/}
 
 \subsubsection{\texttt{cdo ensmean}}
 \texttt{cdo ensmean} only works if all rcm simulations are on an identical grid.
