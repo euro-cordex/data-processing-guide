@@ -99,3 +99,6 @@ have a look first how your variable is called  (ncdump -h)
 e.g. Variable: tg
 ncatted -O -a units,tg,o,c,"Kelvin" -h file.nc
 
+\subsubsection{Change variable name} 
+(ncdump -h) e.g. Variable: var167 to tas 
+ ncrename -h -O -v variable_name,new_variable_name file.nc
