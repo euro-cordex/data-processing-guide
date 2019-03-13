@@ -12,5 +12,5 @@ Contributions from: Lola Kotova, Christine Nam
 
 ## Table of Content
  * [Remo Output](chapter__remo_output.md)
- * [Interpolation to Stations](chapter__interpolation_to_stations.md)
- * [Trouble Shooting for PyPlot Tools](./trouble_shooting_for_pyplot_tools.md)
+ * [Interpolation to Stations](chapter__interpolating_stations.md)
+ * [Trouble Shooting for PyPlot Tools](./chapter__trouble_shooting_for_pyplot_tools.md)

@@ -3,5 +3,7 @@
 *.log
 *.backup
 ignored
+data_processing_guide.html
+data_processing_guide.pdf
 # Except this file
 !.gitignore
