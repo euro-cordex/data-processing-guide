@@ -73,7 +73,7 @@ consider the method of Standort Factsheets
 
 **Height correction** Comparing temperature values of two different kind
 of files, you need to apply a height correction. Differences of the two
-orographie files $\Delta height \times 0,0065 K$.
+orographie files d(height) * 0,0065 K.
 
 ### Area mean of small catchments
 
