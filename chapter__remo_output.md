@@ -85,7 +85,8 @@ For this, Thomas Raub calculated the fraction of each grid cell which
 covered the catchment, see figure attached.
 <https://git.gerics.de/GERICS_products/HPA-Factsheet>
 
-![Method of weighted mean for small areas](./fig/krueckau_weights_REMOdetailliert.png "fig:"){width="5cm"}
+![Method of weighted mean for small areas](./fig/krueckau_weights_REMOdetailliert.png "fig:")
+Method of weighted mean for small areas
 
 ## Useful `cdo` hints
 
