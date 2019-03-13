@@ -21,6 +21,7 @@ Contributions from: Lola Kotova, Christine Nam
 PyPlotTools are for plotting netcdf output data from RCMs.
 
 First you have to download it from the git:
+
  1. Make a directory PyPlotTools in your home directory or favorite place, where you store your software!
  2. cd PyPlotTools
  3. git init
