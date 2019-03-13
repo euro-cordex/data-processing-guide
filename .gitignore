@@ -1,0 +1,7 @@
+# Ignore in this directory:
+*~
+*.log
+*.backup
+ignored
+# Except this file
+!.gitignore
