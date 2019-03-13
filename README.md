@@ -6,6 +6,7 @@ The Data Processing Guide will collect information, best practices and FAQs conc
 
 ### Contributors
 Katharina Bülow, Lars Buntemeyer
+
 Contributions from: Lola Kotova, Christine Nam
 
 ### Introduction
