@@ -1,4 +1,4 @@
-## Troubleshooting for PyPlotTools
+# Troubleshooting for PyPlotTools
 
 ### Plotting netcdf file
 
