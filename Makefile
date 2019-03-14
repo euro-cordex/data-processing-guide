@@ -15,7 +15,8 @@ pdf: README.md ${SOURCES}
 	pandoc README.md ${SOURCES} -o ${TARGET}.pdf
 
 html : ${SOURCES}
-	pandoc README.md ${SOURCES} -o ${TARGET}.html
+#	pandoc README.md ${SOURCES} -o ${TARGET}.html
+	pandoc README.md ${SOURCES} -o index.html -f markdown --template standalone.html --toc --toc-depth=2 
 
 clean:  
 	rm -f ${TARGET}.pdf ${TARGET}.html
