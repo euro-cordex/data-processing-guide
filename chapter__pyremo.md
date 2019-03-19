@@ -17,13 +17,46 @@ Documentation of API: http://136.172.63.17/REMO/PyRemo/PyRemo/docs/build/html/
 
 Download archived REMO output
 ```python
-from PyRemo.FileConventions import REMO_2015_TAPE_ARCHIVE
+import os
+import logging
+
+from PyRemo.FileConventions import REMO_2015, REMO_2015_TAPE_ARCHIVE, REMO_2015_DISK_ARCHIVE
 from PyRemo.DataHandler import DataHandler
+from PyRemo.Scheduler import Scheduler
 
-# define an archive and DataHandler
+
+logging.basicConfig(level=logging.DEBUG)
+
+# define some defaults for the job header
+SLURM_HEADER = {  'partition'   :'shared',
+                  'ntasks'      :'1',
+                  'mem_per_cpu' :'1280',
+                  'mail_type'   :'FAIL',
+                  'account'     :'ch0636',
+                  'time'        :'08:00:00'}
+
+
+expid = '061074'
+
+# define naming and archiving conentions
 tape_archive = REMO_2015_TAPE_ARCHIVE()
-dh = DataHandler()
+disk_archive = REMO_2015_DISK_ARCHIVE()
 
-# call the retrieve function
-dh.retrieve_archive_from_tape('061074',tape_path,years=[2006,2007],types=['afiles'],conv=tape_archive, destdir='/scratch/g/g300046')
+# path to data on the disk
+disk_path = '/work/ch0636/g300046/remo_results_061074'
+dest_path = disk_path
+# path to data on the hpss tape archive
+tape_path = '/hpss/arch/ch0636/CORDEX/CORE-ATLAS/remo/exp061074'
+
+
+# create a DataHandler for parallel processing
+dh = DataHandler(parallel=True,sys='SLURM',header_dict=SLURM_HEADER)
+
+# submit jobs to retrieve data from the archive
+dh.retrieve_archive_from_tape(expid, tape_path, years=range(2006,2100), types=['efiles','pfiles'], \
+                              conv=tape_archive, destdir=dest_path)
+
+# create a new scheduler to get job information
+my_scheduler = Scheduler(sys='SLURM',logfile='DataHandler_061074_extract.jobids.ini')
+my_scheduler.log_jobs_acct() 
 ```
