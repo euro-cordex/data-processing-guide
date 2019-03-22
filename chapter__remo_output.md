@@ -14,8 +14,11 @@
 ## EURO-CORDEX-Data
 
 
-A lot of information is stored at the homepage:\
-e.g. User-Guide, Errata-page at <http://www.euro-cordex.net>
+A lot of information is stored at the homepage:
+
+e.g. User-Guide, Errata-page:
+
+<https://www.hzg.de/ms/euro-cordex/index.php.en>
 
 ## Remapping tools
 
