@@ -22,9 +22,9 @@ A step-by-step approach to compare station data to REMO output
 	            57.195964 56.531819 57.1856161 56.324096 56.570216 57.531171 56.403146 56.383328 57.18022 
                 57.110021 57.234402 56.3111952 57.080628
 
-### 2. Create weights for REMO grid
+### 2. Create weights for REMO grid for 22 stations
 
-    cdo genbil,n32 REMO_file remoweights.nc
+    cdo genbil,r22x1 REMO_file remoweights.nc
 
 ### 3. Interpolation
 
