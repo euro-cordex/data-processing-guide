@@ -2,6 +2,14 @@
 
 ## Useful commands
 
+### Branches
+
+Software branches are used to develop features independently from the
+master branch. However, branches should not be used to create additional versions
+of a program but should rather be merged into the master quite regularly. 
+Also a branch should always stay up to date with the master by merging the master
+reqularly to stay close the main software branch.
+
 List local and remote branches:
 
     git branch -va
@@ -22,3 +30,19 @@ Update local branch:
 
     git pull
 
+
+### Tags
+Tags are used to, well, tag a specific version of the source code. This can be
+used to define some definite working versions or to tag a release version.
+
+Create a tag:
+
+    git tag -a my_tag -m "this is my first tag"
+
+Show tag info:
+
+    git show my_tag
+    
+List tags:
+
+    git tag -l
