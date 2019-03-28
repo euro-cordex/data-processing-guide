@@ -38,6 +38,10 @@ used to define some definite working versions or to tag a release version.
 Create a tag:
 
     git tag -a my_tag -m "this is my first tag"
+    
+Push tag to origin:
+
+    git push origin my_tag
 
 Show tag info:
 
