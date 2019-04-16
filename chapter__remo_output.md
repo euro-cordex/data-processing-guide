@@ -134,3 +134,10 @@ variable is called (ncdump -h) e.g. Variable: tg
 (ncdump -h) e.g. Variable: var167 to tas
 
     ncrename -h -O -v variable_name,new_variable_name file.nc
+
+### Select one variable 
+
+Sometimes "cdo selvar" or "cdo selcode" does not work, then:
+
+    ncks -v variable file.nc variable.nc
+
