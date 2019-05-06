@@ -18,7 +18,7 @@ Climate, sometimes understood as the "average weather,” is defined as the meas
 (Source WMO)
 
 ![Climate](./fig_workshop/Climate_Bild1.png =150x)
-"The Climate System")
+The Climate System
 
 ### Climate Variablility
 * Climate Change: Statistically significant change persisting over a long time period * 
