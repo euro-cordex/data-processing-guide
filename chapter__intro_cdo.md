@@ -98,7 +98,7 @@ To calculate a yearly time series as 30-years running mean, the data has to be c
 cdo runmean,30 -fldmean –yearmean scen_2010-2100 result_file
 
 ### Data masking 
-o order to cut specific areas such as basins or countries from the data, there is a CDO command called ifthen. This command needs a mask with zeros/ones at the same grid
+To order to cut specific areas such as basins or countries from the data, there is a CDO command called ifthen. This command needs a mask with zeros/ones at the same grid
 as the data.
 
 Usage:
