@@ -20,6 +20,7 @@ Most important information of a NetCDF-file is the header, which can be displaye
     * global attributes
 
 **ncview for graphical information of the data**
+
         ncview file
         
 **further information on netcdf:**
