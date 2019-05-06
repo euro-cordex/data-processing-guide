@@ -39,7 +39,7 @@ Climate models can only reproduce the observed spatial and temporal patterns of 
 ![NaturalandAntropgentic](./fig_workshop/Forcing_klein.png "natural and anthropogentic forcings")
 
 ### 4. Key Questions about the climate system and its relation to human kind
-![Questions](./fig_workshop/key_questions_klein.png "key_questions")
+![Questions](./fig_workshop/key_questions_klein_klein.png "key_questions")
 
 ### 5. Climate Modelling
 Climate models are the most sophisticated approach to simulate the Earth System.
@@ -89,7 +89,7 @@ Anthropogenic radiative forcing in Representative Concentration Pathways (RCPs) 
    = Mainly statistical approaches to link regional synoptic patterns with local station data 
 
 #### 5.7 Regional Climate modelling
-![RCMs](./fig_workshop/Folie19_klein.png "From GCM to RCM" 
+![RCMs](./fig_workshop/Folie19_klein.png "From GCM to RCM" )
 
 
 ## Global Climate Modelling
