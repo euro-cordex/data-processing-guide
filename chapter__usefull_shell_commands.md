@@ -1,13 +1,13 @@
 # Useful Shell Commands
-* Torsten Weber and Arne Kriegsmann 
+* Torsten Weber and Arne Kriegsmann *
 
-**What is a shell?**
+** What is a shell? **
 
 A shell (terminal/console) is command-line interface between the computer system
 and the user. There are different shells such as Bash, C-Shell or Korn Shell.
 We are using Bash.
 
-**Bash** is a Unix shell and command language for the GNU Project as a free software replacement for the Born shell.
+** Bash ** is a Unix shell and command language for the GNU Project as a free software replacement for the Born shell.
 
 usefull link:
 <www.tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html>
@@ -16,7 +16,7 @@ Bash tutorial:
 http://www.hypexr.org/bash_tutorial.php
 <www.linuxconfig.org/bash-scripting-tutorial>
 
-###Important commands (case-sensitive!)
+### Important commands (case-sensitive!)
 Each command has a build-in help-function: command --help
 
 * Start a program:
@@ -54,9 +54,9 @@ Each command has a build-in help-function: command --help
 * Show the content of a text file:
   more file.txt (scroll with space key)
 
-*Display one figure:
+* Display one figure:
 	 display figure.png
-*Open a figure explorer to have a look at more than one figures:
+* Open a figure explorer to have a look at more than one figures:
       geeqie
 * Open a PDF document:
   okular file.pdf
