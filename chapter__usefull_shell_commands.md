@@ -25,7 +25,7 @@ Each command has a build-in help-function: command --help
    - mkdir "directory"
 * Change a directory:
   - cd "directory"
-*Leave current folder and go back to the parent directory:
+* Leave current folder and go back to the parent directory:
    - cd ..
 * Show the current path of the directory:
   - pwd
