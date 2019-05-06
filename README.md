@@ -1,7 +1,8 @@
 # Data Processing Guide
 
 ## Introduction to Regional climate change assessment and uncertainty analysis
-*from Torsten Weber and Arne Kriegsmann* 
+*Notes to lecture of Torsten Weber and Arne Kriegsmann*
+(*original slides can be found in arcdoc)
 * Introduction into climate modelling
 * Uncertainty analysis of regional climate data
 * NetCDF-format
