@@ -7,7 +7,7 @@
 Applied software: Virtual Box, Kubuntu 18.04 (Linux-System), Climate Data Operator (CDO), Python/PyNgl - All software is free!
 
 ## Climate modelling
-### Weather vs. Climate
+### 1. Weather vs. Climate
 #### Definition:
 **Weather**
 Physical state of the Atmosphere
@@ -20,7 +20,7 @@ Climate, sometimes understood as the "average weather,” is defined as the meas
 ![Climate](./fig_workshop/Climate_Bild1_klein.png " Climate")
 The Climate System
 
-### Climate Variablility
+### 2. Climate Variablility
 * Climate Change: Statistically significant change persisting over a long time period * 
 * Variations of climate at all temporal and spatial scales (which are beyond single weather events); due to internal feedbacks within the climate system and due to external forcings *
 * internal Climate Variability
@@ -34,14 +34,14 @@ e.g. solar variability, earth rotation, earth declination, earth orbital paramet
 Emissions of greenhouse gases and aerosols to the atmosphere Land use change,
 e.g. deforestation
 
-### Impact of Natural and Anthropogenic Forcing
+### 3. Impact of Natural and Anthropogenic Forcing
 Climate models can only reproduce the observed spatial and temporal patterns of warming when they include natural AND anthropogenic forcings
 ![NaturalandAntropgentic](./fig_workshop/Forcing_klein.png "natural and anthropogentic forcings")
 
-### Key Questions about the climate system and its relation to human kind
+### 4. Key Questions about the climate system and its relation to human kind
 ![Questions](./fig_workshop/key_questions_klein.png "key_questions")
 
-### Climate Modelling
+### 5. Climate Modelling
 Climate models are the most sophisticated approach to simulate the Earth System.
 This involves the description of the major processes occurring
 
@@ -59,24 +59,24 @@ There are several limitations in climate modeling:
   * Models contain thousands of grid points
   * GCMs are computationally expensive
 
-#### Gid sizes:
+#### 5.1 Gid sizes:
 ![Grid size](./fig_workshop/Grid_size.png "Differenz Grid size")
 
-#### The major challenge
+#### 5.2 The major challenge
 Climate models must simulate many physical processes across a wide range of spatial and temporal scales.
 ![Tabelle11](./fig_workshop/Tabelle11.png "Major challenge")
 
-#### Climate Model Development (IPCC AR5, WG1, Chapter 1)
+#### 5.3 Climate Model Development (IPCC AR5, WG1, Chapter 1)
 ![Development](./fig_workshop/Development_klein.png "Development of the GCMs with time")
 
-#### MPIESM
+#### 5.4 MPIESM
 ![MPIESM](./fig_workshop/echam6.png "Earth System Models")
 
-#### Multi-Emission Scenarios
+#### 5.5 Multi-Emission Scenarios
 Anthropogenic radiative forcing in Representative Concentration Pathways (RCPs) and  former Special Report on Emissions Scenarios (SRES)
 ![rcps](./fig_workshop/rcps_klein.png "Adopted from: IPCC AR5 WG I: Figure 1.15 | Historical and projected total anthropogenic  radiative forcing (RF) (W m–2) relative to preindustrial level (about 1765) between 1950 and 2100.")
 
-#### Which model approach for which purpose?
+#### 5.6 Which model approach for which purpose?
 * Studies on global to continental climate change, global to continental carbon cycle, etc.
   - Global models
 * Studies on continental to regional climate change and impact assessment
@@ -86,7 +86,7 @@ Anthropogenic radiative forcing in Representative Concentration Pathways (RCPs) 
 * Subnational to local climate change assessment
   - Mainly statistical approaches to link regional synoptic patterns with local station data 
 
-#### Regional Climate modelling
+#### 5.7 Regional Climate modelling
 ![RCMs](./fig_workshop/Folie19.png "From GCM to RCM" 
 
 
