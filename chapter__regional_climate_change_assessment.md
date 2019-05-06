@@ -111,26 +111,10 @@ Projected changes by the regional model REMO for the duration of the rainy seaso
 
 # Summary of Climate modelling
 * Climate models deliver a valuable tool for assessment of potential future climate change
-
 * Climate models are the only tool available for making projections including all the potential feedbacks between the systems
-
 * One has to know how to interpret the data of climate models and one has to be careful to not over interpret
-
 * Climate models are suspect to uncertainty
-
 * Never rely a decision on the output of a single model or emission scenario
-
-
-'''''''''''''''''''''''
-
-# Uncertainty analysis of regional climate data
-
-# NetCDF-format
-
-# Climate Data Operators (CDO)
-# Climate data processing using scripts
-# Visualisation of climate change information
-
 
 
 
