@@ -17,7 +17,7 @@ at a certain place and time. It can be characterised by meteorological parameter
 Climate, sometimes understood as the "average weather,” is defined as the measurement of the mean and variability of relevant quantities of certain variables (such as temperature, precipitation or wind) over a period of time, ranging from months to thousands or millions of years (Classical time period 30 years)
 (Source WMO)
 
-![Climate](./fig_workshop/Climate_Bild1_klein.png " Climate", { width=50% } )
+![Climate](./fig_workshop/Climate_Bild1_klein.png " Climate")
 The Climate System
 
 ### Climate Variablility
@@ -67,14 +67,14 @@ Climate models must simulate many physical processes across a wide range of spat
 ![Tabelle11](./fig_workshop/Tabelle11.png "Major challenge")
 
 #### Climate Model Development (IPCC AR5, WG1, Chapter 1)
-![Development](./fig_workshop/Development.png "Development of the GCMs with time")
+![Development](./fig_workshop/Development_klein.png "Development of the GCMs with time")
 
 #### MPIESM
 ![MPIESM](./fig_workshop/echam6.png "Earth System Models")
 
 #### Multi-Emission Scenarios
 Anthropogenic radiative forcing in Representative Concentration Pathways (RCPs) and  former Special Report on Emissions Scenarios (SRES)
-![rcps](./fig_workshop/rcps.png "Adopted from: IPCC AR5 WG I: Figure 1.15 | Historical and projected total anthropogenic  radiative forcing (RF) (W m–2) relative to preindustrial level (about 1765) between 1950 and 2100.")
+![rcps](./fig_workshop/rcps_klein.png "Adopted from: IPCC AR5 WG I: Figure 1.15 | Historical and projected total anthropogenic  radiative forcing (RF) (W m–2) relative to preindustrial level (about 1765) between 1950 and 2100.")
 
 #### Which model approach for which purpose?
 * Studies on global to continental climate change, global to continental carbon cycle, etc.
@@ -113,4 +113,4 @@ Anthropogenic radiative forcing in Representative Concentration Pathways (RCPs) 
 
 # GERICS RGB CODE
 
-![GERICS_RGB](./fig_workshop/GERICS_color-codes_in_RGB_for_presentations.png "GERICS rgb code")
+![GERICS_RGB](./fig_workshop/GERICS_color-codes_in_RGB_for_presentations_klein.png "GERICS rgb code")
