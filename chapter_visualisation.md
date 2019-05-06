@@ -56,12 +56,12 @@ Features: annual cycle of temperature, precipitation and optional frost days,
 
      pycontfvect <scalar_nc-file> <scalar_name> <u_nc-file> <u_var_name> <v_nc-file>
                      <v_var_name> <output> (mandatory)
-Example:
+
 ![pycontv](./fig_workshop/pycontvec_klein.png)
 
      pyxy <var_name> <output> <title> <xaxis> <yaxis> <ymin> <ymax> <nc-file(s)> 
          (mandatory)
-Example:
+
 ![pyxy](./fig_workshop/pyxy1_klein.png)
 ![pyxy](./fig_workshop/pyxy2_klein.png)
 
@@ -86,12 +86,7 @@ eddy:
 * PyPlotTools needs to be included in the PATH variable (.profile)
 * PyREMO needs to be included in the PYTHON-PATH variable (.profile)
 
-Examples: pyxy
-![pyxy](./fig_workshop/pyxy1_klein.png)
-![pyxy](./fig_workshop/pyxy2_klein.png)
-Examples: pycontfvect
-![pyxy](./fig_workshop/pycontvec_klein.png)
-Examples: pycontf
-![pyxy](./fig_workshop/pycontf_klein.png)
+MOTRE INFORMATION:
+https://git.gerics.de/PyREMO/PyPlotTools
 
 
