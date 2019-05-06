@@ -1,5 +1,14 @@
 # Data Processing Guide
 
+## Introduction to Regional climate change assessment and uncertainty analysis
+*from Torsten Weber and Arne Kriegsmann* 
+* Introduction into climate modelling
+* Uncertainty analysis of regional climate data
+* NetCDF-format
+* Climate Data Operators (CDO)
+* Climate data processing using scripts
+* Visualisation of climate change information
+
 ## Tipps and Tricks for Data Processing
 The Data Processing Guide will collect information, best practices and FAQs concerning data processing
 
