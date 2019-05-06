@@ -79,13 +79,13 @@ Anthropogenic radiative forcing in Representative Concentration Pathways (RCPs) 
 
 #### 5.6 Which model approach for which purpose?
 * Studies on global to continental climate change, global to continental carbon cycle, etc.
-  = Global models
+    - Global models
 * Studies on continental to regional climate change and impact assessment
-   = Global and regional models
+   - Global and regional models
 * Studies on national climate change and impact assessment
-   = Regional models (both dynamical and statistical)
+   - Regional models (both dynamical and statistical)
 * Subnational to local climate change assessment
-   = Mainly statistical approaches to link regional synoptic patterns with local station data 
+   - Mainly statistical approaches to link regional synoptic patterns with local station data 
 
 #### 5.7 Regional Climate modelling
 ![RCMs](./fig_workshop/Folie19_klein.png "From GCM to RCM" )
