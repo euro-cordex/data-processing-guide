@@ -1,12 +1,12 @@
 # Data Processing Guide
 
-## Introduction to Regional climate change assessment and uncertainty analysis
-*Notes to lecture of Torsten Weber and Arne Kriegsmann 
+## Introduction to Regional Climate Change Assessment and Uncertainty Analysis
+*Notes to the lecture of Torsten Weber and Arne Kriegsmann 
 (original slides can be found in arcdoc)*
-* Introduction into climate modelling
+* Introduction to climate modelling
 * Uncertainty analysis of regional climate data
 * NetCDF-format
-* useful shell commands
+* Useful shell commands
 * Climate Data Operators (CDO)
 * Climate data processing using scripts
 * Visualisation of climate change information
@@ -16,13 +16,13 @@ The Data Processing Guide will collect information, best practices and FAQs conc
 
 * PyRemo
 * FAQ to remo_output (collection of everything)
-* interpolations to stations
+* Interpolations to stations
 * git
-* trouble shooting for pyplot tools
-* 
+* Trouble shooting for pyplot tools
+
 For a compiled html version, see here: http://136.172.63.17/DataProcessingGuide/
 
 ### Contributors
-Lars Buntemeyer, katharina Bülow, Lola Kotova, Arne Kriegsmann, Christine Nam, Torsten Weber
+Lars Buntemeyer, Katharina Bülow, Lola Kotova, Arne Kriegsmann, Christine Nam, Torsten Weber
 
 
