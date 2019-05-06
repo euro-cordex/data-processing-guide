@@ -10,7 +10,7 @@ Applied software: Virtual Box, Kubuntu 18.04 (Linux-System), Climate Data Operat
 
 GERICS rgb code:
 
-![GERICS_RGB](./fig/workshop/GERICS_color-codes_in_RGB_for_presentations.png)
+![GERICS_RGB](./fig_workshop/GERICS_color-codes_in_RGB_for_presentations.png)
 
 # Climate modelling
 ## weather vs. Climate
