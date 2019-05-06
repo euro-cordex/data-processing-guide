@@ -1,5 +1,4 @@
 # **Regional climate change assessment and uncertainty analysis**
-
 ## *Short course by T. Weber and A. Kriegsmann*
 
 ## Introduction into climate modelling
@@ -93,13 +92,16 @@ Anthropogenic radiative forcing in Representative Concentration Pathways (RCPs) 
 
 #### 5.8 Dynamical Downscaling
 How to derive the climate change signal?
-1) Validation of the Earainterim forced run
-2) Calculate the climate change signal
+
+    1) Validation of the Era-Interim forced run
+
+    2) Calculate the climate change signal
 
 ![CCS](./fig_workshop/val_climatechange_folie_klein.png " " )
 
 ##### EXAMPLE:
 Dynamical Downscaling
+
 Projected changes by the regional model REMO for the duration of the rainy season [days] for 2071-2100 compared to 1971-2000. 
 
 ![example](./fig_workshop/Folie24_klein.png "The upper row shows the ECHAM6 and the bottom row the EC-EARTH forcing. Emission scenarios are represented by different columns. " )
@@ -107,7 +109,7 @@ Projected changes by the regional model REMO for the duration of the rainy seaso
 * The regional climate model produces different results with different global model forcings!
 * This issue can be handled with a multi-model ensemble analysis.
 
-# SUMMARY
+# Summary of Climate modelling
 * Climate models deliver a valuable tool for assessment of potential future climate change
 
 * Climate models are the only tool available for making projections including all the potential feedbacks between the systems
