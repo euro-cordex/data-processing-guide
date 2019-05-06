@@ -1,13 +1,13 @@
 # Useful Shell Commands
-* Torsten Weber and Arne Kriegsmann *
+*Torsten Weber and Arne Kriegsmann*
 
-** What is a shell? **
+**What is a shell?**
 
 A shell (terminal/console) is command-line interface between the computer system
 and the user. There are different shells such as Bash, C-Shell or Korn Shell.
 We are using Bash.
 
-** Bash ** is a Unix shell and command language for the GNU Project as a free software replacement for the Born shell.
+**Bash** is a Unix shell and command language for the GNU Project as a free software replacement for the Born shell.
 
 usefull link:
 <www.tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html>
