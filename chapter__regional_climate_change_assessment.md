@@ -59,15 +59,17 @@ There are several limitations in climate modeling:
   * Models contain thousands of grid points
   * GCMs are computationally expensive
 
-#### 5.1 Gid sizes:
-![Grid size](./fig_workshop/Grid_size.png "Differenz Grid size")
+#### 5.1 Grid sizes:
+Different grid size:
+
+![Grid size](./fig_workshop/Grid_size.png "Different Grid size")
 
 #### 5.2 The major challenge
 Climate models must simulate many physical processes across a wide range of spatial and temporal scales.
-![Tabelle11](./fig_workshop/Tabelle11.png "Major challenge")
+![Tabelle11](./fig_workshop/Tabelle11_klein.png "Major challenge")
 
 #### 5.3 Climate Model Development (IPCC AR5, WG1, Chapter 1)
-![Development](./fig_workshop/Development_klein.png "Development of the GCMs with time")
+![Development](./fig_workshop/Development_klein_klein.png "Development of the GCMs with time")
 
 #### 5.4 MPIESM
 ![MPIESM](./fig_workshop/echam6.png "Earth System Models")
