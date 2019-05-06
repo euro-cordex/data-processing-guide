@@ -11,7 +11,7 @@ The NetCDF homepage may be found at http://www.unidata.ucar.edu/software/netcdf/
 
 Most important information of a NetCDF-file is the header, which can be displayed with
             
-            ncdump -h file
+        ncdump -h file
 
 **The header of a NetCDF-file contains information of:**
 
@@ -25,4 +25,4 @@ Most important information of a NetCDF-file is the header, which can be displaye
         
 **further information on netcdf:**
 
-       	  ncdump --help
+       	ncdump --help
