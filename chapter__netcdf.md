@@ -10,13 +10,18 @@ The NetCDF homepage may be found at http://www.unidata.ucar.edu/software/netcdf/
 ## How can I see the data description and the content of a NetCDF-file?
 
 Most important information of a NetCDF-file is the header, which can be displayed with
-     	       ncdump -h file
+            
+            ncdump -h file
 
-The header of a NetCDF-file contains information of:
+**The header of a NetCDF-file contains information of:**
+
     * dimensions of the variable(s)
     * variables
     * global attributes
 
-##ncview for graphical information of the data##
+**ncview for graphical information of the data**
+        ncview file
+        
+**further information on netcdf:**
 
        	  ncdump --help
