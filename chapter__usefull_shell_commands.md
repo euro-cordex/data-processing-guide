@@ -19,8 +19,9 @@ http://www.hypexr.org/bash_tutorial.php
 ### Important commands (case-sensitive!)
 Each command has a build-in help-function: command --help
 
-* Start a program:
-    - "program", e.g. firefox
+* Start a program e.g. firefox:
+        
+        firefox
 * Create a new directory:
         
         mkdir "directory"
