@@ -17,7 +17,7 @@ at a certain place and time. It can be characterised by meteorological parameter
 Climate, sometimes understood as the "average weather,” is defined as the measurement of the mean and variability of relevant quantities of certain variables (such as temperature, precipitation or wind) over a period of time, ranging from months to thousands or millions of years (Classical time period 30 years)
 (Source WMO)
 
-![Climate](./fig_workshop/Climate_Bild1.png)
+![Climate](./fig_workshop/Climate_Bild1.png " Climate")
 The Climate System
 
 ### Climate Variablility
