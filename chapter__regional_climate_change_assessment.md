@@ -8,7 +8,7 @@ Applied software: Virtual Box, Kubuntu 18.04 (Linux-System), Climate Data Operat
 
 ## Climate modelling
 ### Weather vs. Climate
-### Definition:
+#### Definition:
 **Weather**
 Physical state of the Atmosphere
 at a certain place and time. It can be characterised by meteorological parameters, e.g. air pressure, temperature, humidity, precipitation
