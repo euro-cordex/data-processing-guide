@@ -17,7 +17,7 @@ at a certain place and time. It can be characterised by meteorological parameter
 Climate, sometimes understood as the "average weather,” is defined as the measurement of the mean and variability of relevant quantities of certain variables (such as temperature, precipitation or wind) over a period of time, ranging from months to thousands or millions of years (Classical time period 30 years)
 (Source WMO)
 
-![Climate](./fig_workshop/Climate_Bild1.png " Climate", { width=50% } )
+![Climate](./fig_workshop/Climate_Bild1_klein.png " Climate", { width=50% } )
 The Climate System
 
 ### Climate Variablility
@@ -36,10 +36,10 @@ e.g. deforestation
 
 ### Impact of Natural and Anthropogenic Forcing
 Climate models can only reproduce the observed spatial and temporal patterns of warming when they include natural AND anthropogenic forcings
-![NaturalandAntropgentic](./fig_workshop/Forcing.png "natural and anthropogentic forcings")
+![NaturalandAntropgentic](./fig_workshop/Forcing_klein.png "natural and anthropogentic forcings")
 
 ### Key Questions about the climate system and its relation to human kind
-![Questions](./fig_workshop/key_questions.png "key_questions")
+![Questions](./fig_workshop/key_questions_klein.png "key_questions")
 
 ### Climate Modelling
 Climate models are the most sophisticated approach to simulate the Earth System.
