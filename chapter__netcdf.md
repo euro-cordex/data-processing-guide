@@ -1,7 +1,8 @@
 # Netcdf:
 *Arne Kriegsmann and Torsten Weber*
 
-##What is NetCDF?##
+**What is NetCDF?**
+
 NetCDF is a set of software libraries and self-describing, machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. NetCDF was developed and is maintained at Unidata. Unidata provides data and software tools for use in geoscience education and research. 
 
 The NetCDF homepage may be found at http://www.unidata.ucar.edu/software/netcdf/. The NetCDF source-code is hosted at GitHub, and may be found directly at http://github.com/Unidata/netcdf-c.                          (source: http://www.unidata.ucar.edu)
