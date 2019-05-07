@@ -8,7 +8,6 @@
 * NetCDF-format
 * Useful shell commands
 * Climate Data Operators (CDO)
-* Climate data processing using scripts
 * Visualisation of climate change information
 
 ## Hints and Tricks for Data Processing
