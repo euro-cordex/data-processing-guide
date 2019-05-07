@@ -1,4 +1,4 @@
-# Introduction into the Climate Data Operator (CDO)
+#**Introduction into the Climate Data Operator (CDO)**
 *Torsten Weber and Arne Kriegsmann*
 
 ## Climate Data Operators (CDO)
@@ -123,14 +123,15 @@ Print a customised table in a ASCII file:
 
 Example: Output for temperature with longitude 10 deg. and latitude 20 deg.:
 
-#    name  year month day    lon    lat    value 
-     tas  1980  1 16     10     20  281.863 
-     tas  1980  2 15     10     20  285.643 
-     tas  1980  3 16     10     20   292.52 
-     tas  1980  4 16     10     20  298.133 
-     tas  1980  5 16     10     20   300.33 
-     tas  1980  6 16     10     20  299.219 
-     .....
+
+| name | year  |month |day |  lon|   lat | value  |
+|------|-------|:-----|----|----:| -----:|--------| 
+|  tas | 1980  | 1    | 16 |  10 |    20 | 281.863| 
+|  tas | 1980  | 2    | 15 |  10 |    20 | 285.643| 
+|  tas | 1980  | 3    | 16 |  10 |    20 |  292.52| 
+|  tas | 1980  | 4    | 16 |  10 |    20 | 298.133| 
+|  tas | 1980  | 5    | 16 |  10 |    20 |  300.33| 
+|  tas | 1980  | 6    | 16 |  10 |    20 | 299.219| 
 
 ### Data remapping
 When comparing two data sets with different spatial resolutions, always remap

@@ -14,7 +14,7 @@ chapter__pyremo.md\
 chapter__remo_output.md\
 chapter__interpolating_stations.md \
 chapter__git.md\
-chapter__trouble_shooting_for_pyplot_tools.md
+chapter__troubleshooting.md
 
 
 usage:

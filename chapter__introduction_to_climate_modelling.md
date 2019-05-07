@@ -109,7 +109,7 @@ Projected changes by the regional model REMO for the duration of the rainy seaso
 * The regional climate model produces different results with different global model forcings!
 * This issue can be handled with a multi-model ensemble analysis.
 
-# Summary of Climate modelling
+## Summary of Climate modelling
 * Climate models deliver a valuable tool for assessment of potential future climate change
 * Climate models are the only tool available for making projections including all the potential feedbacks between the systems
 * One has to know how to interpret the data of climate models and one has to be careful to not over interpret
@@ -118,6 +118,6 @@ Projected changes by the regional model REMO for the duration of the rainy seaso
 
 
 
-# GERICS RGB CODE
+## GERICS RGB CODE
 
 ![GERICS_RGB](./fig_workshop/GERICS_color-codes_in_RGB_for_presentations_klein.png "GERICS rgb code")

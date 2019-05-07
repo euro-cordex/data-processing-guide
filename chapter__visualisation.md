@@ -1,4 +1,4 @@
-#  Visualisation of Climate Data
+# **Visualisation of Climate Data**
 using PyNGL developed by NCAR
 *by T. Weber and A. Kriegsmann
 

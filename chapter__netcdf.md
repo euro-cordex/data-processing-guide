@@ -1,4 +1,4 @@
-# Netcdf:
+# **Netcdf**
 *Arne Kriegsmann and Torsten Weber*
 
 **What is NetCDF?**

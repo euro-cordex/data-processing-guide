@@ -1,4 +1,4 @@
-# PyRemo
+# **PyRemo**
 
 The heart of PyRemo are the data handling and plotting modules. The OoPlot package 
 contains everything that is needed to do high quality plots based on PyNGL. 

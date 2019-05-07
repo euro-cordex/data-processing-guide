@@ -1,4 +1,4 @@
-# Useful Shell Commands
+# **Useful Shell Commands**
 *Torsten Weber and Arne Kriegsmann*
 
 **What is a shell?**
@@ -16,7 +16,7 @@ Bash tutorial:
 http://www.hypexr.org/bash_tutorial.php
 <www.linuxconfig.org/bash-scripting-tutorial>
 
-### Important commands (case-sensitive!)
+## Important commands (case-sensitive!)
 Each command has a build-in help-function: command --help
 
 * Start a program e.g. firefox:
@@ -38,7 +38,7 @@ Each command has a build-in help-function: command --help
  
        ls or use ll for more details
 
-### Usage of Shell
+## Usage of Shell
 **Important commands (case-sensitive!)**
 
 * Copy one or more files:

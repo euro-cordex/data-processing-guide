@@ -1,8 +1,7 @@
-# How to get climate data, what is available & data formats:
+# **ESGF - How to get climate data, what is available & data formats**
 * Earth System Grid Federation Data Portal ESGF
 
-## ESGF: 
-### Mission
+## Mission
 
 * The Earth System Grid Federation (ESGF) is an international collaboration for the software 
 that powers most global climate change research, notably assessments by the 

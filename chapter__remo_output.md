@@ -1,4 +1,4 @@
-# REMO output
+# **REMO output**
 
 ## Introduction to DKRZ
 
