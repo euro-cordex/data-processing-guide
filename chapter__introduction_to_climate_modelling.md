@@ -100,7 +100,7 @@ How to derive the climate change signal?
 
     2) Calculate the climate change signal
 
-![CCS](./fig_workshop/val_climatechange_folie.png " " )
+![CCS](./fig_workshop/val_climatechange_folie.png)
 
 ##### EXAMPLE:
 Dynamical Downscaling
