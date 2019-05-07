@@ -7,12 +7,14 @@ TARGET = data_processing_guide
 SOURCES = chapter__introduction_to_climate_modelling.md\
 chapter__netcdf.md\
 chapter__usefull_shell_commands.md\
+chapter__esgf_cordex_data_access.md\
 chapter__intro_cdo.md\
+chapter__visualisation.md\
 chapter__pyremo.md\
 chapter__remo_output.md\
 chapter__interpolating_stations.md \
 chapter_git.md\
-chapter__trouble_shooting_for_pyplot_tools.md 
+chapter__trouble_shooting_for_pyplot_tools.md
 
 
 usage:
