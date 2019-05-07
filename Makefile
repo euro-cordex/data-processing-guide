@@ -21,11 +21,12 @@ usage:
 	echo "make pdf html clean"
 
 pdf: README.md ${SOURCES}
-	pandoc README.md ${SOURCES} -o ${TARGET}.pdf
+	pandoc README.md ${SOURCES} -o ${TARGET}.pdf --latex-engine=xelatex
 
 html : ${SOURCES}
 #	pandoc README.md ${SOURCES} -o ${TARGET}.html
-	pandoc README.md ${SOURCES} -o index.html -f markdown --template standalone.html --toc --toc-depth=2 
+#	pandoc README.md ${SOURCES} -o index.html -f markdown --template standalone.html --toc --toc-depth=2 
+	pandoc README.md ${SOURCES} --template toc-sidebar.html --toc -B nav -o index.html 
 
 clean:  
 	rm -f ${TARGET}.pdf ${TARGET}.html
