@@ -11,7 +11,7 @@
 * Climate data processing using scripts
 * Visualisation of climate change information
 
-## Tipps and Tricks for Data Processing
+## Hints and Tricks for Data Processing
 The Data Processing Guide will collect information, best practices and FAQs concerning data processing
 
 * PyRemo
