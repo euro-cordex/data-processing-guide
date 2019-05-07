@@ -3,7 +3,7 @@
 * (ESGF-Data Portal)sgf_cordex_data_access
 
 ## ESGF: 
-###Mission
+### Mission
 
 * The Earth System Grid Federation (ESGF) is an international collaboration for the software 
 that powers most global climate change research, notably assessments by the 
@@ -26,7 +26,7 @@ and reanalysis data for climate change research.
 DKRZ Portal: https://esgf-data.dkrz.de/projects/esgf-dkrz/
 
 ## How to get access on climate data
-###Climate data on EDDY
+### Climate data on EDDY
 
 * Observational data: /eddy/pool/obs, e.g. CRU, TRMM
 
@@ -37,7 +37,7 @@ DKRZ Portal: https://esgf-data.dkrz.de/projects/esgf-dkrz/
 ATTENTION: Check the data before you use it carefully!
 
 
-###CORDEX-Data download
+### CORDEX-Data download
 
 * Change to the directory with the download bash-script wget-20160314165933.sh
 
