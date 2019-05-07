@@ -1,6 +1,5 @@
 # How to get climate data, what is available & data formats:
-* Earth System Grid Federation Data Portal
-* (ESGF-Data Portal)sgf_cordex_data_access
+* Earth System Grid Federation Data Portal ESGF
 
 ## ESGF: 
 ### Mission
