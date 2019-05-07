@@ -34,7 +34,7 @@ Emissions of greenhouse gases and aerosols to the atmosphere Land use change,
 e.g. deforestation
 
 ### 3. Impact of Natural and Anthropogenic Forcing
-Climate models can only reproduce the observed spatial and temporal patterns of warming when they include natural AND anthropogenic forcings
+Climate models can only reproduce the observed spatial and temporal patterns of warming when they include natural AND anthropogenic forcings<br/>
 ![NaturalandAntropgentic](./fig_workshop/Forcing_klein.png "natural and anthropogentic forcings")
 
 ### 4. Key Questions about the climate system and its relation to human kind
@@ -64,7 +64,7 @@ Different grid size:
 ![Grid size](./fig_workshop/Grid_size.png "Different Grid size")
 
 #### 5.2 The major challenge
-Climate models must simulate many physical processes across a wide range of spatial and temporal scales.
+Climate models must simulate many physical processes across a wide range of spatial and temporal scales. <br/>
 ![Tabelle11](./fig_workshop/Tabelle11_klein.png "Major challenge")
 
 #### 5.3 Climate Model Development (IPCC AR5, WG1, Chapter 1)
@@ -74,7 +74,7 @@ Climate models must simulate many physical processes across a wide range of spat
 ![MPIESM](./fig_workshop/echam6.png "Earth System Models")
 
 #### 5.5 Multi-Emission Scenarios
-Anthropogenic radiative forcing in Representative Concentration Pathways (RCPs) and  former Special Report on Emissions Scenarios (SRES)
+Anthropogenic radiative forcing in Representative Concentration Pathways (RCPs) and  former Special Report on Emissions Scenarios (SRES) <br/>
 ![rcps](./fig_workshop/rcps_klein.png "Adopted from: IPCC AR5 WG I: Figure 1.15 | Historical and projected total anthropogenic  radiative forcing (RF) (W m–2) relative to preindustrial level (about 1765) between 1950 and 2100.")
 
 #### 5.6 Which model approach for which purpose?
