@@ -4,10 +4,16 @@
 
 TARGET = data_processing_guide
 
-SOURCES = chapter__remo_output.md \
+SOURCES = chapter__introduction_to_climate_modelling.md\
+chapter__netcdf.md\
+chapter__usefull_shell_commands.md\
+chapter__intro_cdo.md\
+chapter__pyremo.md\
+chapter__remo_output.md\
 chapter__interpolating_stations.md \
-chapter__trouble_shooting_for_pyplot_tools.md \
-chapter__pyremo.md
+chapter_git.md\
+chapter__trouble_shooting_for_pyplot_tools.md 
+
 
 usage:
 	echo "make pdf html clean"
