@@ -35,10 +35,11 @@ e.g. deforestation
 
 ### 3. Impact of Natural and Anthropogenic Forcing
 Climate models can only reproduce the observed spatial and temporal patterns of warming when they include natural AND anthropogenic forcings<br/>
-![NaturalandAntropgentic](./fig_workshop/Forcing_klein.png "natural and anthropogentic forcings")
+![NaturalandAntropgentic](./fig_workshop/Forcing.png "natural and anthropogentic forcings") <br/>
+*Natural and anthropogentic forcings*
 
 ### 4. Key Questions about the climate system and its relation to human kind
-![Questions](./fig_workshop/key_questions_klein_klein.png "key_questions")
+![Questions](./fig_workshop/key_questions_klein.png "key_questions")
 
 ### 5. Climate Modelling
 Climate models are the most sophisticated approach to simulate the Earth System.
@@ -65,10 +66,12 @@ Different grid size:
 
 #### 5.2 The major challenge
 Climate models must simulate many physical processes across a wide range of spatial and temporal scales. <br/>
-![Tabelle11](./fig_workshop/Tabelle11_klein.png "Major challenge")
+![Tabelle11](./fig_workshop/Tabelle11.png "Major challenge") <br/>
+*Major challenges*
 
 #### 5.3 Climate Model Development (IPCC AR5, WG1, Chapter 1)
-![Development](./fig_workshop/Development_klein_klein.png "Development of the GCMs with time")
+![Development](./fig_workshop/Development_klein_klein.png "Development of the GCMs with time") </br>
+*Development of GCMs*
 
 #### 5.4 MPIESM
 ![MPIESM](./fig_workshop/echam6.png "Earth System Models")
@@ -88,7 +91,7 @@ Anthropogenic radiative forcing in Representative Concentration Pathways (RCPs) 
    - Mainly statistical approaches to link regional synoptic patterns with local station data 
 
 #### 5.7 Regional Climate modelling
-![RCMs](./fig_workshop/Folie19_klein.png "From GCM to RCM" )
+![RCMs](./fig_workshop/Folie19.png "From GCM to RCM" )
 
 #### 5.8 Dynamical Downscaling
 How to derive the climate change signal?
@@ -97,14 +100,15 @@ How to derive the climate change signal?
 
     2) Calculate the climate change signal
 
-![CCS](./fig_workshop/val_climatechange_folie_klein.png " " )
+![CCS](./fig_workshop/val_climatechange_folie.png " " )
 
 ##### EXAMPLE:
 Dynamical Downscaling
 
 Projected changes by the regional model REMO for the duration of the rainy season [days] for 2071-2100 compared to 1971-2000. 
 
-![example](./fig_workshop/Folie24_klein.png "The upper row shows the ECHAM6 and the bottom row the EC-EARTH forcing. Emission scenarios are represented by different columns. " )
+![example](./fig_workshop/Folie24.png "The upper row shows the ECHAM6 and the bottom row the EC-EARTH forcing. Emission scenarios are represented by different columns. " ) </br>
+*The upper row shows the ECHAM6 and the bottom row the EC-EARTH forcing. Emission scenarios are represented by different columns.* 
 
 * The regional climate model produces different results with different global model forcings!
 * This issue can be handled with a multi-model ensemble analysis.
