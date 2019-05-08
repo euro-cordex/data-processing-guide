@@ -10,6 +10,12 @@ CDO is a collection of command line operators to manipulate and analyse climate 
 
 A detailed documentation with a tutorial and the software can be find at https://code.zmaw.de/projects/cdo/
 
+You can get help on any operator using:
+
+```
+cdo -h <op>
+```
+
 ### Examples:
 
 See version of cdo you are using:
