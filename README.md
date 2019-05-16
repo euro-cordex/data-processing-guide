@@ -1,5 +1,16 @@
 # **Data Processing Guide**
 
+For a compiled html version, see here: http://136.172.63.17/DataProcessingGuide
+
+For the source files, go here: https://git.gerics.de/DataProcessing/DataProcessingGuide
+
+## How to contribute
+
+You are very welcome to contribute your knowledge! You can simply click
+on the chapter you want to contribute to or make up a new one. There is also
+lots of examples of how to format nicely although it's not important and can
+be done later...
+
 ## Introduction to Regional Climate Change Assessment and Uncertainty Analysis
 *Notes to the lecture of Torsten Weber and Arne Kriegsmann 
 (original slides can be found in arcdoc)*
