@@ -4,7 +4,9 @@
 
 TARGET = data_processing_guide
 
-SOURCES = chapter__introduction_to_climate_modelling.md\
+SOURCES = chapter__introduction.md\
+chapter__concept_note_on_downscaling_climate_information.md\
+chapter__introduction_to_climate_modelling.md\
 chapter__netcdf.md\
 chapter__usefull_shell_commands.md\
 chapter__esgf_cordex_data_access.md\
@@ -31,3 +33,4 @@ html : ${SOURCES}
 
 clean:  
 	rm -f ${TARGET}.pdf ${TARGET}.html
+

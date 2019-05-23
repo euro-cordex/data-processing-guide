@@ -33,6 +33,6 @@ The Data Processing Guide will collect information, best practices and FAQs conc
 For a compiled html version, see here: http://136.172.63.17/DataProcessingGuide/
 
 ### Contributors
-Lars Buntemeyer, Katharina Bülow, Lola Kotova, Arne Kriegsmann, Christine Nam, Torsten Weber
+Lars Buntemeyer, Katharina Bülow, Lola Kotova, Arne Kriegsmann, Christine Nam, Diana Rechid, Claas Teichmann, Torsten Weber
 
 
