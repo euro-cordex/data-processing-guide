@@ -12,6 +12,7 @@ chapter__intro_cdo.md\
 chapter__visualisation.md\
 chapter__pyremo.md\
 chapter__remo_output.md\
+chapter__evaluation.md\
 chapter__interpolating_stations.md \
 chapter__git.md\
 chapter__troubleshooting.md
