@@ -17,6 +17,7 @@ Observation data can be found on _eddy_ in
  * REGNIE
  * HYRAS
  * TRY
+ * COSMO-REA
 
 **Height correction** 
 Comparing temperature values of different data products with 
@@ -33,9 +34,8 @@ remap to the coarser grid - as otherwise eventually erroneous finer scale detail
 be provided which is not inherent to the data product but an artefact through the 
 interpolation procedure. 
 
-Pay attention to different remapping methods for each variable! Some methods preserve
+**Remapping** Pay attention to different remapping methods for each variable! Some methods preserve
 fluxes which is of importance e.g. for precipitation and wind but can result in 
 strong gradients when remapping from a coarse to a higher resolved grid 
-(conservative remapping), while other methods don't (see also RemappingMethods in the REMO-wiki).  
-
+(conservative remapping), while other methods don't (see also RemappingMethods in the REMO-wiki). 
 Remember to apply a height correction for temperature fields!
