@@ -50,6 +50,10 @@ explanation:
    this will prevent wget from working.
  * restricts downloading to the specified file types (with .nc suffix in this case)
 
+## download multiple files from ftp server
+
+    wget -m --user=username --password=password ftp://ip.of.old.host
+
 ## Comparing REMO output to Observations
 
 ### Observations have a different grid resolution than REMO output
