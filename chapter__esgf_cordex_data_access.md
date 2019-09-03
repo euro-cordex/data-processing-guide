@@ -43,3 +43,21 @@ ATTENTION: Check the data before you use it carefully!
 
 * Start the data download script with ./wget-20160314165933.sh and follow the instructions.
 
+### Trouble downloading from esgf with wget script:
+
+* If you want to download more then 1000 files
+
+    http://esgf-data.dkrz.de/esg-search/wget/?project=CMIP5&model=CCSM4&experiment=rcp85&cmor_table=6hrLev&variable=va&limit=2000
+
+maximum limit would be 10000 now it is limit=2000
+
+* wget script does not work:
+
+Try insecure-option (-i)
+
+    bash wget-##############.sh -i
+
+In this case the server certificat will not be checkt.
+Or you can download replicate or from an other server (both has to be chose in the esgf bevor makeing the wget script.)
+
+
