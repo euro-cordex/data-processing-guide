@@ -77,6 +77,10 @@ Each command has a build-in help-function: command --help
 * Open a PDF document:
 
         okular file.pdf
+* or 
+       
+        evince file.pdf
+
 * To use the terminal window after executing a command, put a & at the end of command line before executing the command:
 
         Example: okular file.pdf&
