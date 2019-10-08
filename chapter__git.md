@@ -29,6 +29,11 @@ Push new local branch to remote origin:
 Update local branch:
 
     git pull
+    
+Synchronizing a local Git repository with a remote one
+    
+    git fetch --prune
+
 
 
 ### Tags
