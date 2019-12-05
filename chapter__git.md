@@ -55,3 +55,9 @@ Show tag info:
 List tags:
 
     git tag -l
+    
+## Troubleshooting
+    server certificate verification failed
+Try
+
+    export GIT_SSL_NO_VERIFY=1
