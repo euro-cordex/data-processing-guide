@@ -11,7 +11,7 @@ Not every GCM has delivered a Land-Sea-Mask to the ESGF.
 
 Now it is not possible to maskout the land points for some GCMs.
 
-###Solution:
+### Solution:
 If we do not have a lsm, we will use the landseemask of CRU and remap it to the GCM-grid
 
 
