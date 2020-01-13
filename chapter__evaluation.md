@@ -39,3 +39,6 @@ fluxes which is of importance e.g. for precipitation and wind but can result in
 strong gradients when remapping from a coarse to a higher resolved grid 
 (conservative remapping), while other methods don't (see also RemappingMethods in the REMO-wiki). 
 Remember to apply a height correction for temperature fields!
+
+**Clidas** uses *cdo remapcon* for orographie and precipitation, 
+*remapbil* for Temperature and *remapnn* for the mask.
