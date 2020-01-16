@@ -1,0 +1,23 @@
+image: continuumio/miniconda3:latest
+
+variables:
+  GIT_SSL_NO_VERIFY: "1"
+
+before_script:
+  - git --version
+  - pwd
+
+pages:
+  script:
+  - conda env create -f environment.yml
+  - source activate py3-sphinx
+  - conda install -c anaconda make
+  - make html
+  - rm -r /public/html
+  - mv build/html /public/DataProcessingGuide
+  - ls /public
+  artifacts:
+    paths:
+    - /public
+  only:
+  - sphinx
