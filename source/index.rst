@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 
-Welcome to the REMO documentation!
+Welcome to the Data Processing Guide!
 ==================================================
 
 Contents:
