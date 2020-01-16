@@ -1,15 +1,5 @@
 # **Data Processing Guide**
 
-[![pipeline status](http://git.gerics.de/data-processing/DataProcessingGuide/badges/master/pipeline.svg)](http://git.gerics.de/data-processing/DataProcessingGuide/commits/master)
-
-The data processing guide is now using [sphinx](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html).
-If you want to build the documentation, you can choose between `html` or `pdf`, using:
-
-```
-make html
-make latexpdf
-```
-
 For a compiled html version, see here: http://136.172.63.17/DataProcessingGuide
 
 For the source files, go here: https://git.gerics.de/DataProcessing/DataProcessingGuide
