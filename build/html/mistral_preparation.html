@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Preparation &#8212; REMO Documentation and User Guide 0 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.12.4.min.js "></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="_static/bootstrap-3.4.1/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><span><img src="_static/REMO_logo.png"></span>
+          REMO</a>
+        <span class="navbar-text navbar-version pull-left"><b>2</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="http://remo-rcm.de">Homepage</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="syntax-examples.html">1. Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#headings">1.1. Headings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#code">1.2. Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#admonitions">1.3. Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#footnotes">1.4. Footnotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#icons">1.5. Icons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#tables">1.6. Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#code-documentation">1.7. Code Documentation</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Preparation</a><ul>
+<li><a class="reference internal" href="#setting-up-the-tutorial-directory">Setting up the Tutorial Directory</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/mistral_preparation.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="preparation">
+<h1>Preparation<a class="headerlink" href="#preparation" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line">Before running the REMO model on the machine MISTRAL at DKRZ, it is
+useful to pay some attention to the configuration of your personal
+accout at DKRZ. We recommend to vist the User Portal of the Mistral
+for a lot of helpful advices concerning the workflow on MISTRAL.
+However, we will summarize the most important steps here to make sure,
+you are able to run the REMO Tutorial.</div>
+<div class="line">If you have access to the MISTRAL, you can login to one of the login
+nodes using ssh:</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh  -X &lt;userid&gt;@mistral.dkrz.de
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">By default, you should be using the bash shell which you can configure
+by using the hidden file <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> in your home directory. To
+compile and run the REMO model for this tutorial, you will need a
+Fortran and MPI wrapper compiler. On the Mistral, these are managed by
+the <code class="docutils literal notranslate"><span class="pre">module</span></code> command and we will use the Intel Fortran compiler
+together with the Bullx MPI wrapper compiler to compile REMO for
+parallel runs. You get an overwiew of available software modules using
+<code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">avail</span></code> and to load a specific module, you can use the
+<code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span></code> command.</div>
+<div class="line">For this tutorial, you will need to add the following line to your
+<code class="docutils literal notranslate"><span class="pre">.bashrc</span></code></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use the default versions of Intel compiler and Bullx MPI with Mellanox MXM and FCA tools</span>
+<span class="c1"># Also add ncview and pftp</span>
+module load intel mxm fca bullxmpi_mlx ncview pftp
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">to make sure, you have all modules loaded when compiling and running
+the REMO model. Remember to relogin once you have edited your
+<code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file. You will also need a text editor to edit text files
+(e.g., a bash script). On Mistral, all common editors are available,
+e.g., <code class="docutils literal notranslate"><span class="pre">emacs</span></code>, <code class="docutils literal notranslate"><span class="pre">gedit</span></code> or <code class="docutils literal notranslate"><span class="pre">vim</span></code>. Remember to login to Mistral
+with X11-Forwarding using <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-X</span></code> if you want to use a text editor
+that requires a graphical user interface.</div>
+<div class="line">Projects on MISTRAL are managed using account numbers, e.g., the
+account number for this tutorial is <code class="docutils literal notranslate"><span class="pre">ch0636</span></code> for internal use at
+GERICS. This account number is used to manage computing time and
+storage capacities, e.g., for this tutorial we will work in <code class="docutils literal notranslate"><span class="pre">WORK</span></code>
+partition of the <code class="docutils literal notranslate"><span class="pre">ch0636</span></code> account which is located at</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/work/ch0636
+</pre></div>
+</div>
+<p>where you should create a personal directory for your own data using
+your user id, e.g.,</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir /work/ch0636/<span class="se">\$</span>USER
+</pre></div>
+</div>
+<p>if this directory does not yet exists.</p>
+<div class="section" id="setting-up-the-tutorial-directory">
+<h2>Setting up the Tutorial Directory<a class="headerlink" href="#setting-up-the-tutorial-directory" title="Permalink to this headline">¶</a></h2>
+<p>Finally you will need the tutorial data in your personal working
+directory. The data is available at</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/work/ch0636/remo_tutorial/remo_tutorial.tar.gz
+</pre></div>
+</div>
+<p>Copy this data to you run directory and untar it, e.g., by typing this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp /work/ch0636/remo_tutorial/remo_tutorial.tar.gz .
+tar -xvzf remo_tutorial.tar.gz
+</pre></div>
+</div>
+<p>This will create a directory called <code class="docutils literal notranslate"><span class="pre">remo_tutorial</span></code> in your personal
+working directory containing the REMO model source code
+(<code class="docutils literal notranslate"><span class="pre">ModelRun/REMO_MPI</span></code>), a suite of software tools to create surface
+boundary conditions (<code class="docutils literal notranslate"><span class="pre">BodLibKit</span></code>) and a script for running the
+tutorial on MISTRAL (<code class="docutils literal notranslate"><span class="pre">ModelRun/test_remo.ksh</span></code>).</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Lars Buntemeyer.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

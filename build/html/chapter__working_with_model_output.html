@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>8. REMO output &#8212; REMO Documentation and User Guide 0 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="9. Compare station data to REMO output" href="chapter__interpolating_stations.html" />
+    <link rel="prev" title="7. CMIP5 model output" href="chapter__working_with_CMIP5.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.12.4.min.js "></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="_static/bootstrap-3.4.1/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><span><img src="_static/REMO_logo.png"></span>
+          REMO</a>
+        <span class="navbar-text navbar-version pull-left"><b>2</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="http://remo-rcm.de">Homepage</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="chapter__introduction.html">1. <strong>Introduction</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__introduction.html#additional-resources">1.1. Additional resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__introduction_to_climate_modelling.html">2. <strong>Regional climate change assessment and uncertainty analysis</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__introduction_to_climate_modelling.html#short-course-by-t-weber-and-a-kriegsmann">2.1. <em>Short course by T. Weber and A. Kriegsmann</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__introduction_to_climate_modelling.html#introduction-into-climate-modelling">2.2. Introduction into climate modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__introduction_to_climate_modelling.html#climate-modelling">2.3. Climate modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__introduction_to_climate_modelling.html#summary-of-climate-modelling">2.4. Summary of Climate modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__introduction_to_climate_modelling.html#gerics-rgb-code">2.5. GERICS RGB CODE</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__concept_note_on_downscaling_climate_information.html">3. <strong>Concept note on Downscaling Climate Information</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__concept_note_on_downscaling_climate_information.html#important-things-to-remember-when-using-climate-data">3.1. Important things to remember when using climate data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__concept_note_on_downscaling_climate_information.html#literature">3.2. Literature</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__esgf_cordex_data_access.html">4. <strong>ESGF - How to get climate data, what is available &amp; data formats</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__esgf_cordex_data_access.html#mission">4.1. Mission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__esgf_cordex_data_access.html#how-to-get-access-on-cordex-data">4.2. How to get access on CORDEX-Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__esgf_cordex_data_access.html#how-to-get-access-on-climate-data">4.3. How to get access on climate data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__evaluation.html">5. <strong>Evaluation of RCM output</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__evaluation.html#data-for-comparison">5.1. Data for comparison</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__visualisation.html">6. <strong>Visualisation of Climate Data</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__visualisation.html#pyplottools-1-2-4">6.1. PyPlotTools-1.2.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__visualisation.html#instalation">6.2. Instalation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__working_with_CMIP5.html">7. <strong>CMIP5 model output</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__working_with_CMIP5.html#trouble-shooting">7.1. Trouble shooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">8. <strong>REMO output</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-dkrz">8.1. Introduction to DKRZ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#general-hints-for-working-on-eddy-mistral">8.2. General hints for working on Eddy/Mistral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dealing-with-modeloutput">8.3. Dealing with Modeloutput</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#euro-cordex-data">8.4. EURO-CORDEX-Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#remapping-tools">8.5. Remapping tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plotting-tool">8.6. Plotting tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#download-multiple-files-from-a-web-page">8.7. Download multiple files from a web page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#download-multiple-files-from-ftp-server">8.8. download multiple files from ftp server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comparing-remo-output-to-observations">8.9. Comparing REMO output to Observations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#useful-cdo-hints">8.10. Useful <code class="docutils literal notranslate"><span class="pre">cdo</span></code> hints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#useful-netcdf-file-hints">8.11. Useful <code class="docutils literal notranslate"><span class="pre">netcdf</span> <span class="pre">file</span></code> hints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__interpolating_stations.html">9. <strong>Compare station data to REMO output</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__interpolating_stations.html#create-an-unstructured-grid-for-22-stations-num-22">9.1. 1. Create an unstructured grid - for 22 stations NUM=22</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__interpolating_stations.html#create-weights-for-remo-grid-for-22-stations">9.2. 2. Create weights for REMO grid for 22 stations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__interpolating_stations.html#interpolation">9.3. 3. Interpolation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__interpolating_stations.html#extract-stations">9.4. 4. Extract stations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__intro_cdo.html">10. <strong>Introduction into the Climate Data Operator (CDO)</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__intro_cdo.html#climate-data-operators-cdo">10.1. Climate Data Operators (CDO)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__netcdf.html">11. <strong>Netcdf</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__netcdf.html#how-can-i-see-the-data-description-and-the-content-of-a-netcdf-file">11.1. How can I see the data description and the content of a NetCDF-file?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__pyremo.html">12. <strong>PyRemo</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__pyremo.html#examples">12.1. Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__git.html">13. <em>GIT</em></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__git.html#useful-commands">13.1. Useful commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__git.html#troubleshooting">13.2. Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__usefull_shell_commands.html">14. <strong>Useful Shell Commands</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__usefull_shell_commands.html#important-commands-case-sensitive">14.1. Important commands (case-sensitive!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__usefull_shell_commands.html#usage-of-shell">14.2. Usage of Shell</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__troubleshooting.html">15. <strong>Troubleshooting</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__troubleshooting.html#troubleshooting-for-pyplottools">15.1. Troubleshooting for PyPlotTools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="syntax-examples.html">16. RST Syntax Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#headings">16.1. Headings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#code">16.2. Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#admonitions">16.3. Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#footnotes">16.4. Footnotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#icons">16.5. Icons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#tables">16.6. Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#code-documentation">16.7. Code Documentation</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">8. <strong>REMO output</strong></a><ul>
+<li><a class="reference internal" href="#introduction-to-dkrz">8.1. Introduction to DKRZ</a></li>
+<li><a class="reference internal" href="#general-hints-for-working-on-eddy-mistral">8.2. General hints for working on Eddy/Mistral</a></li>
+<li><a class="reference internal" href="#dealing-with-modeloutput">8.3. Dealing with Modeloutput</a></li>
+<li><a class="reference internal" href="#euro-cordex-data">8.4. EURO-CORDEX-Data</a></li>
+<li><a class="reference internal" href="#remapping-tools">8.5. Remapping tools</a></li>
+<li><a class="reference internal" href="#plotting-tool">8.6. Plotting tool</a></li>
+<li><a class="reference internal" href="#download-multiple-files-from-a-web-page">8.7. Download multiple files from a web page</a></li>
+<li><a class="reference internal" href="#download-multiple-files-from-ftp-server">8.8. download multiple files from ftp server</a></li>
+<li><a class="reference internal" href="#comparing-remo-output-to-observations">8.9. Comparing REMO output to Observations</a><ul>
+<li><a class="reference internal" href="#observations-have-a-different-grid-resolution-than-remo-output">8.9.1. Observations have a different grid resolution than REMO output</a><ul>
+<li><a class="reference internal" href="#version-1">8.9.1.1. Version 1</a></li>
+<li><a class="reference internal" href="#version-2">8.9.1.2. Version 2</a></li>
+<li><a class="reference internal" href="#version-3">8.9.1.3. Version 3</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#area-mean-of-small-catchments">8.9.2. Area mean of small catchments</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#useful-cdo-hints">8.10. Useful <code class="docutils literal notranslate"><span class="pre">cdo</span></code> hints</a><ul>
+<li><a class="reference internal" href="#cdo-ensmean">8.10.1. <code class="docutils literal notranslate"><span class="pre">cdo</span> <span class="pre">ensmean</span></code></a></li>
+<li><a class="reference internal" href="#selindexbox-and-keep-rotated-grid-by-using-cdo">8.10.2. <code class="docutils literal notranslate"><span class="pre">selindexbox</span></code> and keep rotated grid by using <code class="docutils literal notranslate"><span class="pre">cdo</span></code></a></li>
+<li><a class="reference internal" href="#change-rotated-grid-rlon-rlat-to-lon-lat">8.10.3. Change rotated grid rlon/rlat to lon/lat</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#useful-netcdf-file-hints">8.11. Useful <code class="docutils literal notranslate"><span class="pre">netcdf</span> <span class="pre">file</span></code> hints</a><ul>
+<li><a class="reference internal" href="#delete-history">8.11.1. Delete history</a></li>
+<li><a class="reference internal" href="#change-unit">8.11.2. Change unit</a></li>
+<li><a class="reference internal" href="#change-variable-name">8.11.3. Change variable name</a></li>
+<li><a class="reference internal" href="#select-one-variable">8.11.4. Select one variable</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="chapter__working_with_CMIP5.html" title="Previous Chapter: 7. CMIP5 model output"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 7. CMIP5 mode...</span>
+    </a>
+  </li>
+  <li>
+    <a href="chapter__interpolating_stations.html" title="Next Chapter: 9. Compare station data to REMO output"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">9. Compare st... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/chapter__working_with_model_output.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="remo-output">
+<h1>8. <strong>REMO output</strong><a class="headerlink" href="#remo-output" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction-to-dkrz">
+<h2>8.1. Introduction to DKRZ<a class="headerlink" href="#introduction-to-dkrz" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.dkrz.de/up/my-dkrz/getting-started/getting-started-at-dkrz">https://www.dkrz.de/up/my-dkrz/getting-started/getting-started-at-dkrz</a></p>
+</div>
+<div class="section" id="general-hints-for-working-on-eddy-mistral">
+<h2>8.2. General hints for working on Eddy/Mistral<a class="headerlink" href="#general-hints-for-working-on-eddy-mistral" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>You can read a pdf-file with <code class="docutils literal notranslate"><span class="pre">evince</span> <span class="pre">file.pdf</span></code></li>
+</ul>
+</div>
+<div class="section" id="dealing-with-modeloutput">
+<h2>8.3. Dealing with Modeloutput<a class="headerlink" href="#dealing-with-modeloutput" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="euro-cordex-data">
+<h2>8.4. EURO-CORDEX-Data<a class="headerlink" href="#euro-cordex-data" title="Permalink to this headline">¶</a></h2>
+<p>A lot of information is stored at the homepage:</p>
+<p>e.g. User-Guide, Errata-page:</p>
+<p><a class="reference external" href="https://www.hzg.de/ms/euro-cordex/index.php.en">https://www.hzg.de/ms/euro-cordex/index.php.en</a></p>
+</div>
+<div class="section" id="remapping-tools">
+<h2>8.5. Remapping tools<a class="headerlink" href="#remapping-tools" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://wiki.gerics.de/euro-cordex/RemappingMethods">https://wiki.gerics.de/euro-cordex/RemappingMethods</a></p>
+</div>
+<div class="section" id="plotting-tool">
+<h2>8.6. Plotting tool<a class="headerlink" href="#plotting-tool" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>For plotting results: e.g. PyPlotTools (Ref: PyPlotTools)</li>
+<li>Monitoring a REMO-RUN: e.g. Clidas, documentation is in the ArcDoc</li>
+</ul>
+</div>
+<div class="section" id="download-multiple-files-from-a-web-page">
+<h2>8.7. Download multiple files from a web page<a class="headerlink" href="#download-multiple-files-from-a-web-page" title="Permalink to this headline">¶</a></h2>
+<p>example page:
+<a class="reference external" href="http://exporter.nsc.liu.se/8d168f8152704e67968ea28b19ab712e/ICHEC-EC-EARTH/day/">http://exporter.nsc.liu.se/8d168f8152704e67968ea28b19ab712e/ICHEC-EC-EARTH/day/</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">-</span><span class="n">r</span> <span class="o">-</span><span class="n">nd</span> <span class="o">-</span><span class="n">np</span> <span class="o">-</span><span class="n">e</span> <span class="n">robots</span><span class="o">=</span><span class="n">off</span> <span class="o">-</span><span class="n">A</span><span class="o">.</span><span class="n">nc</span>
+    <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">exporter</span><span class="o">.</span><span class="n">nsc</span><span class="o">.</span><span class="n">liu</span><span class="o">.</span><span class="n">se</span><span class="o">/</span><span class="mi">8</span><span class="n">d168f8152704e67968ea28b19ab712e</span><span class="o">/</span><span class="n">ICHEC</span><span class="o">-</span><span class="n">EC</span><span class="o">-</span><span class="n">EARTH</span><span class="o">/</span><span class="n">day</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>explanation:</p>
+<ul class="simple">
+<li>signifies that wget should recursively download data in any
+subdirectories it finds.</li>
+<li>sets the maximum recursion to 1 level of subfolders.</li>
+<li>copies all matching files to current directory. If two files have
+identical names it appends an extension.</li>
+<li>does not download a file if it already exists.</li>
+<li>prevents files from parent directories from being downloaded.</li>
+<li>tells wget to ignore the robots.txt file. If this command is left
+out, the robots.txt file tells wget that it does not like web
+crawlers and this will prevent wget from working.</li>
+<li>restricts downloading to the specified file types (with .nc suffix in
+this case)</li>
+</ul>
+</div>
+<div class="section" id="download-multiple-files-from-ftp-server">
+<h2>8.8. download multiple files from ftp server<a class="headerlink" href="#download-multiple-files-from-ftp-server" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">-</span><span class="n">m</span> <span class="o">--</span><span class="n">user</span><span class="o">=</span><span class="n">username</span> <span class="o">--</span><span class="n">password</span><span class="o">=</span><span class="n">password</span> <span class="n">ftp</span><span class="p">:</span><span class="o">//</span><span class="n">ip</span><span class="o">.</span><span class="n">of</span><span class="o">.</span><span class="n">old</span><span class="o">.</span><span class="n">host</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="comparing-remo-output-to-observations">
+<h2>8.9. Comparing REMO output to Observations<a class="headerlink" href="#comparing-remo-output-to-observations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="observations-have-a-different-grid-resolution-than-remo-output">
+<h3>8.9.1. Observations have a different grid resolution than REMO output<a class="headerlink" href="#observations-have-a-different-grid-resolution-than-remo-output" title="Permalink to this headline">¶</a></h3>
+<p><strong>Important</strong>: You can only remap to the coarser grid, otherwise you
+recieve empty grid boxes!</p>
+<p><strong>Attention</strong>: If grids are very similar, you can also recieve empty
+gridboxes by using cdo remap.</p>
+<div class="section" id="version-1">
+<h4>8.9.1.1. Version 1<a class="headerlink" href="#version-1" title="Permalink to this headline">¶</a></h4>
+<p>remap remo data to the grid of the observations (pay attention to
+different remapping methods for each variable and remember to use height
+correction for temperature, also see scripts in clidas and wiki-Page
+remapping tools.</p>
+</div>
+<div class="section" id="version-2">
+<h4>8.9.1.2. Version 2<a class="headerlink" href="#version-2" title="Permalink to this headline">¶</a></h4>
+<p>If you want to compare area means, you can also remap your remo-mask
+with <code class="docutils literal notranslate"><span class="pre">remapnn</span></code> to the grid of the observations.</p>
+</div>
+<div class="section" id="version-3">
+<h4>8.9.1.3. Version 3<a class="headerlink" href="#version-3" title="Permalink to this headline">¶</a></h4>
+<p>If you want to compare a single location to REMO output, consider the
+method of Standort Factsheets</p>
+<p><strong>Height correction</strong> Comparing temperature values of two different kind
+of files, you need to apply a height correction. Differences of the two
+orographie files d(height) * 0,0065 K.</p>
+</div>
+</div>
+<div class="section" id="area-mean-of-small-catchments">
+<h3>8.9.2. Area mean of small catchments<a class="headerlink" href="#area-mean-of-small-catchments" title="Permalink to this headline">¶</a></h3>
+<p>e.g. For the Hamburg port area, the value is weighted (e.g.
+precipitation) of each grid cell with the fraction of that grid cell
+which covered the port area.</p>
+<p>For this, Thomas Raub calculated the fraction of each grid cell which
+covered the catchment, see figure attached.
+<a class="reference external" href="https://git.gerics.de/GERICS_products/HPA-Factsheet">https://git.gerics.de/GERICS_products/HPA-Factsheet</a></p>
+<p><img alt="Method of weighted mean for small areas" src="_images/krueckau_weights_REMOdetailliert.png" /> Method of weighted mean for
+small areas</p>
+</div>
+</div>
+<div class="section" id="useful-cdo-hints">
+<h2>8.10. Useful <code class="docutils literal notranslate"><span class="pre">cdo</span></code> hints<a class="headerlink" href="#useful-cdo-hints" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://code.mpimet.mpg.de/projects/cdo/">https://code.mpimet.mpg.de/projects/cdo/</a></p>
+<div class="section" id="cdo-ensmean">
+<h3>8.10.1. <code class="docutils literal notranslate"><span class="pre">cdo</span> <span class="pre">ensmean</span></code><a class="headerlink" href="#cdo-ensmean" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">cdo</span> <span class="pre">ensmean</span></code> only works if all rcm simulations are on an identical
+grid. Check grid with <code class="docutils literal notranslate"><span class="pre">cdo</span> <span class="pre">griddes</span></code></p>
+</div>
+<div class="section" id="selindexbox-and-keep-rotated-grid-by-using-cdo">
+<h3>8.10.2. <code class="docutils literal notranslate"><span class="pre">selindexbox</span></code> and keep rotated grid by using <code class="docutils literal notranslate"><span class="pre">cdo</span></code><a class="headerlink" href="#selindexbox-and-keep-rotated-grid-by-using-cdo" title="Permalink to this headline">¶</a></h3>
+<p>If you use <code class="docutils literal notranslate"><span class="pre">cdo</span></code> version 1.9.5 you can select rlon, rlat and you can
+even select a subgrid with <code class="docutils literal notranslate"><span class="pre">selindexbox</span></code> and still preserve rlon/rlat
+(this was not the case in earlierer cdo-versions, they would get grid of
+the rlon/rlat grid information and would only keep lat/lon grid)</p>
+</div>
+<div class="section" id="change-rotated-grid-rlon-rlat-to-lon-lat">
+<h3>8.10.3. Change rotated grid rlon/rlat to lon/lat<a class="headerlink" href="#change-rotated-grid-rlon-rlat-to-lon-lat" title="Permalink to this headline">¶</a></h3>
+<p>If you want to change the rlon/rlat of a remo-file to lat/lon grid, you
+can use <code class="docutils literal notranslate"><span class="pre">cdo</span> <span class="pre">setgridtype</span> <span class="pre">curvilinear</span></code></p>
+</div>
+</div>
+<div class="section" id="useful-netcdf-file-hints">
+<h2>8.11. Useful <code class="docutils literal notranslate"><span class="pre">netcdf</span> <span class="pre">file</span></code> hints<a class="headerlink" href="#useful-netcdf-file-hints" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="delete-history">
+<h3>8.11.1. Delete history<a class="headerlink" href="#delete-history" title="Permalink to this headline">¶</a></h3>
+<p>If you like to give away a data file or publish it in a publication and
+do not want to publish its history. You can delete the whole history:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ncatted</span> <span class="o">-</span><span class="n">h</span> <span class="o">-</span><span class="n">a</span> <span class="n">history</span><span class="p">,</span><span class="k">global</span><span class="p">,</span><span class="n">d</span><span class="p">,,</span> <span class="n">old</span><span class="o">-</span><span class="n">file</span><span class="o">.</span><span class="n">nc</span> <span class="n">new</span><span class="o">-</span><span class="n">file</span><span class="o">.</span><span class="n">nc</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="change-unit">
+<h3>8.11.2. Change unit<a class="headerlink" href="#change-unit" title="Permalink to this headline">¶</a></h3>
+<p>If you changed the unit of the data file from e.g. Celcius to Kelvin,
+you should also change the unit in the header have a look first how your
+variable is called (ncdump -h) e.g. Variable: tg</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ncatted -O -a units,tg,o,c,“Kelvin” -h file.nc
+</pre></div>
+</div>
+</div>
+<div class="section" id="change-variable-name">
+<h3>8.11.3. Change variable name<a class="headerlink" href="#change-variable-name" title="Permalink to this headline">¶</a></h3>
+<p>(ncdump -h) e.g. Variable: var167 to tas</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ncrename</span> <span class="o">-</span><span class="n">h</span> <span class="o">-</span><span class="n">O</span> <span class="o">-</span><span class="n">v</span> <span class="n">variable_name</span><span class="p">,</span><span class="n">new_variable_name</span> <span class="n">file</span><span class="o">.</span><span class="n">nc</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="select-one-variable">
+<h3>8.11.4. Select one variable<a class="headerlink" href="#select-one-variable" title="Permalink to this headline">¶</a></h3>
+<p>Sometimes “cdo selvar” or “cdo selcode” does not work, then:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ncks</span> <span class="o">-</span><span class="n">v</span> <span class="n">variable</span> <span class="n">file</span><span class="o">.</span><span class="n">nc</span> <span class="n">variable</span><span class="o">.</span><span class="n">nc</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Lars Buntemeyer.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

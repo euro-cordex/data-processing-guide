@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Preprocessing &#8212; REMO Documentation and User Guide 0 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.12.4.min.js "></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="_static/bootstrap-3.4.1/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><span><img src="_static/REMO_logo.png"></span>
+          REMO</a>
+        <span class="navbar-text navbar-version pull-left"><b>2</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="http://remo-rcm.de">Homepage</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="chapter__introduction.html">1. <strong>Introduction</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__introduction.html#additional-resources">1.1. Additional resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__introduction_to_climate_modelling.html">2. <strong>Regional climate change assessment and uncertainty analysis</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__introduction_to_climate_modelling.html#short-course-by-t-weber-and-a-kriegsmann">2.1. <em>Short course by T. Weber and A. Kriegsmann</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__introduction_to_climate_modelling.html#introduction-into-climate-modelling">2.2. Introduction into climate modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__introduction_to_climate_modelling.html#climate-modelling">2.3. Climate modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__introduction_to_climate_modelling.html#summary-of-climate-modelling">2.4. Summary of Climate modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__introduction_to_climate_modelling.html#gerics-rgb-code">2.5. GERICS RGB CODE</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__concept_note_on_downscaling_climate_information.html">3. <strong>Concept note on Downscaling Climate Information</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__concept_note_on_downscaling_climate_information.html#important-things-to-remember-when-using-climate-data">3.1. Important things to remember when using climate data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__concept_note_on_downscaling_climate_information.html#literature">3.2. Literature</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__esgf_cordex_data_access.html">4. <strong>ESGF - How to get climate data, what is available &amp; data formats</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__esgf_cordex_data_access.html#mission">4.1. Mission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__esgf_cordex_data_access.html#how-to-get-access-on-cordex-data">4.2. How to get access on CORDEX-Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__esgf_cordex_data_access.html#how-to-get-access-on-climate-data">4.3. How to get access on climate data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__evaluation.html">5. <strong>Evaluation of RCM output</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__evaluation.html#data-for-comparison">5.1. Data for comparison</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__visualisation.html">6. <strong>Visualisation of Climate Data</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__visualisation.html#pyplottools-1-2-4">6.1. PyPlotTools-1.2.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__visualisation.html#instalation">6.2. Instalation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__working_with_CMIP5.html">7. <strong>CMIP5 model output</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__working_with_CMIP5.html#trouble-shooting">7.1. Trouble shooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__working_with_model_output.html">8. <strong>REMO output</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__working_with_model_output.html#introduction-to-dkrz">8.1. Introduction to DKRZ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__working_with_model_output.html#general-hints-for-working-on-eddy-mistral">8.2. General hints for working on Eddy/Mistral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__working_with_model_output.html#dealing-with-modeloutput">8.3. Dealing with Modeloutput</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__working_with_model_output.html#euro-cordex-data">8.4. EURO-CORDEX-Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__working_with_model_output.html#remapping-tools">8.5. Remapping tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__working_with_model_output.html#plotting-tool">8.6. Plotting tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__working_with_model_output.html#download-multiple-files-from-a-web-page">8.7. Download multiple files from a web page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__working_with_model_output.html#download-multiple-files-from-ftp-server">8.8. download multiple files from ftp server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__working_with_model_output.html#comparing-remo-output-to-observations">8.9. Comparing REMO output to Observations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__working_with_model_output.html#useful-cdo-hints">8.10. Useful <code class="docutils literal notranslate"><span class="pre">cdo</span></code> hints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__working_with_model_output.html#useful-netcdf-file-hints">8.11. Useful <code class="docutils literal notranslate"><span class="pre">netcdf</span> <span class="pre">file</span></code> hints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__interpolating_stations.html">9. <strong>Compare station data to REMO output</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__interpolating_stations.html#create-an-unstructured-grid-for-22-stations-num-22">9.1. 1. Create an unstructured grid - for 22 stations NUM=22</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__interpolating_stations.html#create-weights-for-remo-grid-for-22-stations">9.2. 2. Create weights for REMO grid for 22 stations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__interpolating_stations.html#interpolation">9.3. 3. Interpolation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__interpolating_stations.html#extract-stations">9.4. 4. Extract stations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__intro_cdo.html">10. <strong>Introduction into the Climate Data Operator (CDO)</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__intro_cdo.html#climate-data-operators-cdo">10.1. Climate Data Operators (CDO)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__netcdf.html">11. <strong>Netcdf</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__netcdf.html#how-can-i-see-the-data-description-and-the-content-of-a-netcdf-file">11.1. How can I see the data description and the content of a NetCDF-file?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__pyremo.html">12. <strong>PyRemo</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__pyremo.html#examples">12.1. Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__git.html">13. <em>GIT</em></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__git.html#useful-commands">13.1. Useful commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__git.html#troubleshooting">13.2. Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__usefull_shell_commands.html">14. <strong>Useful Shell Commands</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__usefull_shell_commands.html#important-commands-case-sensitive">14.1. Important commands (case-sensitive!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__usefull_shell_commands.html#usage-of-shell">14.2. Usage of Shell</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__troubleshooting.html">15. <strong>Troubleshooting</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__troubleshooting.html#troubleshooting-for-pyplottools">15.1. Troubleshooting for PyPlotTools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="syntax-examples.html">16. RST Syntax Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#headings">16.1. Headings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#code">16.2. Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#admonitions">16.3. Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#footnotes">16.4. Footnotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#icons">16.5. Icons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#tables">16.6. Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#code-documentation">16.7. Code Documentation</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Preprocessing</a><ul>
+<li><a class="reference internal" href="#experiment-plan">Experiment Plan</a><ul>
+<li><a class="reference internal" href="#which-model-domain-do-you-want-to-look-at">Which model domain do you want to look at?</a></li>
+<li><a class="reference internal" href="#which-resolution-do-you-need-does-it-require-more-than-one-nesting">Which resolution do you need? Does it require more than one nesting?</a></li>
+<li><a class="reference internal" href="#what-kind-of-forcing-data-do-you-want-to-use">What kind of forcing data do you want to use?</a></li>
+<li><a class="reference internal" href="#which-kind-of-supercomputer-will-you-use">Which kind of supercomputer will you use?</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#introduction-to-the-preprocessing-workflow">Introduction to the Preprocessing Workflow</a></li>
+<li><a class="reference internal" href="#choosing-grid-parameters">Choosing Grid Parameters</a></li>
+<li><a class="reference internal" href="#the-surface-library">The Surface Library</a><ul>
+<li><a class="reference internal" href="#data-for-the-mean-annual-cycle">Data for the Mean Annual Cycle</a><ul>
+<li><a class="reference internal" href="#creating-a-new-surface-library">Creating a new Surface Library</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#obtaining-additional-datasets">Obtaining additional Datasets</a></li>
+<li><a class="reference internal" href="#configuration">Configuration</a></li>
+<li><a class="reference internal" href="#running-the-setup-sh-script">Running the setup.sh script</a></li>
+<li><a class="reference internal" href="#creating-the-surface-library">Creating the Surface Library</a></li>
+<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a><ul>
+<li><a class="reference internal" href="#step-by-step-example">Step by Step Example</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#step-1">Step 1</a></li>
+<li><a class="reference internal" href="#step-2">Step 2</a></li>
+<li><a class="reference internal" href="#step-3">Step 3</a></li>
+<li><a class="reference internal" href="#step-4">Step 4</a></li>
+<li><a class="reference internal" href="#step-5">Step 5</a></li>
+<li><a class="reference internal" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#driving-data-and-boundary-conditions">Driving Data and Boundary Conditions</a><ul>
+<li><a class="reference internal" href="#remaptoremo">RemapToREMO</a></li>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#setup-and-compilation">Setup and compilation</a><ul>
+<li><a class="reference internal" href="#prepareafiles-running-the-preprocessor">PrepareAFiles - Running the preprocessor</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id1">Requirements</a></li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/preprocess.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="preprocessing">
+<span id="cha-preprocessing"></span><h1>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline">¶</a></h1>
+<p>This chapter deals with a more detailed introduction into the general
+simulation workflow, in the context of REMO often called ’experiment’.
+It requires a proper planning since a useful REMO run needs some well
+prepared input data. In this chapter, we describe how to plan and setup
+your own REMO experiment. This includes choosing a domain and resolution
+([sec:preproc:plan]), creating your own surface data
+([sec:preproc:bodlib]) and interpolating the forcing data from a global
+dataset ([sec:preproc:forcing]).</p>
+<div class="section" id="experiment-plan">
+<h2>Experiment Plan<a class="headerlink" href="#experiment-plan" title="Permalink to this headline">¶</a></h2>
+<p>When you obtained the REMO model and you have successfully run the
+tutorial run from Chapter [cha:quickstart], you might already have an
+idea for your own REMO experiment and scientific task. You then should
+consider the following points, before diving into your own preprocessing
+quest.</p>
+<div class="section" id="which-model-domain-do-you-want-to-look-at">
+<h3>Which model domain do you want to look at?<a class="headerlink" href="#which-model-domain-do-you-want-to-look-at" title="Permalink to this headline">¶</a></h3>
+<p>First of all, you have to be aware of what domain you want to look at.
+That means you need to know the location and extent of your domain of
+interest. The location is usually given in the Geopgraphic coordinate
+system (e.g, lontitude, latitude) and the unit is usually in degrees.
+Since the geopraphich coordinate system has two singularities at the
+north and the south pole, depending on the model domain, a grid rotation
+of your model domain to the equator might be necessary (see Fig.
+[fig:rot_grid]). The problem is that near the poles, the grid get very
+much distorted and grid boxes are not of equals size. Near the equator,
+the grid boxes cover more or less the same area. Therefore, the grid
+should be rotated so that the equator goes straight through the center
+of the domain of interest to cover the domain with a symmetric
+undistored spherical grid. It is recommended to use the same rotated
+grid from model domains, where REMO was running in past experiments,
+when you like to compare the results. Information about the existing
+experiments is available on the REMO homepage. In the Appendix
+[cha:model_domains]</p>
+</div>
+<div class="section" id="which-resolution-do-you-need-does-it-require-more-than-one-nesting">
+<h3>Which resolution do you need? Does it require more than one nesting?<a class="headerlink" href="#which-resolution-do-you-need-does-it-require-more-than-one-nesting" title="Permalink to this headline">¶</a></h3>
+<p>More than one nesting is necessary to avoid big (factor 10) scale jumps
+between the driving data and REMO. Both questions are linked as high
+resolution runs (10km) require usually a double nesting. For example,
+one might produce a REMO experiment with a horizontal resolution of 50km
+forced by GCM data. The output data of the REMO experiment is used as
+boundary data for a second domain nesting with REMO afterwards. The
+second REMO run resolves a smaller area inside of the previous REMO
+domain,e.g. with a 10km horizontal grid. An overview of transforming
+horizontal resolution from km into degree (as needed in scripts) can be
+viewed under UsefulInformations. The vertical resolution is usually 27
+levels nad can be switched to up to 49 levels. The level choice is
+independent from the vertical resolution of the driving data.</p>
+</div>
+<div class="section" id="what-kind-of-forcing-data-do-you-want-to-use">
+<h3>What kind of forcing data do you want to use?<a class="headerlink" href="#what-kind-of-forcing-data-do-you-want-to-use" title="Permalink to this headline">¶</a></h3>
+<p>In principle, control, scenario and validation runs are possible.
+Control- and scenario runs are driven by start and boundary data from
+global climate models, e.g. ECHAM. The data from the global model is
+preprocessed for REMO. Observed greenhouse gas concentrations are used
+as boundary condition for control runs. Scenario runs use greenhouse gas
+concentrations based on different socio-economic assumptions. Standard
+scenarios that are produced by REMO are A1B, B1 and A2. In contrast,
+validation runs are driven by reanalysis data, e.g. ERA-40 and
+ERA-interm, and operational analysis. The kind of run determines which
+forcing data you need and how to configure the preprocessor (Section
+[sec:preproc:forcing]).</p>
+</div>
+<div class="section" id="which-kind-of-supercomputer-will-you-use">
+<h3>Which kind of supercomputer will you use?<a class="headerlink" href="#which-kind-of-supercomputer-will-you-use" title="Permalink to this headline">¶</a></h3>
+<p>Different supercomputers use varied compilers. You can either use a
+massive parallel or a vector machine to run REMO. REMO versions are
+available for both supercomputer types. The latest Version REMO 2015
+is suiteable for massive parallel machines (Intel machines). How much
+computation time is available and how do you spend it reasonably? You
+can quite easily waste of lot of cpu hours if you choose to many
+processors or if your resolution if unnecessarily large. Refer to
+Section [sec:] for more details on the parallelization of REMO.
+Consider that different supercomputers produce slightly different
+results due to technical reasons when you compare output data from
+different machines.</p>
+</div>
+</div>
+<div class="section" id="introduction-to-the-preprocessing-workflow">
+<h2>Introduction to the Preprocessing Workflow<a class="headerlink" href="#introduction-to-the-preprocessing-workflow" title="Permalink to this headline">¶</a></h2>
+<p>The general representation of the worlflow is presented on the Fig.
+[fig:workflow]. The first step into your own REMO experiment is to setup
+your model domain and create some data to your model. This <em>driving</em>
+(often also called <em>forcing</em>) data is essential since it provides time
+dependent boundary condtions for your model domain. There are three
+possible places your driving data can come from:</p>
+<ul class="simple">
+<li>Global atmospheric model (like MPI-OM or Nor-ESM)</li>
+<li>Atmospheric reanalysis (like ERA Iterim or NCEP reanalysis)</li>
+<li>Run of the regional model with larger domain (usually another REMO
+run)</li>
+</ul>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="./fig/REMO_workflow.png"><img alt="Overview of the general worfklow" src="./fig/REMO_workflow.png" style="width: 80.0%;" /></a>
+<p class="caption"><span class="caption-text">Overview of the general workflow for a user customated REMO
+experiment.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>However, the actual files containing results from a global model or a
+reanalysis run can neither be used as an input file for REMO nor the
+preprocessor directly. Instead, the data from the files has to be
+extracted and stored in a file that fullfils certain meta data
+conventions (independent from the acutal file format, e.g., IEG or
+NETCDF). Such a file is simply called a ’g-file’ and its main purpose
+is to store global data using naming conventions and a code table that
+can be understood by REMO and its preprocessor while conserving the
+original model grid and resolution. However, for the actual REMO run,
+this global data has to be interpolated to the domain of interest.
+This mainly means that the data from the g-file has to be interpolated
+to the new (rotated) grid and resolution. The file that contains only
+this <em>regional</em> model data and can be read by REMO is called an
+’a-file’ (from the German word ’Antrieb’). This is the file that
+contains the actual forcing data for the experiment. It also contains
+specific fields for the surface boundary conditions which are created
+with the <em>bodlib</em> toolkit which is a set of scripts that creates the
+so-called domain specific <em>surface library</em>. Although during the model
+run the forcing data is only used to determine the time dependent
+boundary conditions, the a-file always contains all forcing fields for
+the whole model domain (and not only the boundary region). This means
+storing a lot of redundant data, however, this is necessary since
+usually REMO should also be able to read <em>inital conditions</em> from
+these files and it is also helpful to compare the original global data
+with the REMO results. The process of interpolating global data from a
+g-file to an a-file and combining it with the surface library data is
+handled by a seperate FORTRAN program, usually called the
+<em>preprocessor</em> (also the preprocessor only handles the interpolation
+of g-files to a-files, it is convenient to call <em>preprocessing</em> the
+whole process of creating g-files, a-files and surface data).
+In addition to the forcing data stored in g-files and a-files, REMO
+requires additional files that contain surface data. Since this data
+is also specific for the domain of interest, is has to be created for
+each model domain separately. This surface data usually contains time
+dependent fields for the surface albedo, vegatation ratio and the leaf
+area index. The creation of these surface files is also handled by the
+bodlib toolkit (German ’Boden Library’) which, in addition to the
+surface library, creates three files for the surface fields on the
+spatial model grid and each in a montly resolution (e.g., 12 time
+steps in each file).</p>
+</div>
+<div class="section" id="choosing-grid-parameters">
+<h2>Choosing Grid Parameters<a class="headerlink" href="#choosing-grid-parameters" title="Permalink to this headline">¶</a></h2>
+<p>For the setup of a REMO simulation, the second step (after deciding on
+a name for the simulation) is to define the model domain and the
+horizontal grid spacing. A distinct name should be assigned to each
+model domain and it might also be good to include the horizontal
+resolution in the name, e.g. europa044 for a 0.44domain over Europe.
+For the horizontal discretisation, REMO uses a <strong>rotated spherical
+grid</strong> (Figure [fig:rot_grid]). The grid should be placed in a way
+that the rotated equator approximately crosses the center of the model
+domain. This would ensure a negligible meridional convergence and
+almost equal real grid box sizes. For model domains within or close to
+the tropics (close to the real-world equator) a rotation of the grid
+is usually not necessary.
+A specific model domain has to be defined by setting the following
+parameters:</p>
+<ul class="simple">
+<li>real-world latitude (lat) and longitude (lon) of the rotated North
+Pole (or South Pole)</li>
+<li>horizontal resolution in the rotated system in degrees (valid for
+both the x- and the y-direction)</li>
+<li>total number of grid boxes in x- and y-direction</li>
+<li>lat/lon location of the lower left grid box center in the rotated
+system</li>
+</ul>
+<p>Typical horizontal resolutions for REMO are 0.5(approx. 55 km),
+0.44(approx. 50 km), 1/6(approx. 18 km) and 0.11(approx. 12 km). Not
+all numbers of grid boxes in x- and y-direction are allowed! The
+number of boxes in each direction (nx and ny) have to follow these
+rules (see Appendix [app:domainsize]):</p>
+<p>nx - 1 = 2 lx * 3 mx * 5 nx with lx not equal to 1
+ny - 1 = 2 ly * 3 my * 5 ny with ly not equal to 1</p>
+</div>
+<div class="section" id="the-surface-library">
+<h2>The Surface Library<a class="headerlink" href="#the-surface-library" title="Permalink to this headline">¶</a></h2>
+<p>After defining a model domain and a corresponding horizontal resolution,
+a surface library (sometimes referred to as soil library) and monthly
+vegetation fields have to be created. The surface library provides
+information about land sea mask, orography, and other surface parameters
+like roughness length, albedo, vegetation cycle etc.. These informations
+are neccessary as input data for the REMO model run as well as the REMO
+preprocessors which creates the forcing data for the boundary conditions
+(see Section [sec:preproc:forcing]). The surface library contains
+information on those surface characteristics which are constant in time
+(e.g. orography, surface roughness lenght, land-sea-mask, field
+capacity). The monthly vegetation fields contain information about the
+climatological annual cycle in monthly resolution of the surface
+background albedo, vegetation fraction and leaf area index (LAI), i.e.,
+12 fields for each of these three parameters. In essence the surface
+library is the file with your surface boundary condition interpolated on
+to the model grid.</p>
+<p>The surface library itself usually consists of a single srv-file (which
+is a special binary format) and contains the fields list in Table
+[tab:surflib].</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="15%" />
+<col width="14%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Code</th>
+<th class="head">Name</th>
+<th class="head">Unit</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>129</td>
+<td>FIB</td>
+<td>m</td>
+<td>surface geopotential (orography)</td>
+</tr>
+<tr class="row-odd"><td>172</td>
+<td>BLA</td>
+<td>fract.</td>
+<td>land sea mask</td>
+</tr>
+<tr class="row-even"><td>173</td>
+<td>AZ0</td>
+<td>m</td>
+<td>surface roughness length</td>
+</tr>
+<tr class="row-odd"><td>174</td>
+<td>ALB</td>
+<td>fract.</td>
+<td>surface background albedo</td>
+</tr>
+<tr class="row-even"><td>198</td>
+<td>VGRAT</td>
+<td>&#160;</td>
+<td>vegetation ratio</td>
+</tr>
+<tr class="row-odd"><td>199</td>
+<td>VAROR</td>
+<td>&#160;</td>
+<td>orographic variance (for surface runoff)</td>
+</tr>
+<tr class="row-even"><td>200</td>
+<td>VLT</td>
+<td>&#160;</td>
+<td>leaf area index</td>
+</tr>
+<tr class="row-odd"><td>212</td>
+<td>FOREST</td>
+<td>&#160;</td>
+<td>vegetation type</td>
+</tr>
+<tr class="row-even"><td>226</td>
+<td>FAO</td>
+<td>&#160;</td>
+<td>FAO data set (soil data flags)</td>
+</tr>
+<tr class="row-odd"><td>229</td>
+<td>WSMX</td>
+<td>&#160;</td>
+<td>field capacity of soil</td>
+</tr>
+<tr class="row-even"><td>272</td>
+<td>BETA</td>
+<td>&#160;</td>
+<td>shape parameter for Arno Scheme</td>
+</tr>
+<tr class="row-odd"><td>273</td>
+<td>WMINLOK</td>
+<td>&#160;</td>
+<td>minimum subgrid wcap (field capacity)</td>
+</tr>
+<tr class="row-even"><td>274</td>
+<td>WMAXLOK</td>
+<td>&#160;</td>
+<td>maximum subgrid wcap (field capacity)</td>
+</tr>
+</tbody>
+</table>
+<p>Table: Fields in the Surface Library</p>
+<p>The surface library file itself is usually named something like <cite>lib_[NAME_OF_DOMAN]_frac</cite>
+where <cite>[NAME_OF_DOMAIN]</cite> indicates the name of the domain of the
+surface library. The fields in this file are already interpolated to
+the correct model domain and resolution and they are required by REMO
+as surface boundary conditions. However, this file is not used
+directly during the model run but rather indirectly. The surface
+library is used by the preprocessing of forcing data (Section
+[sec:preproc:forcing]) and is included in the forcing files.</p>
+<div class="section" id="data-for-the-mean-annual-cycle">
+<h3>Data for the Mean Annual Cycle<a class="headerlink" href="#data-for-the-mean-annual-cycle" title="Permalink to this headline">¶</a></h3>
+<p>There are another three srv-files that contain the time-dependent mean
+annual cycles for the albedo (ALB), leaf area index (VLT) and vegetation
+ratio (VGRAT) (Table [tab:annual])</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="16%" />
+<col width="18%" />
+<col width="52%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Code</th>
+<th class="head">Name</th>
+<th class="head">Unit</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>174</td>
+<td>ALB</td>
+<td>fract.</td>
+<td>surface background albedo</td>
+</tr>
+<tr class="row-odd"><td>198</td>
+<td>VGRAT</td>
+<td>&#160;</td>
+<td>vegetation ratio</td>
+</tr>
+<tr class="row-even"><td>200</td>
+<td>VLT</td>
+<td>&#160;</td>
+<td>leaf area index</td>
+</tr>
+</tbody>
+</table>
+<p>Table: Fields for the Mean Annual Cycle</p>
+<p>There is a file for each field, usally named somthing like this:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">albyear_[NAME_OF_DOMAIN].srv</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">vgryear_[NAME_OF_DOMAIN].srv</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">vltyear_[NAME_OF_DOMAIN].srv</span></code></li>
+</ul>
+<p>These files are used directly for the REMO model run and have to
+specified in the Input Namelist (see Appendix [cha:remo_namelist]). The
+surface library and the files for the annual cycles are domain specific
+and have to be prepared for each model domain individually There is a
+number of surface libraries available from GERICS on MISTRAL at this
+location:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/work/ch0636/surflibs/
+</pre></div>
+</div>
+<p>and the associated files for the mean annual cycle can be found here:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/pool/data/remo/
+</pre></div>
+</div>
+<p>or ask for support from GERICS. A list of available model domains, for
+which surface data (and maybe even forcing data) is available, can be
+found in Appendix [cha:grid_list]. However, in the following sections,
+we describe how to create these files for a new domain.</p>
+<div class="section" id="creating-a-new-surface-library">
+<h4>Creating a new Surface Library<a class="headerlink" href="#creating-a-new-surface-library" title="Permalink to this headline">¶</a></h4>
+<p>The surface library is created by interpolating data from the GTOPO30
+global digital elevation model (DEM) to the REMO model grid. The
+interpolation is done by using</p>
+<ul class="simple">
+<li>shell-scripts, Fortan- and C-Programs (available from the REMO
+gitlab)</li>
+<li>a global surface library and FAO-datasets (located at
+/hpss/arch/ch0636/bodlib/input_data/)</li>
+<li>global GTOPO orography (located at /hpss/arch/ch0636/bodlib/gtopo/)</li>
+</ul>
+<p>This collcetion of scripts and data is referred to as the <em>bodlibkit</em>.
+You can download it from the REMO gitlab at GERICS, e.g.,</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone http://git.gerics.de/REMO/BodLibKit.git
+</pre></div>
+</div>
+<p>Among others, the main directory contains these directories and files:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/bin      <span class="c1"># shell scripts</span>
+/config   <span class="c1"># configuration files</span>
+/data     <span class="c1"># several binary data files (srv,dat,bin)</span>
+/gtopo    <span class="c1"># GTOPO30 global digital elevation model</span>
+/GOOD     <span class="c1"># fortran codes to read binary elevation data</span>
+/src      <span class="c1"># C source code for goodrot program</span>
+setup.sh  <span class="c1"># shell script to setup a new surface library from a config file</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="obtaining-additional-datasets">
+<h3>Obtaining additional Datasets<a class="headerlink" href="#obtaining-additional-datasets" title="Permalink to this headline">¶</a></h3>
+<p>The surface library is created by interpolating data from the GTOPO30
+global digital elevation model (DEM) 3 and additional FAO-datasets to
+the REMO model grid. The interpolation is done by using a number of
+shell-scripts, Fortan- and C-Programs. These programs are partly created
+and compiled on the fly by the shell scripts.</p>
+<p>To create a new Surface Library, you first have to obtain the GTOPO30
+and FAO datasets. At GERICS, these can be found in the HPSS archive at
+DKRZ at a global surface library and FAO-datasets (located at
+<code class="docutils literal notranslate"><span class="pre">/hpss/arch/ch0636/bodlib/input_data</span></code>, and global GTOPO orography
+(located at <code class="docutils literal notranslate"><span class="pre">/hpss/arch/ch0636/bodlib/gtopo</span></code>)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/hpss/arch/ch0636/bodlib/input_data/gtopo.tar.gz            <span class="c1"># GTOPO30 global elevation</span>
+/hpss/arch/ch0636/bodlib/gtopo/bodlib_input_data.tar.gz     <span class="c1"># additional FAO datasets</span>
+</pre></div>
+</div>
+<p>The GTOPO30 data is available in with different endianess (e.g., big and
+little endian) since these are binary files. However, the scripts will
+check for endianess and convert them if neccessary. Download these files
+from the HPSS archive (using ‘get‘) and untar them by using, e.g.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar -xzf bodlib_input_data.tar.gz
+</pre></div>
+</div>
+<p>This data has to go into the ‘/data‘ subdirectory of the ‘BodLibKiT‘
+root directory. So it is advisable to untar this file directly in the
+‘data‘ subdirectory. So in addition to the data from the gitlab, the
+‘/data‘ subdirectory should contain these additional files:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>MSA0100_1996_DHR30.med
+MSA0100_1996_LAT.bin
+MSA0100_1996_LON.bin
+goge2_0g.img
+f_lim.dat
+</pre></div>
+</div>
+<p>The GTOPO30 data hast to be untarred directly in the ‘BodLibKit‘ root
+directory since these files will automaticall go into the gtopo
+subdirectory.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar -xzf gtopo.tar.gz
+</pre></div>
+</div>
+<p>In the end, the gtopo subdirectory should contain about 33 elvevation
+data files, e.g.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>E020N40.DEM  E020S10.DEM  E060N90.DEM  E060S60.DEM ...
+</pre></div>
+</div>
+</div>
+<div class="section" id="configuration">
+<h3>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h3>
+<p>To setup a configuration for a new REMO domain, you can create a new
+config file in the <code class="docutils literal notranslate"><span class="pre">config</span></code> subdirectory. You can either copy one of
+the available configurations to a new file or use the
+<code class="docutils literal notranslate"><span class="pre">template.config</span></code> file. However, your config file should get a short
+name by which it can easily be identified and it should be equal to the
+<code class="docutils literal notranslate"><span class="pre">EXP</span></code> variable in the config file. In the end, you have to fill in the
+following parameters in the config file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">EXP</span><span class="o">=</span>                     <span class="c1"># Name of the area</span>
+<span class="nv">IWATER</span><span class="o">=</span><span class="m">1</span>                 <span class="c1"># 1=fractional surface library, 0=nonfractional</span>
+
+<span class="nv">RESOLUTION_X</span><span class="o">=</span>            <span class="c1"># Number of Longitudes</span>
+<span class="nv">RESOLUTION_Y</span><span class="o">=</span>            <span class="c1"># Number of Latitudes</span>
+<span class="nv">RESOLUTION</span><span class="o">=</span>              <span class="c1"># Resolution of destination grid</span>
+<span class="nv">LON_LL</span><span class="o">=</span>                  <span class="c1"># Longitude of origin - dest. in rotated system</span>
+<span class="nv">LAT_LL</span><span class="o">=</span>                  <span class="c1"># Latitude of origin - dest. in rotated system</span>
+<span class="c1">#</span>
+<span class="c1"># lon/lat coordinates of South Pole! If you have the North Pole available,</span>
+<span class="c1"># you can compute the South Pole like this:</span>
+<span class="c1">#</span>
+<span class="c1"># LON_SP = LON_NP + 180 (even if it gets larger than 180 degrees)</span>
+<span class="c1"># LAT_SP = -1 * LAT_NP</span>
+<span class="c1">#</span>
+<span class="nv">LON_SP</span><span class="o">=</span>                  <span class="c1"># Longitude of South Pole - destination grid</span>
+<span class="nv">LAT_SP</span><span class="o">=</span>                  <span class="c1"># Latitude of South Pole - destination grid</span>
+<span class="nv">POL</span><span class="o">=</span><span class="m">0</span>                    <span class="c1"># Pole inside the domain</span>
+                         <span class="c1"># 0 = No, 1 = North Pole, 2 = South Pole</span>
+<span class="nv">IGLAC</span><span class="o">=</span><span class="m">0</span>                  <span class="c1"># 0 = default</span>
+                         <span class="c1"># 1 = REMOglacier version: surface parameters (except</span>
+                         <span class="c1">#     WAVA and ICAP) will computed only based on non-</span>
+                         <span class="c1">#     glaciated land fraction</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The surface library covers the REMO model domain PLUS one row of
+gridboxes outside the model domain along each side. You need an
+additional band of one boundary box around your future REMO domain in
+the surface library. Consequently, we have to add 2 grid boxes for each
+dimension resulting in <code class="docutils literal notranslate"><span class="pre">RESOLUTION_X</span></code> and <code class="docutils literal notranslate"><span class="pre">RESOLUTION_Y</span></code> being
+larger by 2 gridboxes than the actual grid of the REMO run. It is also
+crucial to shift the coordinates for the lower left grid box center
+(<code class="docutils literal notranslate"><span class="pre">LON_LL</span></code>, <code class="docutils literal notranslate"><span class="pre">LAT_LL</span></code>) by one grid cell to the left and bottom
+respectively. Note that in REMO and the BodLibKit, grid related
+coordinates always denote the center of a grid box, e.g., (<code class="docutils literal notranslate"><span class="pre">LON_LL</span></code>,
+<code class="docutils literal notranslate"><span class="pre">LAT_LL</span></code>) denotes the coordinates of the center of the lower left grid
+box and NOT the lower left corner of the model domain (which would be
+shifted by another half of a grid box). If you are unsure, you can have
+a look at the REMO user guide for a detailled example of how to create a
+Surface Library with the BodLibKit.</p>
+</div>
+<p>The parameter POL has to be set to 0 if none of the rotated poles lies
+within the model domain (usually this is the case). It has to be set to
+1 (2) if the rotated North (South) Pole lies within the domain
+boundaries. Please be aware, that <code class="docutils literal notranslate"><span class="pre">LON_SP</span></code> and <code class="docutils literal notranslate"><span class="pre">LAT_SP</span></code> denote the
+coordinates of the South pole (NOT the North Pole). Usually the rotated
+REMO grid is defined by the North Pole and you have to convert these to
+the South Pole coordinates as indicated in the config file. From version
+5.1 on, REMO uses a fractional surface coverage (each grid box can
+contain a land, a water and a sea ice fraction). Therefore, when
+carrying out simulations with a newer REMO version, the parameter IWATER
+has to be set to 1. For the fractional version, there are also modified
+scripts ending on <cite>_frac.sh</cite> that have to be executed (see below).</p>
+</div>
+<div class="section" id="running-the-setup-sh-script">
+<h3>Running the setup.sh script<a class="headerlink" href="#running-the-setup-sh-script" title="Permalink to this headline">¶</a></h3>
+<p>The setup.sh script is supposed to setup a new directory named after
+<code class="docutils literal notranslate"><span class="pre">EXP</span></code> (name of the are) in the BodLibKit root directory and to create
+a <code class="docutils literal notranslate"><span class="pre">work</span></code> and <code class="docutils literal notranslate"><span class="pre">results</span></code> directory. In addition, the script also
+creates links to all neccessary data in the <code class="docutils literal notranslate"><span class="pre">EXP/work</span></code> directory and
+copies the main shell scripts from the <code class="docutils literal notranslate"><span class="pre">/bin</span></code> directory to the <code class="docutils literal notranslate"><span class="pre">EXP</span></code>
+directory. All you have to provide to the setups.sh script is your
+domain configuration file in the <code class="docutils literal notranslate"><span class="pre">config</span></code> directory, e.g,</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./setup.sh &lt;EXP.config&gt;
+</pre></div>
+</div>
+<p>The script should also check if all neccessary data has been obtained
+from the HPSS archive and whether it is in the right place. After
+running the setup script successfully, the <code class="docutils literal notranslate"><span class="pre">EXP</span></code> directory should be
+available in the BodLibKit root directory.</p>
+</div>
+<div class="section" id="creating-the-surface-library">
+<h3>Creating the Surface Library<a class="headerlink" href="#creating-the-surface-library" title="Permalink to this headline">¶</a></h3>
+<p>After creating the setup directory, you can change to your <code class="docutils literal notranslate"><span class="pre">EXP</span></code>
+directory and execute the scripts in the indicated order. Please be
+aware, that these scripts create and compile C and Fortran Code on the
+fly so you need to configure a compiler for these. The compiler is
+chosen in the <code class="docutils literal notranslate"><span class="pre">system_setting.sh</span></code> configuration script in the work
+subdirectory. There are some default configurations, e.g., for the
+Mistral the intel compiler is chosen. Make sure, you have a compiler
+available and set in the <code class="docutils literal notranslate"><span class="pre">system_setting.sh</span></code>.</p>
+</div>
+<div class="section" id="troubleshooting">
+<h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h3>
+<p>As mentioned, the scripts of the surface library create C and Fortran
+Codes on the fly and compile it. These programs allocate their memory on
+the stack memory since they define their required memory at compilation
+time (automatic array). This might create trouble if the stack size on
+your system is limited. So if a script, especially the first.sh or
+second.sh, exists with, typically, a segmentation fault, you can try to
+unlimit the stack size. To remove the stack size limit on a non-Windows
+system (i.e. Linux, Unix or OSX), use one of the following commands.</p>
+<p>If you your shell is sh, bash or ksh use</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">ulimit</span> -s unlimited
+</pre></div>
+</div>
+<p>If your shell is csh, tcsh or zsh use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>limit stacksize unlimited
+</pre></div>
+</div>
+<div class="section" id="step-by-step-example">
+<h4>Step by Step Example<a class="headerlink" href="#step-by-step-example" title="Permalink to this headline">¶</a></h4>
+<p>In the following, we give a detailled example of how to configure the
+scripts of the BodLibKit and how to create a new surface library and the
+files for mean annual cycle. The first thing to do, is to configure the
+BodLibKit with your desired grid parameters (see Section
+[sec:grid_params]) This is done in the header of the first script
+<code class="docutils literal notranslate"><span class="pre">first.sh</span></code>. In the header of the file, the following parameters can be
+configured:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">EXP</span><span class="o">=</span><span class="n">europa011</span>            <span class="c1"># Name of the area</span>
+<span class="n">IWATER</span><span class="o">=</span><span class="mi">1</span>                 <span class="c1"># 1=fractional surface library, 0=nonfractional</span>
+
+<span class="n">RESOLUTION_X</span><span class="o">=</span><span class="mi">435</span>         <span class="c1"># Number of Longitudes</span>
+<span class="n">RESOLUTION_Y</span><span class="o">=</span><span class="mi">435</span>         <span class="c1"># Number of Latitudes</span>
+<span class="n">RESOLUTION</span><span class="o">=</span><span class="mf">0.11</span>          <span class="c1"># Resolution of destination grid</span>
+<span class="n">LAT_LL</span><span class="o">=-</span><span class="mf">24.035</span>           <span class="c1"># Latitude of origin - dest. in rotated system</span>
+<span class="n">LON_LL</span><span class="o">=-</span><span class="mf">29.035</span>           <span class="c1"># Longitude of origin - dest. in rotated system</span>
+<span class="n">LAT_SP</span><span class="o">=-</span><span class="mf">39.25</span>            <span class="c1"># Latitude of South Pole - destination grid</span>
+<span class="n">LON_SP</span><span class="o">=</span><span class="mf">18.0</span>              <span class="c1"># Longitude of South Pole - destination grid</span>
+<span class="n">POL</span><span class="o">=</span><span class="mi">0</span>                    <span class="c1"># Pol innerhalb des Gebietes</span>
+                         <span class="c1"># 0 = No, 1 = North Pole, 2 = South Pole</span>
+<span class="n">IGLAC</span><span class="o">=</span><span class="mi">0</span>                  <span class="c1"># 0 = default</span>
+                         <span class="c1"># 1 = REMOglacier version: surface parameters (except</span>
+                         <span class="c1">#     WAVA and ICAP) will computed only based on non-</span>
+                         <span class="c1">#     glaciated land fraction</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">By default parameters in the <code class="docutils literal notranslate"><span class="pre">first.sh</span></code> are defined for Baltex model
+domain. For this example, we put in the parameters for a grid that has
+a horizontal resolution of 0.11and that extends roughly over the
+Eurocordex domain with an appropriate grid rotation (Fig.
+[fig:rot_grid]). The grid should be placed in a way that the rotated
+equator approximately crosses the center of the model domain. This
+would ensure a negligible meridional convergence and almost equal real
+grid box sizes. For model domains within or close to the tropics
+(close to the real-world-equator) a rotation of the grid is usually
+not necessary.</div>
+<div class="line"><strong>NOTE:</strong> The surface library covers the REMO model domain <strong>PLUS</strong>
+one row of gridboxes outside the model domain along each side. You
+need an additional band of one boundary box around your future REMO
+domain in the surface library. In this example, we plan to create the
+surface library for a REMO model domain with a resolution of 433x433
+grid boxes (see the Appendix [app:domainsize]) and we have to add 2
+grid boxes for each dimension resulting in <code class="docutils literal notranslate"><span class="pre">RESOLUTION_X=435</span></code> and
+<code class="docutils literal notranslate"><span class="pre">RESOLUTION_Y=435</span></code>. It is also crucial to shift the coordinates for
+the lower left grid box center <code class="docutils literal notranslate"><span class="pre">(LON_LL,</span> <span class="pre">LAT_LL)</span></code> by one grid cell,
+e.g. 0.11, to the left and bottom respectively so that the resulting
+REMO model domain lies within the slightly larger domain of the
+surface library. Note that in REMO, grid related coordinates always
+denote the center of a grid box, e.g., <code class="docutils literal notranslate"><span class="pre">(LON_LL,</span> <span class="pre">LAT_LL)</span></code> denotes
+the coordinates of the center of the lower left grid box and <strong>NOT</strong>
+the lower left corner of the model domain (which would be shifted by
+another half of a grid box).</div>
+</div>
+<blockquote>
+<div><strong>Example</strong>: If you are applying a 1/2 degree resolution and your
+lower left corner of a grid box should be at 20 degree west/40
+degree south you have to define it as 20.25 west/40.25 south in the
+’first.sh’ - script. (It’s actually one gridbox more than one would
+usually expect, because you need one boundary row at each side) (the
+coordinates define the center of the gridbox. 20.25 west/40.25 south
+means that the lower left corner of the gridbox in the lower left
+corner of the model domain is at 20.5 west/40.5 south.)</div></blockquote>
+<p>The parameter POL has to be set to 0 if none of the rotated poles lies
+within the model domain (usually this is the case). It has to be set to
+1 (2) if the rotated North (South) Pole lies within the domain
+boundaries. From version 5.1 on, REMO uses a fractional surface coverage
+(each grid box can contain a land, a water and a sea ice fraction).
+Therefore, when carrying out simulations with a newer REMO version, the
+parameter IWATER has to be set to 1. For the fractional version, there
+are also modified scripts ending on <code class="docutils literal notranslate"><span class="pre">..._frac.sh</span></code> that have to be
+executed (see below).</p>
+</div>
+</div>
+<div class="section" id="step-1">
+<h3>Step 1<a class="headerlink" href="#step-1" title="Permalink to this headline">¶</a></h3>
+<p>After putting in the right grid parameters, the first script can be
+executed by running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">first</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>Note that this script will also check for the endianess of the machine
+you are working on and, if neccessary, convert some binary files.
+Afterwards, it will compile and execute the <code class="docutils literal notranslate"><span class="pre">good.exe</span></code> program and you
+will see some output similar to this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Distance</span> <span class="n">at</span> <span class="n">ilnord</span><span class="p">:</span> <span class="mf">0.013161</span> <span class="n">Distance</span> <span class="n">at</span> <span class="n">ilsued</span><span class="p">:</span> <span class="mf">0.008993</span>
+<span class="n">fline</span><span class="p">:</span>    <span class="mf">74.3025</span> <span class="n">iline</span><span class="o">=</span><span class="mi">900</span> <span class="n">ityp</span><span class="o">=</span><span class="mi">12</span> <span class="n">JB</span><span class="o">=</span><span class="mi">435</span> <span class="n">JL</span><span class="o">=</span><span class="mi">292</span> <span class="n">Weight</span><span class="o">=</span> <span class="mf">0.000000</span> <span class="n">reg</span><span class="p">:</span> <span class="n">lat</span><span class="o">=</span>  <span class="mf">74.303</span> <span class="n">lon</span><span class="o">=</span> <span class="mf">179.991</span> <span class="n">rot</span><span class="p">:</span> <span class="n">lat</span><span class="o">=</span>  <span class="mf">53.936</span> <span class="n">lon</span><span class="o">=</span>   <span class="mf">8.169</span>
+<span class="n">fline</span><span class="p">:</span>    <span class="mf">73.0167</span> <span class="n">iline</span><span class="o">=</span><span class="mi">1000</span> <span class="n">ityp</span><span class="o">=</span><span class="mi">12</span> <span class="n">JB</span><span class="o">=</span><span class="mi">435</span> <span class="n">JL</span><span class="o">=</span><span class="mi">340</span> <span class="n">Weight</span><span class="o">=</span> <span class="mf">0.000000</span> <span class="n">reg</span><span class="p">:</span> <span class="n">lat</span><span class="o">=</span>  <span class="mf">73.017</span> <span class="n">lon</span><span class="o">=</span> <span class="mf">179.995</span> <span class="n">rot</span><span class="p">:</span> <span class="n">lat</span><span class="o">=</span>  <span class="mf">55.108</span> <span class="n">lon</span><span class="o">=</span>   <span class="mf">9.081</span>
+<span class="n">fline</span><span class="p">:</span>    <span class="mf">71.7632</span> <span class="n">iline</span><span class="o">=</span><span class="mi">1100</span> <span class="n">ityp</span><span class="o">=</span><span class="mi">12</span> <span class="n">JB</span><span class="o">=</span><span class="mi">435</span> <span class="n">JL</span><span class="o">=</span><span class="mi">368</span> <span class="n">Weight</span><span class="o">=</span> <span class="mf">31.000000</span> <span class="n">reg</span><span class="p">:</span> <span class="n">lat</span><span class="o">=</span>  <span class="mf">71.763</span> <span class="n">lon</span><span class="o">=</span> <span class="mf">179.986</span> <span class="n">rot</span><span class="p">:</span> <span class="n">lat</span><span class="o">=</span>  <span class="mf">56.242</span> <span class="n">lon</span><span class="o">=</span>  <span class="mf">10.030</span>
+<span class="n">fline</span><span class="p">:</span>    <span class="mf">70.5384</span> <span class="n">iline</span><span class="o">=</span><span class="mi">1200</span> <span class="n">ityp</span><span class="o">=</span><span class="mi">12</span> <span class="n">JB</span><span class="o">=</span><span class="mi">435</span> <span class="n">JL</span><span class="o">=</span><span class="mi">391</span> <span class="n">Weight</span><span class="o">=</span> <span class="mf">0.000000</span> <span class="n">reg</span><span class="p">:</span> <span class="n">lat</span><span class="o">=</span>  <span class="mf">70.538</span> <span class="n">lon</span><span class="o">=</span> <span class="mf">179.995</span> <span class="n">rot</span><span class="p">:</span> <span class="n">lat</span><span class="o">=</span>  <span class="mf">57.344</span> <span class="n">lon</span><span class="o">=</span>  <span class="mf">11.003</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>Running the first script might take some time. If the script
+fails due to some segmentation faul error, the reason might lie in an
+insufficient stack size. Setting the stack size to unlimited might often
+resolve this problem using, e.g,</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ulimit</span> <span class="o">-</span><span class="n">s</span> <span class="n">unlimited</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">If the script still fails to execute, it might be worth trying to use
+a different C compiler in the <code class="docutils literal notranslate"><span class="pre">system_settings.sh</span></code> scripts, e.g.,
+the GNU Fortran compiler <code class="docutils literal notranslate"><span class="pre">gfortran</span></code>.</div>
+<div class="line">If the first script runs successfully, it should finish with some
+output similiar to:</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+<span class="n">Erstelle</span> <span class="n">neue</span> <span class="n">Land</span><span class="o">-</span><span class="n">See</span><span class="o">-</span><span class="n">Maske</span>
+<span class="n">Erstelle</span> <span class="n">Grads</span><span class="o">-</span><span class="n">Dateien</span>
+<span class="n">Ende</span> <span class="n">des</span> <span class="n">ersten</span> <span class="n">Teil</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-2">
+<h3>Step 2<a class="headerlink" href="#step-2" title="Permalink to this headline">¶</a></h3>
+<p>For the next step, the script <code class="docutils literal notranslate"><span class="pre">rotcoord.sh</span></code> has to be executed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">rotcoord</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>The script creates corners and intervals of latitude and longitude in
+geographic coordinates. Among other things, this script will give
+information (standard output) on the four corners of the chosen model
+domain in real-world lat/lon coordinates.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">links</span> <span class="n">unten</span>  <span class="p">(</span><span class="n">norm</span><span class="p">)</span> <span class="o">-</span> <span class="n">lower</span> <span class="n">left</span> <span class="n">corner</span>
+<span class="n">rechts</span> <span class="n">unten</span> <span class="p">(</span><span class="n">norm</span><span class="p">)</span> <span class="o">-</span> <span class="n">lower</span> <span class="n">right</span> <span class="n">corner</span>
+<span class="n">links</span> <span class="n">oben</span>   <span class="p">(</span><span class="n">norm</span><span class="p">)</span> <span class="o">-</span> <span class="n">Upper</span> <span class="n">left</span> <span class="n">corner</span>
+<span class="n">rechts</span> <span class="n">oben</span>  <span class="p">(</span><span class="n">norm</span><span class="p">)</span> <span class="o">-</span> <span class="n">upper</span> <span class="n">right</span> <span class="n">corne</span>
+</pre></div>
+</div>
+<p>With this information one can check whether the model domain has been
+correctly placed or not. For the Europe 0.11example, the output should
+be something like this</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+         <span class="mi">435</span>           <span class="mi">435</span>
+           <span class="mi">1</span>           <span class="mi">435</span>
+ <span class="n">Max</span> <span class="o">/</span> <span class="n">Min</span>      <span class="p">(</span><span class="n">WO</span><span class="p">):</span>    <span class="mf">69.04558</span>        <span class="o">-</span><span class="mf">48.28784</span>
+ <span class="n">Max</span> <span class="o">/</span> <span class="n">Min</span>      <span class="p">(</span><span class="n">NS</span><span class="p">):</span>    <span class="mf">74.45499</span>         <span class="mf">21.14123</span>
+ <span class="n">links</span> <span class="n">unten</span>  <span class="p">(</span><span class="n">norm</span><span class="p">):</span>   <span class="o">-</span><span class="mf">10.37563</span>         <span class="mf">21.14123</span>
+ <span class="n">rechts</span> <span class="n">unten</span> <span class="p">(</span><span class="n">norm</span><span class="p">):</span>    <span class="mf">36.75190</span>         <span class="mf">24.34295</span>
+ <span class="n">links</span> <span class="n">oben</span>   <span class="p">(</span><span class="n">norm</span><span class="p">):</span>   <span class="o">-</span><span class="mf">48.28784</span>         <span class="mf">60.96326</span>
+ <span class="n">rechts</span> <span class="n">oben</span>  <span class="p">(</span><span class="n">norm</span><span class="p">):</span>    <span class="mf">69.04558</span>         <span class="mf">67.81503</span>
+ <span class="n">links</span> <span class="n">unten</span>   <span class="p">(</span><span class="n">rot</span><span class="p">):</span>   <span class="o">-</span><span class="mf">29.03500</span>        <span class="o">-</span><span class="mf">24.03500</span>
+ <span class="n">rechts</span> <span class="n">oben</span>   <span class="p">(</span><span class="n">rot</span><span class="p">):</span>    <span class="mf">18.70500</span>         <span class="mf">23.70500</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">that running the script <code class="docutils literal notranslate"><span class="pre">rotcoord.sh</span></code> is not optional because it
+provides files that are used by other scripts! If you are happy with the
+result, you can run <code class="docutils literal notranslate"><span class="pre">second.sh</span></code> straight away. If you want the script
+to run faster have a look at <code class="docutils literal notranslate"><span class="pre">gtopo30_tiles.gif</span></code>, choose tiles that
+are necessary for your domain and remove unnecessary .DEM files from
+<code class="docutils literal notranslate"><span class="pre">gtopo</span></code> subdirectory.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">second</span><span class="o">.</span><span class="n">sh</span> <span class="o">&amp;</span>
+</pre></div>
+</div>
+<p>This program will compile and execute another C program that interpolate
+orography from the GTOPO30 elevation data. The output should look
+similar to</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!!!!
+!!!! The gtopo files exist and are correct build for this little Endian machine
+!!!!
+gpolphi = 39.250000, gpollam = -162.000000
+1. part for file: gtopo/W180N90.DEM, gj: 0
+1. part for file: gtopo/W180N90.DEM, gj: 1000
+1. part for file: gtopo/W180N90.DEM, gj: 2000
+1. part for file: gtopo/W180N90.DEM, gj: 3000
+...
+...
+2. part for file: gtopo/E120S60.DEM, gj: 2000
+2. part for file: gtopo/E120S60.DEM, gj: 3000
+Erstelle Grads-Dateien
+Ende des zweiten Teils
+</pre></div>
+</div>
+<p>If the <code class="docutils literal notranslate"><span class="pre">second.sh</span></code> script finished successfully, one can view the
+result for the min, mean and max values of the orography with cdo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cdo</span> <span class="n">info</span> <span class="n">europa011_oro</span><span class="o">.</span><span class="n">srv</span>
+</pre></div>
+</div>
+<p>and the output should be similar to this</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Level</span> <span class="n">Gridsize</span>    <span class="n">Miss</span> <span class="p">:</span>     <span class="n">Minimum</span>        <span class="n">Mean</span>     <span class="n">Maximum</span> <span class="p">:</span> <span class="n">Parameter</span> <span class="n">ID</span>
+    <span class="mi">0</span>   <span class="mi">189225</span>       <span class="mi">0</span> <span class="p">:</span>     <span class="o">-</span><span class="mf">395.99</span>      <span class="mf">205.24</span>      <span class="mf">3587.7</span> <span class="p">:</span> <span class="mi">129</span>
+</pre></div>
+</div>
+<p>A good way of checking the interpolated and rotated orography data is by
+converting the srv file to netcdf and have a quick look with <code class="docutils literal notranslate"><span class="pre">ncview</span></code>.
+The srv file can be converted using the REMO table of cdo with the
+following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cdo</span> <span class="o">-</span><span class="n">t</span> <span class="n">remo</span> <span class="o">-</span><span class="n">f</span> <span class="n">nc</span> <span class="n">copy</span> <span class="n">europa011_oro</span><span class="o">.</span><span class="n">srv</span> <span class="n">europa011_oro</span><span class="o">.</span><span class="n">nc</span>
+</pre></div>
+</div>
+<p>The resulting orography data (FIB, code=129) can be plotted using</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ncview</span> <span class="n">europa011_oro</span><span class="o">.</span><span class="n">nc</span>
+</pre></div>
+</div>
+<p>and the result should look similar to Figure [fig:europa011]</p>
+</div>
+<div class="section" id="step-3">
+<h3>Step 3<a class="headerlink" href="#step-3" title="Permalink to this headline">¶</a></h3>
+<p>The third step is to create the FAO-soiltype-dataset for your domain.
+Start the scripts in the order:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">third</span><span class="o">.</span><span class="n">sh</span>
+<span class="o">./</span><span class="n">fourth</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>If one of the poles is located inside the model domain, the scripts
+<code class="docutils literal notranslate"><span class="pre">third_b.sh</span></code> and <code class="docutils literal notranslate"><span class="pre">fourth_b.sh</span></code> have to be used instead. Since the
+REMO5.7, the following scripts have to be used in their fractional
+version and the next script is executed using</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">fifth_frac</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>Before REMO5.7, which had no fractional land, water and sea ice, use</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">fifth</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>instead. Note that these scripts actually create, compile and execute
+Fortran code.</p>
+</div>
+<div class="section" id="step-4">
+<h3>Step 4<a class="headerlink" href="#step-4" title="Permalink to this headline">¶</a></h3>
+<p>In the fourth step, the script</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">sixth_frac</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">sixth</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>has to be executed respectively. This script finally creates the surface
+library <code class="docutils literal notranslate"><span class="pre">lib_europa011_frac</span></code> in IEG format. The content can be checked
+using cdo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cdo</span> <span class="o">-</span><span class="n">t</span> <span class="n">remo</span> <span class="n">sinfo</span> <span class="n">lib_europa011_frac</span>
+</pre></div>
+</div>
+<p>which should give output similiar to</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">File</span> <span class="nb">format</span> <span class="p">:</span> <span class="n">IEG</span>  <span class="n">LITTLEENDIAN</span>
+  <span class="o">-</span><span class="mi">1</span> <span class="p">:</span> <span class="n">Institut</span> <span class="n">Source</span>   <span class="n">Ttype</span>    <span class="n">Levels</span> <span class="n">Num</span>    <span class="n">Points</span> <span class="n">Num</span> <span class="n">Dtype</span> <span class="p">:</span> <span class="n">Parameter</span> <span class="n">ID</span>
+   <span class="mi">1</span> <span class="p">:</span> <span class="n">MPIMET</span>   <span class="n">REMO</span>     <span class="n">instant</span>       <span class="mi">1</span>   <span class="mi">1</span>    <span class="mi">189225</span>   <span class="mi">1</span>  <span class="n">F32</span>  <span class="p">:</span> <span class="mf">129.128</span>
+   <span class="mi">2</span> <span class="p">:</span> <span class="n">MPIMET</span>   <span class="n">REMO</span>     <span class="n">instant</span>       <span class="mi">1</span>   <span class="mi">1</span>    <span class="mi">189225</span>   <span class="mi">1</span>  <span class="n">F32</span>  <span class="p">:</span> <span class="mf">172.128</span>
+   <span class="mi">3</span> <span class="p">:</span> <span class="n">MPIMET</span>   <span class="n">REMO</span>     <span class="n">instant</span>       <span class="mi">1</span>   <span class="mi">1</span>    <span class="mi">189225</span>   <span class="mi">1</span>  <span class="n">F32</span>  <span class="p">:</span> <span class="mf">173.128</span>
+   <span class="mi">4</span> <span class="p">:</span> <span class="n">MPIMET</span>   <span class="n">REMO</span>     <span class="n">instant</span>       <span class="mi">1</span>   <span class="mi">1</span>    <span class="mi">189225</span>   <span class="mi">1</span>  <span class="n">F32</span>  <span class="p">:</span> <span class="mf">174.128</span>
+   <span class="mi">5</span> <span class="p">:</span> <span class="n">MPIMET</span>   <span class="n">REMO</span>     <span class="n">instant</span>       <span class="mi">1</span>   <span class="mi">1</span>    <span class="mi">189225</span>   <span class="mi">1</span>  <span class="n">F32</span>  <span class="p">:</span> <span class="mf">198.128</span>
+   <span class="mi">6</span> <span class="p">:</span> <span class="n">MPIMET</span>   <span class="n">REMO</span>     <span class="n">instant</span>       <span class="mi">1</span>   <span class="mi">1</span>    <span class="mi">189225</span>   <span class="mi">1</span>  <span class="n">F32</span>  <span class="p">:</span> <span class="mf">199.128</span>
+   <span class="mi">7</span> <span class="p">:</span> <span class="n">MPIMET</span>   <span class="n">REMO</span>     <span class="n">instant</span>       <span class="mi">1</span>   <span class="mi">1</span>    <span class="mi">189225</span>   <span class="mi">1</span>  <span class="n">F32</span>  <span class="p">:</span> <span class="mf">200.128</span>
+   <span class="mi">8</span> <span class="p">:</span> <span class="n">MPIMET</span>   <span class="n">REMO</span>     <span class="n">instant</span>       <span class="mi">1</span>   <span class="mi">1</span>    <span class="mi">189225</span>   <span class="mi">1</span>  <span class="n">F32</span>  <span class="p">:</span> <span class="mf">212.128</span>
+   <span class="mi">9</span> <span class="p">:</span> <span class="n">MPIMET</span>   <span class="n">REMO</span>     <span class="n">instant</span>       <span class="mi">1</span>   <span class="mi">1</span>    <span class="mi">189225</span>   <span class="mi">1</span>  <span class="n">F32</span>  <span class="p">:</span> <span class="mf">226.128</span>
+  <span class="mi">10</span> <span class="p">:</span> <span class="n">MPIMET</span>   <span class="n">REMO</span>     <span class="n">instant</span>       <span class="mi">1</span>   <span class="mi">1</span>    <span class="mi">189225</span>   <span class="mi">1</span>  <span class="n">F32</span>  <span class="p">:</span> <span class="mf">229.128</span>
+  <span class="mi">11</span> <span class="p">:</span> <span class="n">MPIMET</span>   <span class="n">REMO</span>     <span class="n">instant</span>       <span class="mi">1</span>   <span class="mi">1</span>    <span class="mi">189225</span>   <span class="mi">1</span>  <span class="n">F32</span>  <span class="p">:</span> <span class="mf">272.128</span>
+  <span class="mi">12</span> <span class="p">:</span> <span class="n">MPIMET</span>   <span class="n">REMO</span>     <span class="n">instant</span>       <span class="mi">1</span>   <span class="mi">1</span>    <span class="mi">189225</span>   <span class="mi">1</span>  <span class="n">F32</span>  <span class="p">:</span> <span class="mf">273.128</span>
+  <span class="mi">13</span> <span class="p">:</span> <span class="n">MPIMET</span>   <span class="n">REMO</span>     <span class="n">instant</span>       <span class="mi">1</span>   <span class="mi">1</span>    <span class="mi">189225</span>   <span class="mi">1</span>  <span class="n">F32</span>  <span class="p">:</span> <span class="mf">274.128</span>
+ <span class="n">Grid</span> <span class="n">coordinates</span> <span class="p">:</span>
+   <span class="mi">1</span> <span class="p">:</span> <span class="n">lonlat</span>                   <span class="p">:</span> <span class="n">points</span><span class="o">=</span><span class="mi">189225</span> <span class="p">(</span><span class="mi">435</span><span class="n">x435</span><span class="p">)</span>
+                           <span class="n">rlon</span> <span class="p">:</span> <span class="o">-</span><span class="mf">29.035</span> <span class="n">to</span> <span class="mf">18.705</span> <span class="n">by</span> <span class="mf">0.11</span> <span class="n">degrees</span>
+                           <span class="n">rlat</span> <span class="p">:</span> <span class="o">-</span><span class="mf">24.035</span> <span class="n">to</span> <span class="mf">23.705</span> <span class="n">by</span> <span class="mf">0.11</span> <span class="n">degrees</span>
+                      <span class="n">northpole</span> <span class="p">:</span> <span class="n">lon</span><span class="o">=-</span><span class="mi">162</span>  <span class="n">lat</span><span class="o">=</span><span class="mf">39.25</span>
+ <span class="n">Vertical</span> <span class="n">coordinates</span> <span class="p">:</span>
+   <span class="mi">1</span> <span class="p">:</span> <span class="n">surface</span>                  <span class="p">:</span> <span class="n">levels</span><span class="o">=</span><span class="mi">1</span>
+ <span class="n">Time</span> <span class="n">coordinate</span> <span class="p">:</span>  <span class="mi">1</span> <span class="n">step</span>
+<span class="n">YYYY</span><span class="o">-</span><span class="n">MM</span><span class="o">-</span><span class="n">DD</span> <span class="n">hh</span><span class="p">:</span><span class="n">mm</span><span class="p">:</span><span class="n">ss</span>  <span class="n">YYYY</span><span class="o">-</span><span class="n">MM</span><span class="o">-</span><span class="n">DD</span> <span class="n">hh</span><span class="p">:</span><span class="n">mm</span><span class="p">:</span><span class="n">ss</span>  <span class="n">YYYY</span><span class="o">-</span><span class="n">MM</span><span class="o">-</span><span class="n">DD</span> <span class="n">hh</span><span class="p">:</span><span class="n">mm</span><span class="p">:</span><span class="n">ss</span>  <span class="n">YYYY</span><span class="o">-</span><span class="n">MM</span><span class="o">-</span><span class="n">DD</span> <span class="n">hh</span><span class="p">:</span><span class="n">mm</span><span class="p">:</span><span class="n">ss</span>
+<span class="mi">0017</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">28</span> <span class="mi">12</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>
+</pre></div>
+</div>
+<p>Note that the Grid coordinates should match the parameters that were set
+in the header of the <code class="docutils literal notranslate"><span class="pre">first.sh</span></code> script and that the codes (Parameter
+ID) should match the list in Table [tab:surflib].</p>
+</div>
+<div class="section" id="step-5">
+<h3>Step 5<a class="headerlink" href="#step-5" title="Permalink to this headline">¶</a></h3>
+<p>In the last step, the files for the mean annual cycle of the leaf area
+index, vegetation ratio and albedo are created by running</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">vegcycle_1</span><span class="o">.</span><span class="n">sh</span>
+<span class="o">./</span><span class="n">vegcycle_2</span><span class="o">.</span><span class="n">sh</span>
+<span class="o">./</span><span class="n">albcycle</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>in this order. These scripts create the files <code class="docutils literal notranslate"><span class="pre">vltyear_europa011.srv</span></code>,
+<code class="docutils literal notranslate"><span class="pre">vgryear_europa011.srv</span></code> and <code class="docutils literal notranslate"><span class="pre">albyear_europa011.srv</span></code>.</p>
+</div>
+<div class="section" id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
+<p>If everything worked, the five steps should have created the following
+files for the Eurocordex domain with a resolution of 0.11:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">lib_europa011_frac</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">vltyear_europa011.srv</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">vgryear_europa011.srv</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">albyear_europa011.srv</span></code></li>
+</ul>
+<p>Note that the surface library itself contains 435x435 cells while the
+mean annual cycle files contain 433x433 cells (which can be checked with
+<code class="docutils literal notranslate"><span class="pre">cdo</span> <span class="pre">sinfo</span></code>). The surface library file <code class="docutils literal notranslate"><span class="pre">lib_europa011_frac</span></code> is used
+in the following step to create forcing data from global data sets while
+the mean annual cycle files will be used directly for the REMO model run
+and, therefore, already have the right grid specifications. If nothing
+went wrong, the files that were created in this example should match the
+files that can be found on MISTRAL in <code class="docutils literal notranslate"><span class="pre">/pool/data/remo</span></code> and
+<code class="docutils literal notranslate"><span class="pre">/work/ch0636/surflibs</span></code> respectively. This can be checked by using
+<code class="docutils literal notranslate"><span class="pre">cdo</span> <span class="pre">diff</span></code>.</p>
+</div>
+</div>
+<div class="section" id="driving-data-and-boundary-conditions">
+<h2>Driving Data and Boundary Conditions<a class="headerlink" href="#driving-data-and-boundary-conditions" title="Permalink to this headline">¶</a></h2>
+<p>To run the REMO model, apart from the appropriate soil data created with
+the bodlib tool, you will also need boundary forcing data, which is the
+so called ’a-files’ (a stands for ’Antrieb’, which means forcing in
+German). The purpose of a-files is to provide initial and boundary
+conditions for the planned REMO run, that is why there is typically an
+a-file for every six hours of simulation time. Since the timestep of the
+REMO run is usually much shorter (e.g., 60 s), REMO will interpolate
+forcing data in between two a-files. E.g., in the beginning of a
+simulated month, REMO will read in the first two boundary files (e.g., 0
+hours and 6 hours) and start the simulation of the 6 hours in between on
+a timestep of, e.g, 60 s by interpolating the forcing data between the
+a-file at 0 hours and 6 hours. However, in the process of preparing your
+input data for a REMO run, you have to create these a-files for your
+domain of interest. However, there are some ’preprocessors’ for this
+which you can adapt to your domain. The input to these preprocessors can
+come from any global model that provides data for your domain, e.g., any
+GCM model, reanalysis data or even another REMO run on a coarser grid.
+However this global data has to be prepared for the preprocessor in a
+certain file format, called g-files (global file). These files have, in
+general, the same format as the a-files but they provide global data
+from which the preprocessor can create a-files for any domain of
+interest by interpolation to your resolution. The g-files are archived
+and there is a good chance that they already exist for the forcing data
+you want to use (e.g., ERA-INTERIM). However, the preprocessing of these
+g-files into a-files still has to be done by the user.</p>
+<p>The preparation of global files stronlgy depends on the available global
+data. If the data comes from a GCM, one has to consult carefully the
+meta data information of the model to determine which fields are
+available and how they correspond to the REMO code convention. Once the
+global file exist in a format the REMO preprocessor can work with, the
+user can create forcing files from the global files for any domain and
+resolution of interest by using the REMO preprocessor. Creating the
+global files is not straight-forward since the different GCMs create
+their own model output data usually using different kinds of meta
+information or file formats.</p>
+<p>Forcing files (a-files) are created from g-files using the
+preprocesser. The preprocessor is a Fortran program that can read a
+g-file and does the interpolation to the model domain of interest
+including the transformation to the rotated grid of REMO. Each a-file
+contains forcing data for a certain date and time and there is usually
+a forcing file for each 6 hours (e.g., for each day at 00 hours, 06
+hours, 12 hours, 18 hours). The a-files usually contain about 35 2D
+and 3D variables (depending on some switches in the REMO preprocessor
+configuration) that initialize and force the model run. They are
+listed in table [tab:afile_content]. The first 9 fields are the
+minimum that is required to be in each forcing file to update the
+boundary conditions dynamically with a 6-hour interval, the fields for
+the sea ice depth (<code class="docutils literal notranslate"><span class="pre">SICED</span></code>) and liquid water content (<code class="docutils literal notranslate"><span class="pre">QW</span></code>) are
+optional. The rest of the fields are only needed at the start of the
+model run to define initial conditions. Consequently, these fields are
+required to be, at least, in the a-file of the initilisation date but
+not neccessarily in all of them (since these fields are constant in
+time anyway). However, most often it is a good idea to include all 35
+fields in all a-files so that the model can be initalized at any time.
+The additional fields are also useful for comparision of input and
+output data.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="11%" />
+<col width="10%" />
+<col width="63%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Dim</th>
+<th class="head">Code</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>U</td>
+<td>MOKE</td>
+<td>131</td>
+<td>U-velocity</td>
+</tr>
+<tr class="row-odd"><td>V</td>
+<td>MOKE</td>
+<td>132</td>
+<td>V-velocity</td>
+</tr>
+<tr class="row-even"><td>T,</td>
+<td>MOKE</td>
+<td>130</td>
+<td>Air temperature</td>
+</tr>
+<tr class="row-odd"><td>QD</td>
+<td>MOKE</td>
+<td>133</td>
+<td>specific humidity</td>
+</tr>
+<tr class="row-even"><td>PS</td>
+<td>1</td>
+<td>134</td>
+<td>surface pressure</td>
+</tr>
+<tr class="row-odd"><td>QDBL</td>
+<td>1</td>
+<td>84</td>
+<td>specific humidity surface (land)</td>
+</tr>
+<tr class="row-even"><td>TSWECH</td>
+<td>1</td>
+<td>55</td>
+<td>surface temperature (water)</td>
+</tr>
+<tr class="row-odd"><td>TSIECH</td>
+<td>1</td>
+<td>56</td>
+<td>surface temperature (ice)</td>
+</tr>
+<tr class="row-even"><td>SEAICE</td>
+<td>1</td>
+<td>210</td>
+<td>sea ice cover</td>
+</tr>
+<tr class="row-odd"><td>SICED</td>
+<td>1</td>
+<td>211</td>
+<td>sea ice depth</td>
+</tr>
+<tr class="row-even"><td>QW</td>
+<td>MOKE</td>
+<td>153</td>
+<td>liquid water content</td>
+</tr>
+<tr class="row-odd"><td>TSLECH</td>
+<td>1</td>
+<td>54</td>
+<td>surface temperature (land)</td>
+</tr>
+<tr class="row-even"><td>TSN</td>
+<td>1</td>
+<td>206</td>
+<td>snow temperature</td>
+</tr>
+<tr class="row-odd"><td>TD3</td>
+<td>1</td>
+<td>207</td>
+<td>soil temperature</td>
+</tr>
+<tr class="row-even"><td>TD4</td>
+<td>1</td>
+<td>208</td>
+<td>soil temperature</td>
+</tr>
+<tr class="row-odd"><td>TD5</td>
+<td>1</td>
+<td>209</td>
+<td>soil temperature</td>
+</tr>
+<tr class="row-even"><td>TD</td>
+<td>1</td>
+<td>170</td>
+<td>deep soil temperature</td>
+</tr>
+<tr class="row-odd"><td>TDCL</td>
+<td>1</td>
+<td>183</td>
+<td>soil temperature</td>
+</tr>
+<tr class="row-even"><td>WSECH</td>
+<td>1</td>
+<td>140</td>
+<td>soil wetness</td>
+</tr>
+<tr class="row-odd"><td>SN</td>
+<td>1</td>
+<td>141</td>
+<td>snow depth</td>
+</tr>
+<tr class="row-even"><td>WL</td>
+<td>1</td>
+<td>194</td>
+<td>skin reservoir content</td>
+</tr>
+<tr class="row-odd"><td>FIB</td>
+<td>1</td>
+<td>129</td>
+<td>surface geopotential (orography)</td>
+</tr>
+<tr class="row-even"><td>BLA</td>
+<td>1</td>
+<td>172</td>
+<td>land sea mask</td>
+</tr>
+<tr class="row-odd"><td>GLAC</td>
+<td>1</td>
+<td>232</td>
+<td>glacier mask</td>
+</tr>
+<tr class="row-even"><td>AZ0</td>
+<td>1</td>
+<td>173</td>
+<td>surface roughness length</td>
+</tr>
+<tr class="row-odd"><td>VGRAT</td>
+<td>1</td>
+<td>198</td>
+<td>vegetation ratio</td>
+</tr>
+<tr class="row-even"><td>FOREST</td>
+<td>1</td>
+<td>212</td>
+<td>vegetation type</td>
+</tr>
+<tr class="row-odd"><td>ALBECH</td>
+<td>1</td>
+<td>174</td>
+<td>surface background albedo</td>
+</tr>
+<tr class="row-even"><td>WSMX</td>
+<td>1</td>
+<td>229</td>
+<td>field capacity of soil</td>
+</tr>
+<tr class="row-odd"><td>VLT</td>
+<td>1</td>
+<td>200</td>
+<td>leaf area index</td>
+</tr>
+<tr class="row-even"><td>FAO</td>
+<td>1</td>
+<td>226</td>
+<td>FAO data set (soil data flags)</td>
+</tr>
+<tr class="row-odd"><td>VAROR</td>
+<td>1</td>
+<td>199</td>
+<td>orographic variance (for surface runoff)</td>
+</tr>
+<tr class="row-even"><td>BETA</td>
+<td>1</td>
+<td>272</td>
+<td>shape parameter for Arno Scheme</td>
+</tr>
+<tr class="row-odd"><td>WMINLOK</td>
+<td>1</td>
+<td>273</td>
+<td>minimum subgrid wcap (field capacity)</td>
+</tr>
+<tr class="row-even"><td>WMAXLOK</td>
+<td>1</td>
+<td>274</td>
+<td>maximum subgrid wcap (field capacity)</td>
+</tr>
+</tbody>
+</table>
+<p>Table: Forcing Fields</p>
+<div class="section" id="remaptoremo">
+<h3>RemapToREMO<a class="headerlink" href="#remaptoremo" title="Permalink to this headline">¶</a></h3>
+<p>The task of the REMO preprocessor (<code class="docutils literal notranslate"><span class="pre">RemapToREMO</span></code>) is to interpolate
+the coarse resolution input forcing data to the resolution and (rotated)
+grid of the regional domain. The input forcing data are either from:</p>
+<ul class="simple">
+<li>global data from reanalysis datasets;</li>
+<li>model output from global climate simulations (GCMs); and</li>
+<li>model output from regional climate data simulations.</li>
+</ul>
+<p>The interpolated forcing data are combined with the surface data
+created with the bodlib toolkit (Section [sec:preproc:bodlib]) and are
+stored as <strong>a</strong>-files.
+The new preprocessor is now called <code class="docutils literal notranslate"><span class="pre">RemapToREMO</span></code>. It contains all
+neccessary source code to compile any preprocessor configuration
+including reanalysis with ERA-INTERIM, global model data that fullfils
+nc-conventions as well as a configuration for preparing remo output
+data for double nesting. The different configurations originate from
+several legacy codes that have been combined to avoid further code
+duplication. This program will build the preprocessor executable that
+then can be used to convert g files generated from the global model
+output or t files generated by the REMO in to a files, that are used
+to force REMO.</p>
+</div>
+<div class="section" id="requirements">
+<h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h3>
+<p>In present works only with intel compiler, so you have to have ifort in
+your <code class="docutils literal notranslate"><span class="pre">$PATH</span></code> variable. On DKRZ computers you can usually load intel
+compiler by</p>
+<p>module load intel</p>
+</div>
+<div class="section" id="setup-and-compilation">
+<h3>Setup and compilation<a class="headerlink" href="#setup-and-compilation" title="Permalink to this headline">¶</a></h3>
+<p>The directory structure of the remapping program contains the following</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setup</span>        <span class="c1"># setup script to manage configurations</span>
+<span class="n">setups</span>       <span class="c1"># directory containgin preprocessor configrations</span>
+<span class="n">source</span>       <span class="c1"># main source code</span>
+<span class="n">vc_tables</span>    <span class="c1"># tables with additional vertical hybrid sigma coordinates</span>
+</pre></div>
+</div>
+<p>In the setups directory one can find several possible preconfigured
+options for the precprocessor. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">era_interim</span>  <span class="c1"># configuration for ECMWF ERA-INTERIM reanalysis</span>
+<span class="n">hadgem2</span>      <span class="c1"># configuration for HadGEM2</span>
+<span class="n">gcm_cf</span>       <span class="c1"># global model data with cf-conventions, e.g., from ESGF</span>
+<span class="n">remo</span>         <span class="c1"># preprocessor for double nesting</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>The configruations in the setup directory typically contain some special
+implementations of specific subroutines from the source directory. These
+special implementations are combined with the rest of the generic source
+code into an object directory where the configuration can be compiled.</p>
+<p>To create an executable for a specific configuration, the setup script
+will handle the source code management. For example, to setup the
+preprocessor for ERA-INTERIM data, the configuration is chosen by typing</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">setup</span> <span class="n">era_interim</span> <span class="o">-</span><span class="n">auto</span> <span class="o">-</span><span class="n">objdir</span><span class="o">=</span><span class="n">era_interim</span>
+</pre></div>
+</div>
+<p>in the root directory.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">era_interim</span></code> directory will be created in the root directory of
+the program and contains source files of the preprocessor and the
+Makefile.</p>
+<p>To compile the configuration, simply change to the newly created
+directory and run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span>
+</pre></div>
+</div>
+<p>The resulting executable is usually called <code class="docutils literal notranslate"><span class="pre">preproc</span></code></p>
+<div class="line-block">
+<div class="line">| l | l | p9cm | l | [tab:preproc_input] Namelist &amp; Parameter &amp;
+Description &amp; Datatype</div>
+<div class="line">&amp; &amp; &amp;</div>
+</div>
+<div class="section" id="prepareafiles-running-the-preprocessor">
+<h4>PrepareAFiles - Running the preprocessor<a class="headerlink" href="#prepareafiles-running-the-preprocessor" title="Permalink to this headline">¶</a></h4>
+<div class="line-block">
+<div class="line">Once the preprocessor has been compiled successfully, it requires a
+<code class="docutils literal notranslate"><span class="pre">Fortran</span></code> Input file containing a number of namelists to configure
+it, see table [tab:preproc_input]. All g-files have to be located in
+a certain directory (<code class="docutils literal notranslate"><span class="pre">YGMCAT</span></code>) and the remapped data will be written
+to the output directory (<code class="docutils literal notranslate"><span class="pre">YEMCAT</span></code>). However, similar to a model run
+(see Chapter [cha:model_run]), it is usually recommended to prepare
+forcing data on a monthly basis while the start hour (<code class="docutils literal notranslate"><span class="pre">HANF</span></code>) and
+end hour (<code class="docutils literal notranslate"><span class="pre">HENDE</span></code>) are adapted with respect to the start date. The
+time frequency is usually 6 hours (<code class="docutils literal notranslate"><span class="pre">DH</span></code>) if global model data is
+remapped, however, this also depends on the temporal resolution of the
+driving model’s global data and that of the resulting g-files.
+Consequently, the time frequency of the double nesting approach
+depends on the time frequency in which data is written by the parent
+model run with <code class="docutils literal notranslate"><span class="pre">REMO</span></code>.</div>
+<div class="line">However, a set of python scripts for controlling the preprocessor is
+availabe in the <code class="docutils literal notranslate"><span class="pre">REMO</span></code> tools suite and is called <code class="docutils literal notranslate"><span class="pre">PrepareAFiles</span></code>.
+In particular the script do the following:</div>
+</div>
+<ul class="simple">
+<li>[optional] download files with original external forcing (g-files in
+case of global model or t-files in case of remo) from DKRZ archive</li>
+<li>convert g- (or t- in case of REMO nesting) files to a-files with use
+of executable created by <code class="docutils literal notranslate"><span class="pre">RemapToREMO</span></code></li>
+<li>[optional] interpolate variables from a-files to pressure levels with
+the <code class="docutils literal notranslate"><span class="pre">druintzr</span></code> executable (p-files)</li>
+<li>[optional] create monthly means with <code class="docutils literal notranslate"><span class="pre">mitzrpe</span></code> executable (l-files)</li>
+<li>tar resulted a- and optionally p- and l-files</li>
+<li>upload tar-files back to the DKRZ archive</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>Requirements<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>PyRemo</li>
+<li>Python</li>
+<li>surface library for the target REMO setup (created by the
+<code class="docutils literal notranslate"><span class="pre">BodLibKit</span></code>)</li>
+<li>Executable created by <code class="docutils literal notranslate"><span class="pre">RemapToREMO</span></code></li>
+<li>[optional] Executable created by <code class="docutils literal notranslate"><span class="pre">druintzr</span></code> if creation of p-files
+is required</li>
+<li>[optional] Executable created by <code class="docutils literal notranslate"><span class="pre">mitzrpe</span></code> if creation of l-files
+(monthly means) is required</li>
+</ul>
+<p>The user hase to setup no-password acces to DKRZ archive. To do so, add
+the following to your <code class="docutils literal notranslate"><span class="pre">$HOME/.netrc</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">machine</span> <span class="n">tape</span>
+   <span class="n">login</span> <span class="n">mylogin</span>
+   <span class="n">password</span> <span class="n">mypassword</span>
+</pre></div>
+</div>
+<p>The forcing files (‘g‘ or ‘t‘) are stored in ‘tar‘ files on monthly
+basis with 6h interval.</p>
+</div>
+<div class="section" id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
+<p>The main script is called <code class="docutils literal notranslate"><span class="pre">create_input.py</span></code>, that hase to be called
+with a configuration file as an argument:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">create_input</span><span class="o">.</span><span class="n">py</span> <span class="n">config</span><span class="o">/</span><span class="n">config</span><span class="o">.</span><span class="n">ini</span>
+</pre></div>
+</div>
+<p>An alternative is to use the <code class="docutils literal notranslate"><span class="pre">submit.py</span></code> script if the config file
+contains a <code class="docutils literal notranslate"><span class="pre">[batch]</span></code> section.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">submit</span><span class="o">.</span><span class="n">py</span> <span class="n">config</span><span class="o">/</span><span class="n">config</span><span class="o">.</span><span class="n">ini</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">submit.py</span></code> script will create a series of batch scripts each
+handling a certain chunk of the entire timeframe for which forcing data
+is requested. E.g., the user can choose ‘chunks=month‘ and the
+‘submit.py‘ script will create a series of job scripts in the
+subdirectory ‘scripts‘ and a configuration file for on month. The
+jobscript itself calls the <code class="docutils literal notranslate"><span class="pre">create_input.py</span></code> script and use the
+corresponding configuration file.</p>
+<p>The main configuration file should reside in the ‘config‘ subdirectory
+and might be exchanged between users. The configuration for input data
+is extracted into a ‘global‘ config file (for the input of g-files) and
+a ‘grid‘ configuration. These configuration files can be found in the
+corresponding subdirectories of the ‘config‘ directory and should be
+specified in the main ‘config‘ file in the ‘global‘ and <code class="docutils literal notranslate"><span class="pre">grid_out</span></code>
+sections respectively. This should prevent code duplication and the user
+can easily choose between different predefined domains and global model
+input.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Lars Buntemeyer.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

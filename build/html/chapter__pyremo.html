@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>12. PyRemo &#8212; REMO Documentation and User Guide 0 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="13. GIT" href="chapter__git.html" />
+    <link rel="prev" title="11. Netcdf" href="chapter__netcdf.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.12.4.min.js "></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="_static/bootstrap-3.4.1/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><span><img src="_static/REMO_logo.png"></span>
+          REMO</a>
+        <span class="navbar-text navbar-version pull-left"><b>2</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="http://remo-rcm.de">Homepage</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="chapter__introduction.html">1. <strong>Introduction</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__introduction.html#additional-resources">1.1. Additional resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__introduction_to_climate_modelling.html">2. <strong>Regional climate change assessment and uncertainty analysis</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__introduction_to_climate_modelling.html#short-course-by-t-weber-and-a-kriegsmann">2.1. <em>Short course by T. Weber and A. Kriegsmann</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__introduction_to_climate_modelling.html#introduction-into-climate-modelling">2.2. Introduction into climate modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__introduction_to_climate_modelling.html#climate-modelling">2.3. Climate modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__introduction_to_climate_modelling.html#summary-of-climate-modelling">2.4. Summary of Climate modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__introduction_to_climate_modelling.html#gerics-rgb-code">2.5. GERICS RGB CODE</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__concept_note_on_downscaling_climate_information.html">3. <strong>Concept note on Downscaling Climate Information</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__concept_note_on_downscaling_climate_information.html#important-things-to-remember-when-using-climate-data">3.1. Important things to remember when using climate data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__concept_note_on_downscaling_climate_information.html#literature">3.2. Literature</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__esgf_cordex_data_access.html">4. <strong>ESGF - How to get climate data, what is available &amp; data formats</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__esgf_cordex_data_access.html#mission">4.1. Mission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__esgf_cordex_data_access.html#how-to-get-access-on-cordex-data">4.2. How to get access on CORDEX-Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__esgf_cordex_data_access.html#how-to-get-access-on-climate-data">4.3. How to get access on climate data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__evaluation.html">5. <strong>Evaluation of RCM output</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__evaluation.html#data-for-comparison">5.1. Data for comparison</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__visualisation.html">6. <strong>Visualisation of Climate Data</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__visualisation.html#pyplottools-1-2-4">6.1. PyPlotTools-1.2.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__visualisation.html#instalation">6.2. Instalation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__working_with_CMIP5.html">7. <strong>CMIP5 model output</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__working_with_CMIP5.html#trouble-shooting">7.1. Trouble shooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__working_with_model_output.html">8. <strong>REMO output</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__working_with_model_output.html#introduction-to-dkrz">8.1. Introduction to DKRZ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__working_with_model_output.html#general-hints-for-working-on-eddy-mistral">8.2. General hints for working on Eddy/Mistral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__working_with_model_output.html#dealing-with-modeloutput">8.3. Dealing with Modeloutput</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__working_with_model_output.html#euro-cordex-data">8.4. EURO-CORDEX-Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__working_with_model_output.html#remapping-tools">8.5. Remapping tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__working_with_model_output.html#plotting-tool">8.6. Plotting tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__working_with_model_output.html#download-multiple-files-from-a-web-page">8.7. Download multiple files from a web page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__working_with_model_output.html#download-multiple-files-from-ftp-server">8.8. download multiple files from ftp server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__working_with_model_output.html#comparing-remo-output-to-observations">8.9. Comparing REMO output to Observations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__working_with_model_output.html#useful-cdo-hints">8.10. Useful <code class="docutils literal notranslate"><span class="pre">cdo</span></code> hints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__working_with_model_output.html#useful-netcdf-file-hints">8.11. Useful <code class="docutils literal notranslate"><span class="pre">netcdf</span> <span class="pre">file</span></code> hints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__interpolating_stations.html">9. <strong>Compare station data to REMO output</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__interpolating_stations.html#create-an-unstructured-grid-for-22-stations-num-22">9.1. 1. Create an unstructured grid - for 22 stations NUM=22</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__interpolating_stations.html#create-weights-for-remo-grid-for-22-stations">9.2. 2. Create weights for REMO grid for 22 stations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__interpolating_stations.html#interpolation">9.3. 3. Interpolation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__interpolating_stations.html#extract-stations">9.4. 4. Extract stations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__intro_cdo.html">10. <strong>Introduction into the Climate Data Operator (CDO)</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__intro_cdo.html#climate-data-operators-cdo">10.1. Climate Data Operators (CDO)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__netcdf.html">11. <strong>Netcdf</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__netcdf.html#how-can-i-see-the-data-description-and-the-content-of-a-netcdf-file">11.1. How can I see the data description and the content of a NetCDF-file?</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">12. <strong>PyRemo</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#examples">12.1. Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__git.html">13. <em>GIT</em></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__git.html#useful-commands">13.1. Useful commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__git.html#troubleshooting">13.2. Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__usefull_shell_commands.html">14. <strong>Useful Shell Commands</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__usefull_shell_commands.html#important-commands-case-sensitive">14.1. Important commands (case-sensitive!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter__usefull_shell_commands.html#usage-of-shell">14.2. Usage of Shell</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter__troubleshooting.html">15. <strong>Troubleshooting</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter__troubleshooting.html#troubleshooting-for-pyplottools">15.1. Troubleshooting for PyPlotTools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="syntax-examples.html">16. RST Syntax Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#headings">16.1. Headings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#code">16.2. Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#admonitions">16.3. Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#footnotes">16.4. Footnotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#icons">16.5. Icons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#tables">16.6. Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#code-documentation">16.7. Code Documentation</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">12. <strong>PyRemo</strong></a><ul>
+<li><a class="reference internal" href="#examples">12.1. Examples</a><ul>
+<li><a class="reference internal" href="#datahandler">12.1.1. DataHandler</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="chapter__netcdf.html" title="Previous Chapter: 11. Netcdf"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 11. Netcdf</span>
+    </a>
+  </li>
+  <li>
+    <a href="chapter__git.html" title="Next Chapter: 13. GIT"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">13. GIT &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/chapter__pyremo.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="pyremo">
+<h1>12. <strong>PyRemo</strong><a class="headerlink" href="#pyremo" title="Permalink to this headline">¶</a></h1>
+<p>The heart of PyRemo are the data handling and plotting modules. The
+OoPlot package contains everything that is needed to do high quality
+plots based on PyNGL. Some useful stand-alone functions for plotting
+purposes can be found in Plotting. ConvertToGFile contains functions
+that are used to convert global model data into the g-file format
+readable for the REMO pre-processor. CalcInput provides functions for
+calculating input with the pre-processor for the REMO model. The Ftp
+module provides functions to up- and download data to and from the tape
+archive at dkrz. IO contains a basic class to read and write Fortran
+style binary data. The module ShellTools is a collection of useful
+functions that are run on a Linux shell, e.g., to create or remove
+directories.</p>
+<p>Documentation of API:
+<a class="reference external" href="http://136.172.63.17/REMO/PyRemo/PyRemo/docs/build/html/">http://136.172.63.17/REMO/PyRemo/PyRemo/docs/build/html/</a></p>
+<div class="section" id="examples">
+<h2>12.1. Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="datahandler">
+<h3>12.1.1. DataHandler<a class="headerlink" href="#datahandler" title="Permalink to this headline">¶</a></h3>
+<p>Check if files exist in the tape archive:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PyRemo.FileConventions</span> <span class="kn">import</span> <span class="n">REMO_2015_TAPE_ARCHIVE</span><span class="p">,</span> <span class="n">REMO_2015_DISK_ARCHIVE</span>
+<span class="kn">from</span> <span class="nn">PyRemo.DataHandler</span> <span class="kn">import</span> <span class="n">DataHandler</span>
+
+<span class="c1"># define experiment id for file conventions</span>
+<span class="n">expid</span> <span class="o">=</span> <span class="s1">&#39;061074&#39;</span>
+
+<span class="c1"># path to hpss tape archive</span>
+<span class="n">tape_path</span> <span class="o">=</span> <span class="s1">&#39;/hpss/arch/ch0636/CORDEX/CORE-ATLAS/remo/exp061074&#39;</span>
+<span class="c1"># path to disk archive</span>
+<span class="n">disk_path</span> <span class="o">=</span> <span class="s1">&#39;/work/ch0636/g300046/remo_results_061074&#39;</span>
+
+<span class="c1"># create a DataHandler</span>
+<span class="n">dh</span> <span class="o">=</span> <span class="n">DataHandler</span><span class="p">()</span>
+
+<span class="c1">#</span>
+<span class="c1"># check files on tape archive</span>
+<span class="c1">#</span>
+<span class="c1"># check all files depending on naming convention</span>
+<span class="n">dh</span><span class="o">.</span><span class="n">check_archive_files</span><span class="p">(</span><span class="n">expid</span><span class="p">,</span> <span class="n">tape_path</span><span class="p">,</span> <span class="n">years</span><span class="o">=</span><span class="p">[</span><span class="mi">2006</span><span class="p">],</span> <span class="n">conv</span><span class="o">=</span><span class="n">REMO_2015_TAPE_ARCHIVE</span><span class="p">())</span>
+<span class="c1"># check only a-files</span>
+<span class="n">dh</span><span class="o">.</span><span class="n">check_archive_files</span><span class="p">(</span><span class="n">expid</span><span class="p">,</span> <span class="n">tape_path</span><span class="p">,</span> <span class="n">years</span><span class="o">=</span><span class="p">[</span><span class="mi">2006</span><span class="p">],</span> <span class="n">conv</span><span class="o">=</span><span class="n">REMO_2015_TAPE_ARCHIVE</span><span class="p">(),</span> <span class="n">types</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;afiles&#39;</span><span class="p">])</span>
+<span class="c1"># check only e-files for one month</span>
+<span class="n">dh</span><span class="o">.</span><span class="n">check_archive_files</span><span class="p">(</span><span class="n">expid</span><span class="p">,</span> <span class="n">tape_path</span><span class="p">,</span> <span class="n">years</span><span class="o">=</span><span class="p">[</span><span class="mi">2006</span><span class="p">],</span> <span class="n">months</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">conv</span><span class="o">=</span><span class="n">REMO_2015_TAPE_ARCHIVE</span><span class="p">(),</span> <span class="n">types</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;afiles&#39;</span><span class="p">])</span>
+<span class="c1"># check only p-files for the whole range</span>
+<span class="n">dh</span><span class="o">.</span><span class="n">check_archive_files</span><span class="p">(</span><span class="n">expid</span><span class="p">,</span> <span class="n">tape_path</span><span class="p">,</span> <span class="n">years</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">2006</span><span class="p">,</span><span class="mi">2100</span><span class="p">),</span> <span class="n">conv</span><span class="o">=</span><span class="n">REMO_2015_TAPE_ARCHIVE</span><span class="p">(),</span> <span class="n">types</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;pfiles&#39;</span><span class="p">])</span>
+<span class="c1">#</span>
+<span class="c1">#</span>
+<span class="c1"># check files on disk archive</span>
+<span class="c1">#</span>
+<span class="c1"># check only p-files</span>
+<span class="n">dh</span><span class="o">.</span><span class="n">check_archive_files</span><span class="p">(</span><span class="n">expid</span><span class="p">,</span> <span class="n">disk_path</span><span class="p">,</span> <span class="n">years</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">2006</span><span class="p">,</span><span class="mi">2100</span><span class="p">),</span> <span class="n">conv</span><span class="o">=</span><span class="n">REMO_2015_DISK_ARCHIVE</span><span class="p">(),</span> <span class="n">types</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;mfiles&#39;</span><span class="p">])</span>
+<span class="c1"># check all for one year and print a warning if a file does not exist</span>
+<span class="n">check_list</span> <span class="o">=</span> <span class="n">dh</span><span class="o">.</span><span class="n">check_archive_files</span><span class="p">(</span><span class="n">expid</span><span class="p">,</span> <span class="n">disk_path</span><span class="p">,</span> <span class="n">years</span><span class="o">=</span><span class="p">[</span><span class="mi">2006</span><span class="p">],</span> <span class="n">conv</span><span class="o">=</span><span class="n">REMO_2015_DISK_ARCHIVE</span><span class="p">())</span>
+<span class="k">for</span> <span class="n">check</span> <span class="ow">in</span> <span class="n">check_list</span><span class="p">:</span>
+  <span class="k">if</span> <span class="ow">not</span> <span class="n">check</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Warning, could not find file: &#39;</span><span class="o">+</span><span class="n">check</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Download archived REMO output:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="kn">from</span> <span class="nn">PyRemo.FileConventions</span> <span class="kn">import</span> <span class="n">REMO_2015</span><span class="p">,</span> <span class="n">REMO_2015_TAPE_ARCHIVE</span><span class="p">,</span> <span class="n">REMO_2015_DISK_ARCHIVE</span>
+<span class="kn">from</span> <span class="nn">PyRemo.DataHandler</span> <span class="kn">import</span> <span class="n">DataHandler</span>
+<span class="kn">from</span> <span class="nn">PyRemo.Scheduler</span> <span class="kn">import</span> <span class="n">Scheduler</span>
+
+
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+
+<span class="c1"># define some defaults for the job header</span>
+<span class="n">SLURM_HEADER</span> <span class="o">=</span> <span class="p">{</span>  <span class="s1">&#39;partition&#39;</span>   <span class="p">:</span><span class="s1">&#39;shared&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;ntasks&#39;</span>      <span class="p">:</span><span class="s1">&#39;1&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;mem_per_cpu&#39;</span> <span class="p">:</span><span class="s1">&#39;1280&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;mail_type&#39;</span>   <span class="p">:</span><span class="s1">&#39;FAIL&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;account&#39;</span>     <span class="p">:</span><span class="s1">&#39;ch0636&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;time&#39;</span>        <span class="p">:</span><span class="s1">&#39;08:00:00&#39;</span><span class="p">}</span>
+
+
+<span class="n">expid</span> <span class="o">=</span> <span class="s1">&#39;061074&#39;</span>
+
+<span class="c1"># define naming and archiving conentions</span>
+<span class="n">tape_archive</span> <span class="o">=</span> <span class="n">REMO_2015_TAPE_ARCHIVE</span><span class="p">()</span>
+<span class="n">disk_archive</span> <span class="o">=</span> <span class="n">REMO_2015_DISK_ARCHIVE</span><span class="p">()</span>
+
+<span class="c1"># path to data on the disk</span>
+<span class="n">disk_path</span> <span class="o">=</span> <span class="s1">&#39;/work/ch0636/g300046/remo_results_061074&#39;</span>
+<span class="n">dest_path</span> <span class="o">=</span> <span class="n">disk_path</span>
+<span class="c1"># path to data on the hpss tape archive</span>
+<span class="n">tape_path</span> <span class="o">=</span> <span class="s1">&#39;/hpss/arch/ch0636/CORDEX/CORE-ATLAS/remo/exp061074&#39;</span>
+
+
+<span class="c1"># create a DataHandler for parallel processing</span>
+<span class="n">dh</span> <span class="o">=</span> <span class="n">DataHandler</span><span class="p">(</span><span class="n">parallel</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">sys</span><span class="o">=</span><span class="s1">&#39;SLURM&#39;</span><span class="p">,</span><span class="n">header_dict</span><span class="o">=</span><span class="n">SLURM_HEADER</span><span class="p">)</span>
+
+<span class="c1"># submit jobs to retrieve data from the archive</span>
+<span class="n">dh</span><span class="o">.</span><span class="n">retrieve_archive_from_tape</span><span class="p">(</span><span class="n">expid</span><span class="p">,</span> <span class="n">tape_path</span><span class="p">,</span> <span class="n">years</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">2006</span><span class="p">,</span><span class="mi">2100</span><span class="p">),</span> <span class="n">types</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;efiles&#39;</span><span class="p">,</span><span class="s1">&#39;pfiles&#39;</span><span class="p">],</span> \
+                              <span class="n">conv</span><span class="o">=</span><span class="n">tape_archive</span><span class="p">,</span> <span class="n">destdir</span><span class="o">=</span><span class="n">dest_path</span><span class="p">)</span>
+
+<span class="c1"># create a new scheduler to get job information</span>
+<span class="n">my_scheduler</span> <span class="o">=</span> <span class="n">Scheduler</span><span class="p">(</span><span class="n">sys</span><span class="o">=</span><span class="s1">&#39;SLURM&#39;</span><span class="p">,</span><span class="n">logfile</span><span class="o">=</span><span class="s1">&#39;DataHandler_061074_extract.jobids.ini&#39;</span><span class="p">)</span>
+<span class="n">my_scheduler</span><span class="o">.</span><span class="n">log_jobs_acct</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Lars Buntemeyer.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

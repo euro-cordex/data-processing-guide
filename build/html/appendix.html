@@ -1,0 +1,3209 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Tips, Tricks and Troubleshooting &#8212; REMO Documentation and User Guide 0 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.12.4.min.js "></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="_static/bootstrap-3.4.1/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><span><img src="_static/REMO_logo.png"></span>
+          REMO</a>
+        <span class="navbar-text navbar-version pull-left"><b>2</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="http://remo-rcm.de">Homepage</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="syntax-examples.html">1. Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#headings">1.1. Headings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#code">1.2. Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#admonitions">1.3. Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#footnotes">1.4. Footnotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#icons">1.5. Icons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#tables">1.6. Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#code-documentation">1.7. Code Documentation</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Tips, Tricks and Troubleshooting</a><ul>
+<li><a class="reference internal" href="#working-with-data">Working with data</a><ul>
+<li><a class="reference internal" href="#the-ieg-tool">The IEG tool</a></li>
+<li><a class="reference internal" href="#pyremo-and-pyplot-tools">PyRemo and PyPlot Tools</a></li>
+<li><a class="reference internal" href="#missing-files">Missing Files</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#some-more-tricks">Some more Tricks…</a></li>
+<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+<li><a class="reference internal" href="#naming-conventions-1">Naming Conventions </a></li>
+<li><a class="reference internal" href="#the-ieg-format-2">The IEG Format </a></li>
+<li><a class="reference internal" href="#code-list-of-variables">Code List of Variables</a></li>
+<li><a class="reference internal" href="#namelist-of-input-parameters">Namelist of Input Parameters</a></li>
+<li><a class="reference internal" href="#namelist-for-the-preprocessor">Namelist for the Preprocessor</a></li>
+<li><a class="reference internal" href="#constants-in-remo-physics">Constants in REMO Physics</a></li>
+<li><a class="reference internal" href="#model-domains-and-grids">Model Domains and Grids</a><ul>
+<li><a class="reference internal" href="#south-america">South America</a></li>
+<li><a class="reference internal" href="#west-asia">West Asia</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#grid-decomposition">Grid Decomposition</a></li>
+<li><a class="reference internal" href="#remo-model-parameters">REMO Model Parameters</a></li>
+<li><a class="reference internal" href="#possible-domain-sizes">Possible domain sizes</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/appendix.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="tips-tricks-and-troubleshooting">
+<h1>Tips, Tricks and Troubleshooting<a class="headerlink" href="#tips-tricks-and-troubleshooting" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="working-with-data">
+<h2>Working with data<a class="headerlink" href="#working-with-data" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-ieg-tool">
+<h3>The IEG tool<a class="headerlink" href="#the-ieg-tool" title="Permalink to this headline">¶</a></h3>
+<p>There is a tool available that can read IEG files and give information
+especially related to REMO data. The tool is available here:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">git</span><span class="o">.</span><span class="n">gerics</span><span class="o">.</span><span class="n">de</span><span class="o">/</span><span class="n">REMO</span><span class="o">/</span><span class="n">ieg</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">The ieg tool is a simple command line interface tool to quickly read
+IEG files. It also supports non-standard IEG files with more than 50
+levels (e.g., for g-files).</div>
+<div class="line">To install the tool, go to the build directory and adapt Makefile.h
+for your system. To use one of the default headers, just copy it over
+Makefile.h.</div>
+</div>
+<p>Then just try:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span>
+</pre></div>
+</div>
+<p>and afterwards:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">install</span>
+</pre></div>
+</div>
+<p>The final installation process will copy the executable to your personal
+<code class="docutils literal notranslate"><span class="pre">$HOME/bin</span></code> directory. To use ieg, the <code class="docutils literal notranslate"><span class="pre">$HOME/bin</span></code> should be in your
+<code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable.</p>
+<p>You can then use the command, e.g., using the <code class="docutils literal notranslate"><span class="pre">info</span></code> option to get
+REMO related information about the file. The program contains a REMO
+table to get some meta information about codes in an IEG file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ieg</span> <span class="n">info</span> <span class="n">file</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pyremo-and-pyplot-tools">
+<h3>PyRemo and PyPlot Tools<a class="headerlink" href="#pyremo-and-pyplot-tools" title="Permalink to this headline">¶</a></h3>
+<p>A python library that can handel some REMO data manipulation is
+available here:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">git</span><span class="o">.</span><span class="n">gerics</span><span class="o">.</span><span class="n">de</span><span class="o">/</span><span class="n">PyREMO</span><span class="o">/</span><span class="n">PyREMO</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>You can download it and add it to your <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> environment
+variable to import it to your own scripts for using it. On MISTRAL, it
+is available from the GERICS project:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export PYTHONPATH=/work/ch0636/software/python/PyRemo-1.0.0:\${PYTHONPATH}
+</pre></div>
+</div>
+<p>The PyPlot library contains tools for plotting REMO data and is
+available here:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">git</span><span class="o">.</span><span class="n">gerics</span><span class="o">.</span><span class="n">de</span><span class="o">/</span><span class="n">PyREMO</span><span class="o">/</span><span class="n">PyPlotTools</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>Once downloaded, the tools should be added to you <code class="docutils literal notranslate"><span class="pre">PATH</span></code> variable to
+be available on the command line for use in further scripts. Again, on
+MISTRAL, it is available by adding this line to your .profile or
+.bashrrc file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export PATH=/work/ch0636/sw/python/PyPlotTools-1.2.0:\$PATH
+</pre></div>
+</div>
+</div>
+<div class="section" id="missing-files">
+<h3>Missing Files<a class="headerlink" href="#missing-files" title="Permalink to this headline">¶</a></h3>
+<p>If working with forcing data, it might sometimes be the case that some
+files are missing. E.g., if you apply double-nesting and you create
+high-resolution forcing data from an earlier low-resolution REMO run,
+you are probably missing the very first a-file at 0 hours. You can then
+simply copy the 6 hour forcing file to a 0 hour forcing file and change
+the date to 0 hours. The same holds for the very last forcing file.</p>
+</div>
+</div>
+<div class="section" id="some-more-tricks">
+<h2>Some more Tricks…<a class="headerlink" href="#some-more-tricks" title="Permalink to this headline">¶</a></h2>
+<p>On MISTRAL, you have to load the pftp module to use it. You also need to
+create a .netrc file in your home directory so that a run script can
+automatically login to the archive. According to the DKRZ page, it
+should look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">machine</span> <span class="n">tape</span> <span class="n">login</span> <span class="o">&lt;</span><span class="n">user</span><span class="o">&gt;</span> <span class="n">password</span> <span class="o">&lt;</span><span class="n">password</span><span class="o">&gt;</span>
+<span class="n">machine</span> <span class="n">tape</span><span class="o">.</span><span class="n">dkrz</span><span class="o">.</span><span class="n">de</span> <span class="n">login</span> <span class="o">&lt;</span><span class="n">user</span><span class="o">&gt;</span> <span class="n">password</span> <span class="o">&lt;</span><span class="n">password</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Remember that this file must not be readable by anyone but the user! So
+you need to set permissions of this file, using, e.g., <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">600</span></code>.</p>
+<p>Did you know that you can easily delete and add files from and to a
+tar-archive? To delete a file from a tar-archive, you can use the
+command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="o">--</span><span class="n">append</span> <span class="o">--</span><span class="n">file</span><span class="o">=</span><span class="n">collection</span><span class="o">.</span><span class="n">tar</span> <span class="n">rock</span>
+</pre></div>
+</div>
+<p>or to remove a file, use</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="o">--</span><span class="n">delete</span> <span class="o">--</span><span class="n">file</span><span class="o">=</span><span class="n">collection</span><span class="o">.</span><span class="n">tar</span> <span class="n">rock</span>
+</pre></div>
+</div>
+<p>These commands are very useful when working with tar archives of forcing
+files of output data.</p>
+<p>It seems, that you only can clone a gerics git repository per http on
+MISTRAL. You also need to disable ssl verification by using the flag “-c
+http.sslVerify=false” or by adding it to your .gitconfig in your home
+directory, e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">http</span><span class="p">]</span>
+    <span class="n">sslVerify</span> <span class="o">=</span> <span class="n">false</span>
+</pre></div>
+</div>
+<p>If the flag does not work, you will probably have to load a newer git
+version with the module command. You can also add your gitlab
+credentials to your .netrc file in your home directory, e.g.,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">machine</span> <span class="n">git</span><span class="o">.</span><span class="n">gerics</span><span class="o">.</span><span class="n">de</span> <span class="n">login</span> <span class="o">&lt;</span><span class="n">user</span><span class="o">&gt;</span> <span class="n">password</span> <span class="o">&lt;</span><span class="n">password</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>See only the history of your branch, e.g., when it was created</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">log</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">&gt;</span> <span class="o">--</span><span class="ow">not</span> <span class="n">master</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes REMO might crash when trying to read an IEG file with some
+error output. This is very often due to a problem with the endianness of
+the forcing file. As a default, REMO is usually compiled with a convert
+flag that force REMO to read and write binary files in the Big Endian
+format. If REMO fails to read a binary file, you should check the
+endianess of the input file using the <code class="docutils literal notranslate"><span class="pre">cdo</span> <span class="pre">sinfo</span></code> command. Then you
+should check in the Makefile if the compiler options contain some
+<em>convert</em> flag like, e.g., <code class="docutils literal notranslate"><span class="pre">-convert</span> <span class="pre">big_endian</span></code> and if it is
+consistent with the endianness of the input file.</p>
+</div>
+<div class="section" id="naming-conventions-1">
+<h2>Naming Conventions <a class="footnote-reference" href="#id3" id="id1">[1]</a><a class="headerlink" href="#naming-conventions-1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>a002155aYYYYMM.tar : These files contain the 6-hourly forcing data
+for REMO (“a” = “Antrieb” = forcing). The individual ieg files in the
+archive are organised by time and are named a002155aYYYYMMDDHH, one
+file every 6 hours.</li>
+<li>e002155eYYYYMM.tar: These are the main result files (“e” = “Ergebnis”
+= result) for the 2D fields, usually in hourly resolution (hourly
+means). The individual ieg files in this archive are organised by
+CODES (3- digit code number CCC) and are named
+e002155e_cCCC_YYYYMM, one file for each code.</li>
+<li>e002155tYYYYMM.tar : These archives contain 6-hourly model results
+(instantaneous values) for a number 2D surface fields and for the 3D
+atmospheric fields. The individual ieg files in the archive are
+organised by time and are named e002155tYYYYMMDDHH, one file every 6
+hours. Among other purposes, the t-files are used for computing the
+forcing for finer-resolution REMO experiments.</li>
+<li>e002155mYYYYMM.tar : These archives contain monthly means (“m”) and
+monthly standard deviations (“s”) of the most important 2D fields
+Each archive consists of two individual files: e002155mYYYYMM
+(monthly means) e002155sYYYYMM (monthly standard deviations).</li>
+<li>e002155fYYYYMM.tar : These archives contain the model restart files,
+i.e. the prognostic fields at the last two time steps of the month.
+They are written at the end of each month’s calculation and are read
+by the model at the beginning of the next month’s calculation for
+initialisation. Each archive consists of two individual files:
+e002155fYYYYMM and e002155gYYYYMM (two time steps).</li>
+</ul>
+</div>
+<div class="section" id="the-ieg-format-2">
+<h2>The IEG Format <a class="footnote-reference" href="#id4" id="id2">[2]</a><a class="headerlink" href="#the-ieg-format-2" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">The generic data format used by REMO is a “Max Planck -internal”
+FORTRAN binary format which is usually referred to as “ieg-format”
+(ieg). Both the model input data (surface library, forcing fields) and
+the model output are based on this format. Sometimes, a reduced format
+called “service-format” (srv) is used which contains the same binary
+data fields but a reduced header (see below). Both the ieg and the srv
+format have the following sequential block structure:</div>
+<div class="line">HEADER 1, FIELD 1</div>
+<div class="line">HEADER 2, FIELD 2</div>
+<div class="line">HEADER 3, FIELD 3</div>
+<div class="line">…</div>
+<div class="line">HEADER n, FIELD n</div>
+<div class="line">The header precedes the following binary 2D-field (nx*ny) and
+contains information on its basic characteristics (code number, date
+and time, level, etc.). The header consists of 58 INTEGER and 101 REAL
+values (ieg format) and 8 INTEGER values (srv format) while the binary
+field consists of (nx*ny) REAL values.</div>
+<div class="line">A typical FORTRAN routine that opens an ieg model result file (nx=121,
+ny=121) and reads in the first header and the first field would look
+like this:</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">READ_IEG</span>
+<span class="n">INTEGER</span><span class="p">,</span> <span class="n">PARAMETER</span> <span class="p">::</span> <span class="n">NX</span> <span class="o">=</span> <span class="mi">121</span><span class="p">,</span> <span class="n">NY</span> <span class="o">=</span> <span class="mi">121</span>
+<span class="n">INTEGER</span> <span class="n">IPDB</span><span class="p">(</span><span class="mi">37</span><span class="p">),</span> <span class="n">IGDB</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>
+<span class="n">REAL</span> <span class="n">REF</span><span class="p">,</span> <span class="n">AK</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span> <span class="n">BK</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">REAL</span> <span class="n">FIELD</span><span class="p">(</span><span class="n">NX</span><span class="p">,</span><span class="n">NY</span><span class="p">)</span>
+<span class="n">OPEN</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="n">file</span><span class="o">=</span><span class="s1">&#39;infile.ieg&#39;</span><span class="p">,</span> <span class="n">FORM</span><span class="o">=</span><span class="s2">&quot;UNFORMATTED&quot;</span><span class="p">)</span>
+<span class="n">READ</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="n">IPDB</span><span class="p">,(</span><span class="n">IGDB</span><span class="p">(</span><span class="n">I</span><span class="p">),</span><span class="n">I</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="mi">18</span><span class="p">),</span><span class="n">REF</span><span class="p">,(</span><span class="n">IGDB</span><span class="p">(</span><span class="n">J</span><span class="p">),</span><span class="n">J</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="mi">22</span><span class="p">),</span><span class="n">AK</span><span class="p">,</span><span class="n">BK</span>
+<span class="n">READ</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="n">FIELD</span>
+<span class="n">CLOSE</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">END</span> <span class="n">PROGRAM</span>
+</pre></div>
+</div>
+<p>For the reduced srv format the program looks more simple:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">READ_SRV</span>
+<span class="n">INTEGER</span><span class="p">,</span> <span class="n">PARAMETER</span> <span class="p">::</span> <span class="n">NX</span> <span class="o">=</span> <span class="mi">121</span><span class="p">,</span> <span class="n">NY</span> <span class="o">=</span> <span class="mi">121</span>
+<span class="n">INTEGER</span> <span class="n">IHEAD</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">REAL</span> <span class="n">FIELD</span><span class="p">(</span><span class="n">NX</span><span class="p">,</span><span class="n">NY</span><span class="p">)</span>
+<span class="n">OPEN</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="n">file</span><span class="o">=</span><span class="s1">&#39;infile.srv&#39;</span><span class="p">,</span> <span class="n">FORM</span><span class="o">=</span><span class="s2">&quot;UNFORMATTED&quot;</span><span class="p">)</span>
+<span class="n">READ</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="n">IHEAD</span>
+<span class="n">READ</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="n">FIELD</span>
+<span class="n">CLOSE</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">END</span> <span class="n">PROGRAM</span>
+</pre></div>
+</div>
+<p>In the case of ieg, the IPDB header field contains the “Product
+Definition Block”, the IGDB field the “Grid Definition Block”, and the
+AK and BK arrays define the vertical grid on which the model results are
+based (hybrid sigma coordinate system; NLEV+1 pairs for NLEV levels).
+The real variable REF ist usually set to 0.0. The components of the IPDB
+and IGDB arrays are listed in Table [tab:igdb] and [tab:ipdb]</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="96%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">1</th>
+<th class="head">Length of the Grid Definition Block in Octets</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>2</td>
+<td>Number of unused Bits at the end of the GDB</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>Reserved</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>Data Representation (10 for rotated Grid)</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td><strong>Number of grid points in x-direction
+6 &amp; **Number of grid points in y-direction
+7 &amp; Latitude :math:`varphi` of lower left corner in the rotated system in :math:`10^{-3}` degree
+8 &amp; Longitude :math:`lambda` of lower left corner in the rotated system in :math:`10^{-3}` degree
+9 &amp; Flag
+10 &amp; Latitude :math:`varphi` of upper right corner in :math:`10^{-3}` degree
+11 &amp; Longitude :math:`lambda` of upper right corner in :math:`10^{-3}` degree
+12 &amp; Latitude increment (resolution) :math:`Deltavarphi ` in x-direction in :math:`10^{-3}` degree
+13 &amp; Longitude increment (resolution) :math:`Deltalambda ` in y-direction in :math:`10^{-3}` degree
+14 &amp; Flag
+15 &amp; Scanning Mode
+16 &amp; Reserved
+17 &amp; Latitude :math:`varphi` of rotated south pole in the non-rotated system in :math:`10^{-3}` degree
+18 &amp; Longitude :math:`lambda` of rotated south pole in the non-rotated system in :math:`10^{-3}` degree
+19 &amp; Rotation angle saved in REF
+20 &amp; Not used
+21 &amp; Not used
+22 &amp; Not used
+from 23 on &amp; Vertical Coordinate Parameters saved in AK and BK
+**</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Table: IEG Format; Grid Definition Block contained in IGDB, REF, AK and
+BK.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">1</th>
+<th class="head">Length of the Product Definition Block in Octets</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>2</td>
+<td>Edition number</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>Station ID</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>Type ID</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>Catalouge number</td>
+</tr>
+<tr class="row-even"><td>6</td>
+<td>Block flag, shows if more blocks are following</td>
+</tr>
+<tr class="row-odd"><td>7</td>
+<td>Code Number</td>
+</tr>
+<tr class="row-even"><td>8</td>
+<td>Level type</td>
+</tr>
+<tr class="row-odd"><td>9</td>
+<td>Level type, depends on nr. 8</td>
+</tr>
+<tr class="row-even"><td>10</td>
+<td>Level height</td>
+</tr>
+<tr class="row-odd"><td>11</td>
+<td>Year</td>
+</tr>
+<tr class="row-even"><td>12</td>
+<td>Month</td>
+</tr>
+<tr class="row-odd"><td>13</td>
+<td>Day</td>
+</tr>
+<tr class="row-even"><td>14</td>
+<td>Hour</td>
+</tr>
+<tr class="row-odd"><td>15</td>
+<td>Minutes</td>
+</tr>
+<tr class="row-even"><td>16</td>
+<td>Time unit</td>
+</tr>
+<tr class="row-odd"><td>17</td>
+<td>Not used</td>
+</tr>
+<tr class="row-even"><td>18</td>
+<td>Not used</td>
+</tr>
+<tr class="row-odd"><td>19</td>
+<td>10: Prediction time,</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>4: Sum for a prediction time,</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>3: mean for a prediction time</td>
+</tr>
+<tr class="row-even"><td>20</td>
+<td>For mean values</td>
+</tr>
+<tr class="row-odd"><td>21</td>
+<td>Reserved</td>
+</tr>
+<tr class="row-even"><td>22</td>
+<td>Free</td>
+</tr>
+</tbody>
+</table>
+<p>Table: IEG Format; Product Definition Block contained in IPDB.</p>
+<div class="line-block">
+<div class="line">Within each binary field, the first value represents the lower left
+grid box, with columns varying faster than lines (i.e., the lowermost
+line is filled at first from left to right before starting with the
+second line). Regarding the sequence of the fields, the date and time
+are the parameters that vary slowest, then the code and then the
+level. For instance, in a model results file containing two parameters
+(code 1 and code 2, both defined on 27 levels) for two points in time
+(date 1 and date 2) the sequence would look like this:</div>
+<div class="line">HEADER date 1, code 1, level 1</div>
+<div class="line">FIELD date 1, code 1, level 1</div>
+<div class="line">HEADER date 1, code 1, level 2</div>
+<div class="line">FIELD date 1, code 1, level 2</div>
+<div class="line">…</div>
+<div class="line">HEADER date 1, code 1, level 27</div>
+<div class="line">FIELD date 1, code 1, level 27</div>
+<div class="line">HEADER date 1, code 2, level 1</div>
+<div class="line">FIELD date 1, code 2, level 1</div>
+<div class="line">HEADER date 1, code 2, level 2</div>
+<div class="line">FIELD date 1, code 2, level 2</div>
+<div class="line">HEADER date 1, code 2, level 27</div>
+<div class="line">FIELD date 1, code 2, level 27</div>
+<div class="line">HEADER date 2, code 1, level 1</div>
+<div class="line">FIELD date 2, code 1, level 1</div>
+<div class="line">HEADER date 2, code 1, level 2</div>
+<div class="line">FIELD date 2, code 1, level 2</div>
+<div class="line">…</div>
+<div class="line">HEADER date 2, code 1, level 27</div>
+<div class="line">FIELD date 2, code 1, level 27</div>
+<div class="line">HEADER date 2, code 2, level 1</div>
+<div class="line">FIELD date 2, code 2, level 1</div>
+<div class="line">HEADER date 2, code 2, level 2</div>
+<div class="line">FIELD date 2, code 2, level 2</div>
+<div class="line">…</div>
+<div class="line">HEADER date 2, code 2, level 27</div>
+<div class="line">FIELD date 2, code 2, level 27</div>
+<div class="line">needs to be translated</div>
+<div class="line">Das IEG-Format ist im IEEE Binärformat abgespeichert, wobei zwei
+computerabhängige Formatierungen vorliegen, die sich durch die
+Anordnungen der Bytes unterscheiden, das sogenannte Big-Endian und
+Little-Endian Format. Alle Daten in der CERA Datenbank liegen im
+Big-Endian Format vor und können mit FORTRAN Programmen unter UNIX
+problemlos eingelesen werden. Linux und Windows Computer verwenden das
+Little-Endian Format. Daher müssen die Daten evt. vorher umformatiert
+werden, nur dann nicht, wenn der FORTRAN Compiler in der Lage ist auch
+Big-Endian Formate einzulesen. Die CDOs können mit beiden
+Datenformaten umgehen, so dass hier keine Konvertiereung notwendig
+ist.</div>
+</div>
+</div>
+<div class="section" id="code-list-of-variables">
+<h2>Code List of Variables<a class="headerlink" href="#code-list-of-variables" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils" id="id5">
+<caption><span class="caption-text">Code List</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="40%" />
+<col width="10%" />
+<col width="10%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">code</th>
+<th class="head">layers</th>
+<th class="head">name</th>
+<th class="head">type</th>
+<th class="head">description</th>
+<th class="head">unit</th>
+<th class="head">output</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>1</td>
+<td>WS1</td>
+<td>&#160;</td>
+<td>soil wetness of layer 1</td>
+<td>[m]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>1</td>
+<td>WS2</td>
+<td>&#160;</td>
+<td>soil wetness of layer 2</td>
+<td>[m]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>1</td>
+<td>WS3</td>
+<td>&#160;</td>
+<td>soil wetness of layer 3</td>
+<td>[m]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>1</td>
+<td>WS4</td>
+<td>&#160;</td>
+<td>soil wetness of layer 4</td>
+<td>[m]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>5</td>
+<td>1</td>
+<td>WS5</td>
+<td>&#160;</td>
+<td>soil wetness of layer 5</td>
+<td>[m]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>6</td>
+<td>1</td>
+<td>DZR</td>
+<td>&#160;</td>
+<td>Rooting depth</td>
+<td>[m]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>7</td>
+<td>1</td>
+<td>DZS</td>
+<td>&#160;</td>
+<td>Soil depth until bedrock derived from textures</td>
+<td>[m]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>8</td>
+<td>1</td>
+<td>FKSAT</td>
+<td>&#160;</td>
+<td>Saturated hydraulic conductivity (Clapp and Hornberger)</td>
+<td>[m/s]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>9</td>
+<td>1</td>
+<td>FMPOT</td>
+<td>&#160;</td>
+<td>Matrix potential</td>
+<td>[m]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>10</td>
+<td>1</td>
+<td>BCLAPP</td>
+<td>&#160;</td>
+<td>Exponent b in Clapp and Hornberger</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>11</td>
+<td>1</td>
+<td>VPOR</td>
+<td>&#160;</td>
+<td>Volumetric soil porosity</td>
+<td>[m/m]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>12</td>
+<td>1</td>
+<td>ETRANS</td>
+<td>&#160;</td>
+<td>Transpiration at the surface</td>
+<td>[mm]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>13</td>
+<td>1</td>
+<td>EBSOIL</td>
+<td>&#160;</td>
+<td>Bare soil evaporation at the surface</td>
+<td>[mm]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>14</td>
+<td>nl-1</td>
+<td>FTKVM</td>
+<td>&#160;</td>
+<td>turbulent transfer coefficient of momentum in the atmosphere</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>15</td>
+<td>nl-1</td>
+<td>FTKVH</td>
+<td>&#160;</td>
+<td>turbulent transfer coefficient of heat in the atmosphere</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>16</td>
+<td>&#160;</td>
+<td>TGLAC1</td>
+<td>&#160;</td>
+<td>GLACIER: Temperature of upper ice layer</td>
+<td>[K]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>17</td>
+<td>&#160;</td>
+<td>TGLAC2</td>
+<td>&#160;</td>
+<td>GLACIER: Temperature of lower ice layer</td>
+<td>[K]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>18</td>
+<td>&#160;</td>
+<td>GLD</td>
+<td>&#160;</td>
+<td>GLACIER: Ice thickness</td>
+<td>[m w.e.]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>19</td>
+<td>&#160;</td>
+<td>GLRUN</td>
+<td>&#160;</td>
+<td>GLACIER: Surface runoff originating runoff from glaciated fraction (reference area: total land area)</td>
+<td>[mm]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>20</td>
+<td>&#160;</td>
+<td>GLDRAIN</td>
+<td>&#160;</td>
+<td>GLACIER: Drainage originating from glaciated fraction (reference area: total land area)</td>
+<td>[mm]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>21</td>
+<td>&#160;</td>
+<td>GLACIER</td>
+<td>&#160;</td>
+<td>GLACIER: Fractional glacier cover</td>
+<td>[]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>22</td>
+<td>&#160;</td>
+<td>TD3G</td>
+<td>&#160;</td>
+<td>GLACIER: Soil temperature of glaciated fraction (1st layer)</td>
+<td>[K]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>23</td>
+<td>&#160;</td>
+<td>TD4G</td>
+<td>&#160;</td>
+<td>GLACIER: Soil temperature of glaciated fraction (2nd layer)</td>
+<td>[K]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>24</td>
+<td>&#160;</td>
+<td>TD5G</td>
+<td>&#160;</td>
+<td>GLACIER: Soil temperature of glaciated fraction (3rd layer)</td>
+<td>[K]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>25</td>
+<td>&#160;</td>
+<td>TDG</td>
+<td>&#160;</td>
+<td>GLACIER: Soil temperature of glaciated fraction (4th layer)</td>
+<td>[K]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>26</td>
+<td>&#160;</td>
+<td>TDCLG</td>
+<td>&#160;</td>
+<td>GLACIER: Soil temperature of glaciated fraction (5th layer)</td>
+<td>[K]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>27</td>
+<td>&#160;</td>
+<td>WI3G</td>
+<td>&#160;</td>
+<td>GLACIER: Fraction of frozen soil of glaciated fraction (1st layer)</td>
+<td>[]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>28</td>
+<td>&#160;</td>
+<td>WI4G</td>
+<td>&#160;</td>
+<td>GLACIER: Fraction of frozen soil of glaciated fraction (2nd layer)</td>
+<td>[]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>29</td>
+<td>&#160;</td>
+<td>WI5G</td>
+<td>&#160;</td>
+<td>GLACIER: Fraction of frozen soil of glaciated fraction (3rd layer)</td>
+<td>[]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>30</td>
+<td>&#160;</td>
+<td>WIG</td>
+<td>&#160;</td>
+<td>GLACIER: Fraction of frozen soil of glaciated fraction (4th layer)</td>
+<td>[]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>31</td>
+<td>&#160;</td>
+<td>WICLG</td>
+<td>&#160;</td>
+<td>GLACIER: Fraction of frozen soil of glaciated fraction (5th layer)</td>
+<td>[]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>32</td>
+<td>&#160;</td>
+<td>GLACCI</td>
+<td>&#160;</td>
+<td>GLACIER: Ice accumulation on glaciated fraction (reference area: glaciated area)</td>
+<td>[mm w.e.]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>33</td>
+<td>&#160;</td>
+<td>GLABLI</td>
+<td>&#160;</td>
+<td>GLACIER: Ice ablation on glaciated fraction (reference area: glaciated area)</td>
+<td>[mm w.e.]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>34</td>
+<td>&#160;</td>
+<td>GLACCS</td>
+<td>&#160;</td>
+<td>GLACIER: Snow accumulation on glaciated fraction (reference area: glaciated area)</td>
+<td>[mm w.e.]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>35</td>
+<td>&#160;</td>
+<td>GLABLS</td>
+<td>&#160;</td>
+<td>GLACIER: Snow ablation on glaciated fraction (reference area: glaciated area)</td>
+<td>[mm w.e.]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>36</td>
+<td>&#160;</td>
+<td>GLVOL</td>
+<td>&#160;</td>
+<td>GLACIER: Ice volume</td>
+<td>[m³ w.e.]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>37</td>
+<td>&#160;</td>
+<td>SRADSGI</td>
+<td>&#160;</td>
+<td>GLACIER: Surface incoming solar radiation on glaciated fraction</td>
+<td>[W/m²]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>38</td>
+<td>&#160;</td>
+<td>SRADSGO</td>
+<td>&#160;</td>
+<td>GLACIER: Surface outgoing solar radiation on glaciated fraction</td>
+<td>[W/m²]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>49</td>
+<td>1</td>
+<td>TRSOL</td>
+<td>i</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>51</td>
+<td>1</td>
+<td>EMTEF</td>
+<td>i</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>52</td>
+<td>1</td>
+<td>TRSOF</td>
+<td>i</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>53</td>
+<td>1</td>
+<td>DRAIN</td>
+<td>s</td>
+<td>drainage (part of 160)</td>
+<td>[mm]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>54</td>
+<td>1</td>
+<td>TSL</td>
+<td>&#160;</td>
+<td>surface temperature (land)</td>
+<td>[K]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>55</td>
+<td>1</td>
+<td>TSW</td>
+<td>&#160;</td>
+<td>surface temperature (water)</td>
+<td>[K]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>56</td>
+<td>1</td>
+<td>TSI</td>
+<td>&#160;</td>
+<td>surface temperature (ice)</td>
+<td>[K]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>57</td>
+<td>1</td>
+<td>USTRL</td>
+<td>m</td>
+<td>surface u-stress (land)</td>
+<td>[Pa]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>58</td>
+<td>1</td>
+<td>USTRW</td>
+<td>m</td>
+<td>surface u-stress (water)</td>
+<td>[Pa]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>59</td>
+<td>1</td>
+<td>USTRI</td>
+<td>m</td>
+<td>surface u-stress (ice)</td>
+<td>[Pa]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>60</td>
+<td>1</td>
+<td>VSTRL</td>
+<td>m</td>
+<td>surface v-stress (land)</td>
+<td>[Pa]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>61</td>
+<td>1</td>
+<td>VSTRW</td>
+<td>m</td>
+<td>surface v-stress (water)</td>
+<td>[Pa]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>62</td>
+<td>1</td>
+<td>VSTRI</td>
+<td>m</td>
+<td>surface v-stress (ice)</td>
+<td>[Pa]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>63</td>
+<td>1</td>
+<td>EVAPL</td>
+<td>s</td>
+<td>surface evaporation (land)</td>
+<td>[mm]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>64</td>
+<td>1</td>
+<td>EVAPW</td>
+<td>s</td>
+<td>surface evaporation (water)</td>
+<td>[mm]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>65</td>
+<td>1</td>
+<td>EVAPI</td>
+<td>s</td>
+<td>surface evaporation (ice)</td>
+<td>[mm]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>66</td>
+<td>1</td>
+<td>AHFLL</td>
+<td>m</td>
+<td>surface latent heat flux (land)</td>
+<td>[W/m²]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>67</td>
+<td>1</td>
+<td>AHFLW</td>
+<td>m</td>
+<td>surface latent heat flux (water)</td>
+<td>[W/m²]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>68</td>
+<td>1</td>
+<td>AHFLI</td>
+<td>m</td>
+<td>surface latent heat flux (ice)</td>
+<td>[W/m²]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>69</td>
+<td>1</td>
+<td>AHFSL</td>
+<td>m</td>
+<td>surface sensible heat flux (land)</td>
+<td>[W/m²]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>70</td>
+<td>1</td>
+<td>AHFSW</td>
+<td>m</td>
+<td>surface sensible heat flux (water)</td>
+<td>[W/m²]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>71</td>
+<td>1</td>
+<td>AHFSI</td>
+<td>m</td>
+<td>surface sensible heat flux (ice)</td>
+<td>[W/m²]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>72</td>
+<td>1</td>
+<td>AZ0L</td>
+<td>&#160;</td>
+<td>surface roughness length (land)</td>
+<td>[m]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>73</td>
+<td>1</td>
+<td>AZ0W</td>
+<td>&#160;</td>
+<td>surface roughness length (water)</td>
+<td>[m]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>74</td>
+<td>1</td>
+<td>AZ0I</td>
+<td>&#160;</td>
+<td>surface roughness length (ice)</td>
+<td>[m]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>75</td>
+<td>1</td>
+<td>ALSOL</td>
+<td>&#160;</td>
+<td>surface albedo (land)</td>
+<td>[fract.]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>76</td>
+<td>1</td>
+<td>ALSOW</td>
+<td>&#160;</td>
+<td>surface albedo (water)</td>
+<td>[fract.]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>77</td>
+<td>1</td>
+<td>ALSOI</td>
+<td>&#160;</td>
+<td>surface albedo (ice)</td>
+<td>[fract.]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>81</td>
+<td>1</td>
+<td>TMCHL</td>
+<td>i</td>
+<td>turbulent transfer coefficient of heat at the surface (land)</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>82</td>
+<td>1</td>
+<td>TMCHW</td>
+<td>i</td>
+<td>turbulent transfer coefficient of heat at the surface (water)</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>83</td>
+<td>1</td>
+<td>TMCHI</td>
+<td>i</td>
+<td>turbulent transfer coefficient of heat at the surface (ice)</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>84</td>
+<td>1</td>
+<td>QDBL</td>
+<td>&#160;</td>
+<td>specific humidity surface (land)</td>
+<td>[kg/kg]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>85</td>
+<td>1</td>
+<td>QDBW</td>
+<td>&#160;</td>
+<td>specific humidity surface (water)</td>
+<td>[kg/kg]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>86</td>
+<td>1</td>
+<td>QDBI</td>
+<td>&#160;</td>
+<td>specific humidity surface (ice)</td>
+<td>[kg/kg]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>87</td>
+<td>1</td>
+<td>BFLHSL</td>
+<td>m</td>
+<td>surface sensible heat flux (land) (= 69)</td>
+<td>[W/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>88</td>
+<td>1</td>
+<td>BFLHSW</td>
+<td>m</td>
+<td>surface sensible heat flux (water) (= 70)</td>
+<td>[W/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>89</td>
+<td>1</td>
+<td>BFLHSI</td>
+<td>m</td>
+<td>surface sensible heat flux (ice) (= 71)</td>
+<td>[W/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>90</td>
+<td>1</td>
+<td>BFLQDSL</td>
+<td>m</td>
+<td>surface latent heat flux (land) (= 66)</td>
+<td>[W/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>91</td>
+<td>1</td>
+<td>BFLQDSW</td>
+<td>m</td>
+<td>surface latent heat flux (water) (= 67)</td>
+<td>[W/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>92</td>
+<td>1</td>
+<td>BFLQDSI</td>
+<td>m</td>
+<td>surface latent heat flux (ice) (= 68)</td>
+<td>[W/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>93</td>
+<td>1</td>
+<td>AHFICE</td>
+<td>m</td>
+<td>sea-ice: conductive heat</td>
+<td>[W/m]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>94</td>
+<td>1</td>
+<td>QRES</td>
+<td>m</td>
+<td>residual heat flux for melting sea ice</td>
+<td>[W/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>95</td>
+<td>1</td>
+<td>SRFL</td>
+<td>i</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>96</td>
+<td>1</td>
+<td>QDBOXS</td>
+<td>m</td>
+<td>horizontal transport of water vapour</td>
+<td>[kg/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>97</td>
+<td>1</td>
+<td>QWBOXS</td>
+<td>m</td>
+<td>horizontal transport of cloud water</td>
+<td>[kg/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>98</td>
+<td>1</td>
+<td>EKBOXS</td>
+<td>m</td>
+<td>horizontal transport of kinetic energy</td>
+<td>[(3600*J)/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>99</td>
+<td>1</td>
+<td>FHBOXS</td>
+<td>m</td>
+<td>horizontal transport of sensible heat</td>
+<td>[(3600*J)/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>100</td>
+<td>1</td>
+<td>FIBOXS</td>
+<td>m</td>
+<td>horizontal transport of potential energy</td>
+<td>[(3600*J)/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>101</td>
+<td>1</td>
+<td>TLAMBDA</td>
+<td>&#160;</td>
+<td>heat conductivity of dry soil</td>
+<td>[W/(K*m)]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>102</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>not free</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>103</td>
+<td>1</td>
+<td>DLAMBDA</td>
+<td>&#160;</td>
+<td>parameter for increasing the heat conductivity of the soil due to soil moisture (TLAMBDA+DLAMBDA gives the heat conductivity of saturated soil)</td>
+<td>&#160;</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>104</td>
+<td>1</td>
+<td>PORVOL</td>
+<td>&#160;</td>
+<td>pore volume</td>
+<td>&#160;</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>105</td>
+<td>1</td>
+<td>FCAP</td>
+<td>&#160;</td>
+<td>field capacity of soil</td>
+<td>[m³/m³]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>106</td>
+<td>1</td>
+<td>WI3</td>
+<td>&#160;</td>
+<td>fraction of frozen soil (layers analogous soil temp.)</td>
+<td>&#160;</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>107</td>
+<td>1</td>
+<td>WI4</td>
+<td>&#160;</td>
+<td>fraction of frozen soil (layers analogous soil temp.)</td>
+<td>&#160;</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>108</td>
+<td>1</td>
+<td>WI5</td>
+<td>&#160;</td>
+<td>fraction of frozen soil (layers analogous soil temp.)</td>
+<td>&#160;</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>109</td>
+<td>1</td>
+<td>WI</td>
+<td>&#160;</td>
+<td>fraction of frozen soil (layers analogous soil temp.)</td>
+<td>&#160;</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>110</td>
+<td>1</td>
+<td>WICL</td>
+<td>&#160;</td>
+<td>fraction of frozen soil (layers analogous soil temp.)</td>
+<td>&#160;</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>111</td>
+<td>&#160;</td>
+<td>TSGECH</td>
+<td>&#160;</td>
+<td>GLACIER: Surface temperature of glaciated fraction</td>
+<td>[K]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>112</td>
+<td>1</td>
+<td>QDB</td>
+<td>&#160;</td>
+<td>specific humidity surface</td>
+<td>[kg/kg]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>113</td>
+<td>&#160;</td>
+<td>AZ0G</td>
+<td>&#160;</td>
+<td>GLACIER: Surface roughness length of glaciated fraction</td>
+<td>[m]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>114</td>
+<td>&#160;</td>
+<td>TMCHG</td>
+<td>&#160;</td>
+<td>GLACIER: Turbulent exchange coefficient for sensible and latent heat on glaciated fraction</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>115</td>
+<td>&#160;</td>
+<td>AHFSG</td>
+<td>&#160;</td>
+<td>GLACIER: Sensible heat flux on glaciated fraction (VDIFF)</td>
+<td>[W/m²]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>116</td>
+<td>&#160;</td>
+<td>BFLHSG</td>
+<td>&#160;</td>
+<td>GLACIER: Sensible heat flux on glaciated fraction (PROGEXP)</td>
+<td>[W/m²]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>117</td>
+<td>&#160;</td>
+<td>BFLQDSG</td>
+<td>&#160;</td>
+<td>GLACIER: Latent heat flux on glaciated fraction (PROGEXP)</td>
+<td>[W/m²]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>118</td>
+<td>&#160;</td>
+<td>EVAPG</td>
+<td>&#160;</td>
+<td>GLACIER: Evaporation on glaciated fraction (reference area: glaciated area)</td>
+<td>[mm]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>119</td>
+<td>&#160;</td>
+<td>QDBG</td>
+<td>&#160;</td>
+<td>GLACIER: Specific humidity over glaciated fraction</td>
+<td>[kg/kg]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>120</td>
+<td>&#160;</td>
+<td>USTRG</td>
+<td>&#160;</td>
+<td>GLACIER: Surface u-stress over glaciated fraction</td>
+<td>[Pa*s]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>121</td>
+<td>&#160;</td>
+<td>VSTRG</td>
+<td>&#160;</td>
+<td>GLACIER: Surface v-stress over glaciated fraction</td>
+<td>[Pa*s]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>122</td>
+<td>&#160;</td>
+<td>ALSOG</td>
+<td>&#160;</td>
+<td>GLACIER: Surface albedo of glaciated fraction</td>
+<td>[]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>123</td>
+<td>&#160;</td>
+<td>SNG</td>
+<td>&#160;</td>
+<td>GLACIER: Snow depth on glaciated fraction</td>
+<td>[m w.e.]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>124</td>
+<td>&#160;</td>
+<td>TSNG</td>
+<td>&#160;</td>
+<td>GLACIER: Snow temperature on glaciated fraction</td>
+<td>[K]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>125</td>
+<td>&#160;</td>
+<td>SNAGEL</td>
+<td>&#160;</td>
+<td>GLACIER: Snow age on non-glaciated fraction</td>
+<td>[days]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>126</td>
+<td>&#160;</td>
+<td>SNAGEG</td>
+<td>&#160;</td>
+<td>GLACIER: Snow age on glaciated fraction</td>
+<td>[days]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>127</td>
+<td>&#160;</td>
+<td>SNMDL</td>
+<td>&#160;</td>
+<td>GLACIER: Mean snow depth on non-glaciated fraction during SNAGEL</td>
+<td>[m w.e.]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>128</td>
+<td>&#160;</td>
+<td>SNMDG</td>
+<td>&#160;</td>
+<td>GLACIER: Mean snow depth on glaciated fraction during SNAGEG</td>
+<td>[m w.e.]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>129</td>
+<td>1</td>
+<td>FIB</td>
+<td>&#160;</td>
+<td>surface geopotential (orography)</td>
+<td>[m]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>130</td>
+<td>nl</td>
+<td>T</td>
+<td>&#160;</td>
+<td>temperature</td>
+<td>[K]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>131</td>
+<td>nl</td>
+<td>U</td>
+<td>c</td>
+<td>u-velocity</td>
+<td>[m/s]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>132</td>
+<td>nl</td>
+<td>V</td>
+<td>c</td>
+<td>v-velocity</td>
+<td>[m/s]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>133</td>
+<td>nl</td>
+<td>QD</td>
+<td>&#160;</td>
+<td>specific humidity</td>
+<td>[kg/kg]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>134</td>
+<td>1</td>
+<td>PS</td>
+<td>&#160;</td>
+<td>Surface pressure</td>
+<td>[Pa]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>135</td>
+<td>pl</td>
+<td>OMEGA**</td>
+<td>&#160;</td>
+<td>Vertical velocity</td>
+<td>[Pa/s]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>136</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>not free</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>137</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>not free</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>138</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>not free</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>139</td>
+<td>1</td>
+<td>TS</td>
+<td>&#160;</td>
+<td>surface temperature (mean over gridbox)</td>
+<td>[K]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>140</td>
+<td>1</td>
+<td>WS</td>
+<td>&#160;</td>
+<td>soil wetness</td>
+<td>[m]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>141</td>
+<td>1</td>
+<td>SN</td>
+<td>&#160;</td>
+<td>snow depth</td>
+<td>[m]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>142</td>
+<td>1</td>
+<td>APRL</td>
+<td>s</td>
+<td>large scale precipitation</td>
+<td>[mm]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>143</td>
+<td>1</td>
+<td>APRC</td>
+<td>s</td>
+<td>convective precipitation</td>
+<td>[mm]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>144</td>
+<td>1</td>
+<td>APRS</td>
+<td>s</td>
+<td>snow fall</td>
+<td>[mm]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>145</td>
+<td>1</td>
+<td>VDIS</td>
+<td>m</td>
+<td>boundary layer dissipation</td>
+<td>[W/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>146</td>
+<td>1</td>
+<td>AHFS</td>
+<td>m</td>
+<td>surface sensible heat flux</td>
+<td>[W/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>147</td>
+<td>1</td>
+<td>AHFL</td>
+<td>m</td>
+<td>surface latent heat flux</td>
+<td>[W/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>148</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>not free</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>149</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>not free</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>150</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>not free</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>151</td>
+<td>1</td>
+<td>PSRED</td>
+<td>&#160;</td>
+<td>mean sea level pressure</td>
+<td>[Pa]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>152</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>not free</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>153</td>
+<td>nl</td>
+<td>QW</td>
+<td>&#160;</td>
+<td>liquid water content</td>
+<td>[kg/kg]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>154</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>not free</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>155</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>not free</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>156</td>
+<td>nl</td>
+<td>FI</td>
+<td>&#160;</td>
+<td>geopotential height</td>
+<td>[m]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>157</td>
+<td>pl</td>
+<td>RELHUM</td>
+<td>&#160;</td>
+<td>relative humidity (only an output variable of the pressure interpolation routine as ‘REL HUM ‘ in the namelist)</td>
+<td>[%]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>158</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>not free</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>159</td>
+<td>1</td>
+<td>USTAR3</td>
+<td>m</td>
+<td>ustar³</td>
+<td>[m³/s³]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>160</td>
+<td>1</td>
+<td>RUNOFF</td>
+<td>s</td>
+<td>total runoff (surface runoff PLUS drainage !!)</td>
+<td>[mm]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>161</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>not free</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>162</td>
+<td>nl</td>
+<td>ACLC</td>
+<td>&#160;</td>
+<td>cloud cover (see also 223)</td>
+<td>[fract.]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>163</td>
+<td>1</td>
+<td>ACLCV</td>
+<td>&#160;</td>
+<td>total cloud cover (see also 164)</td>
+<td>[fract.]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>164</td>
+<td>1</td>
+<td>ACLCOV</td>
+<td>m</td>
+<td>total cloud cover</td>
+<td>[fract.]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>165</td>
+<td>1</td>
+<td>U10</td>
+<td>m x</td>
+<td>10m u-velocity</td>
+<td>[m/s]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>166</td>
+<td>1</td>
+<td>V10</td>
+<td>m x</td>
+<td>10m v-velocity</td>
+<td>[m/s]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>167</td>
+<td>1</td>
+<td>TEMP2</td>
+<td>m</td>
+<td>2m temperature</td>
+<td>[K]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>168</td>
+<td>1</td>
+<td>DEW2</td>
+<td>m</td>
+<td>2m dew point temperature</td>
+<td>[K]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>169</td>
+<td>1</td>
+<td>TSURF</td>
+<td>m</td>
+<td>surface temperature (land) (see also 54)</td>
+<td>[K]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>170</td>
+<td>1</td>
+<td>TD</td>
+<td>&#160;</td>
+<td>deep soil temperature</td>
+<td>[K]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>171</td>
+<td>1</td>
+<td>WIND10</td>
+<td>m</td>
+<td>10m windspeed</td>
+<td>[m/s]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>172</td>
+<td>1</td>
+<td>BLA</td>
+<td>&#160;</td>
+<td>land sea mask</td>
+<td>[fract.]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>173</td>
+<td>1</td>
+<td>AZ0</td>
+<td>&#160;</td>
+<td>surface roughness length</td>
+<td>[m]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>174</td>
+<td>1</td>
+<td>ALB</td>
+<td>&#160;</td>
+<td>surface background albedo</td>
+<td>[fract.]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>175</td>
+<td>1</td>
+<td>ALBEDO</td>
+<td>&#160;</td>
+<td>surface albedo</td>
+<td>[fract.]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>176</td>
+<td>1</td>
+<td>SRADS</td>
+<td>m</td>
+<td>net surface solar radiation</td>
+<td>[W/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>177</td>
+<td>1</td>
+<td>TRADS</td>
+<td>m</td>
+<td>net surface thermal radiation</td>
+<td>[W/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>178</td>
+<td>1</td>
+<td>SRAD0</td>
+<td>m</td>
+<td>net top solar radiation</td>
+<td>[W/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>179</td>
+<td>1</td>
+<td>TRAD0</td>
+<td>m</td>
+<td>top thermal radiation (OLR)</td>
+<td>[W/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>180</td>
+<td>1</td>
+<td>USTR</td>
+<td>m</td>
+<td>surface u-stress</td>
+<td>[Pa]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>181</td>
+<td>1</td>
+<td>VSTR</td>
+<td>m</td>
+<td>surface v-stress</td>
+<td>[Pa]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>182</td>
+<td>1</td>
+<td>EVAP</td>
+<td>s</td>
+<td>surface evaporation</td>
+<td>[mm]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>183</td>
+<td>1</td>
+<td>TDCL</td>
+<td>&#160;</td>
+<td>soil temperature (see description below)</td>
+<td>[K]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>184</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>not free</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>185</td>
+<td>1</td>
+<td>SRAFS</td>
+<td>m</td>
+<td>net surf. solar radiation (clear sky)</td>
+<td>[W/m²]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>186</td>
+<td>1</td>
+<td>TRAFS</td>
+<td>m</td>
+<td>net surf. thermal radiation (clear sky)</td>
+<td>[W/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>187</td>
+<td>1</td>
+<td>SRAF0</td>
+<td>m</td>
+<td>net top solar radiation (clear sky)</td>
+<td>[W/m²]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>188</td>
+<td>1</td>
+<td>TRAF0</td>
+<td>m</td>
+<td>net top thermal radiation (clear sky)</td>
+<td>[W/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>189</td>
+<td>1</td>
+<td>SCLFS</td>
+<td>m</td>
+<td>surface solar cloud forcing</td>
+<td>[W/m²]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>190</td>
+<td>1</td>
+<td>TCLFS</td>
+<td>m</td>
+<td>surface thermal cloud forcing</td>
+<td>[W/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>191</td>
+<td>1</td>
+<td>SCLF0</td>
+<td>m</td>
+<td>top solar cloud forcing</td>
+<td>[W/m²]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>192</td>
+<td>1</td>
+<td>TCLF0</td>
+<td>m</td>
+<td>top thermal cloud forcing</td>
+<td>[W/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>193</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>not free</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>194</td>
+<td>1</td>
+<td>WL</td>
+<td>&#160;</td>
+<td>skin reservoir content</td>
+<td>[m]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>195</td>
+<td>1</td>
+<td>USTRGW</td>
+<td>m</td>
+<td>u-gravity wave stress</td>
+<td>[Pa]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>196</td>
+<td>1</td>
+<td>VSTRGW</td>
+<td>m</td>
+<td>v-gravity wave stress</td>
+<td>[Pa]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>197</td>
+<td>1</td>
+<td>VDISGW</td>
+<td>m</td>
+<td>gravity wave dissipation</td>
+<td>[W/m²]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>198</td>
+<td>1</td>
+<td>VGRAT</td>
+<td>&#160;</td>
+<td>vegetation ratio</td>
+<td>&#160;</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>199</td>
+<td>1</td>
+<td>VAROR</td>
+<td>&#160;</td>
+<td>orographic variance (for surface runoff)</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>200</td>
+<td>1</td>
+<td>VLT</td>
+<td>&#160;</td>
+<td>leaf area index</td>
+<td>[m²/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>201</td>
+<td>1</td>
+<td>T2MAX</td>
+<td>&#160;</td>
+<td>maximum 2m-temperature</td>
+<td>[K]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>202</td>
+<td>1</td>
+<td>T2MIN</td>
+<td>&#160;</td>
+<td>minimum 2m-temperature</td>
+<td>[K]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>203</td>
+<td>1</td>
+<td>SRAD0U</td>
+<td>m</td>
+<td>top solar radiation upward</td>
+<td>[W/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>204</td>
+<td>1</td>
+<td>SRADSU</td>
+<td>m</td>
+<td>surface solar radiation upward</td>
+<td>[W/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>205</td>
+<td>1</td>
+<td>TRADSU</td>
+<td>m</td>
+<td>surface thermal radiation upward</td>
+<td>[W/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>206</td>
+<td>1</td>
+<td>TSN</td>
+<td>&#160;</td>
+<td>snow temperature (see description below)</td>
+<td>[K]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>207</td>
+<td>1</td>
+<td>TD3</td>
+<td>&#160;</td>
+<td>soil temperature (see description below)</td>
+<td>[K]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>208</td>
+<td>1</td>
+<td>TD4</td>
+<td>&#160;</td>
+<td>soil temperature (see description below)</td>
+<td>[K]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>209</td>
+<td>1</td>
+<td>TD5</td>
+<td>&#160;</td>
+<td>soil temperature (see description below)</td>
+<td>[K]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>210</td>
+<td>1</td>
+<td>SEAICE</td>
+<td>&#160;</td>
+<td>sea ice cover</td>
+<td>[fract.]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>211</td>
+<td>1</td>
+<td>SICED</td>
+<td>&#160;</td>
+<td>sea ice depth</td>
+<td>[m]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>212</td>
+<td>1</td>
+<td>FOREST</td>
+<td>&#160;</td>
+<td>vegetation type</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>213</td>
+<td>1</td>
+<td>TEFF</td>
+<td>&#160;</td>
+<td>(effective) sea-ice skin temperature</td>
+<td>[K]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>214</td>
+<td>1</td>
+<td>TSMAX</td>
+<td>&#160;</td>
+<td>maximum surface temperature</td>
+<td>[K]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>215</td>
+<td>1</td>
+<td>TSMIN</td>
+<td>&#160;</td>
+<td>minimum surface temperature</td>
+<td>[K]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>216</td>
+<td>1</td>
+<td>WIMAX</td>
+<td>&#160;</td>
+<td>maximum 10m-wind speed (w/o gusts)</td>
+<td>[m/s]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>217</td>
+<td>1</td>
+<td>TOPMAX</td>
+<td>&#160;</td>
+<td>maximum height of convective cloud tops</td>
+<td>[Pa]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>218</td>
+<td>1</td>
+<td>SNMEL</td>
+<td>s</td>
+<td>snow melt</td>
+<td>[mm]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>219</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>not free</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>220</td>
+<td>1</td>
+<td>TSLIN</td>
+<td>m</td>
+<td>land: residual surface heat budget sea-ice: conductive heat flux</td>
+<td>[W/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>221</td>
+<td>1</td>
+<td>DSNAC</td>
+<td>s</td>
+<td>snow depth change</td>
+<td>[mm]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>222</td>
+<td>1</td>
+<td>EMTER</td>
+<td>i</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>223</td>
+<td>nl</td>
+<td>ACLCAC</td>
+<td>m</td>
+<td>cloud cover</td>
+<td>[fract.]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>224</td>
+<td>nl</td>
+<td>TKE</td>
+<td>&#160;</td>
+<td>turbulent kinetic energy</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>225</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>not free</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>226</td>
+<td>1</td>
+<td>FAO</td>
+<td>&#160;</td>
+<td>FAO data set (soil data flags)</td>
+<td>[0…6.]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>227</td>
+<td>1</td>
+<td>RGCGN</td>
+<td>&#160;</td>
+<td>heat capacity of soil</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>228</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>not free</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>229</td>
+<td>1</td>
+<td>WSMX</td>
+<td>&#160;</td>
+<td>field capacity of soil</td>
+<td>[m³/m³]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>230</td>
+<td>1</td>
+<td>QVI</td>
+<td>m</td>
+<td>vertically integrated specific humidity</td>
+<td>[kg/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>231</td>
+<td>1</td>
+<td>ALWCVI</td>
+<td>m</td>
+<td>vertically integrated liquid water cont.</td>
+<td>[kg/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>232</td>
+<td>1</td>
+<td>GLAC</td>
+<td>&#160;</td>
+<td>glacier mask (0.: no</td>
+<td>1.: yes)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>233</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>not free</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>251</td>
+<td>1</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>Kevin Sieck</td>
+<td>[BMI]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>252</td>
+<td>&#160;</td>
+<td>SNMELG</td>
+<td>&#160;</td>
+<td>GLACIER: Snow melt on glaciated fraction (reference area: total land area)</td>
+<td>[mm w.e.]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>253</td>
+<td>1</td>
+<td>PHI</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>latitude in real coordinates</td>
+<td>[deg. N]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>254</td>
+<td>1</td>
+<td>RLA</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>longitude in real coordinates</td>
+<td>[deg. E]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>255</td>
+<td>&#160;</td>
+<td>GLIMELT</td>
+<td>&#160;</td>
+<td>GLACIER: Ice melt on glaciated fraction (reference area: total land area)</td>
+<td>[mm w.e.]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>256</td>
+<td>&#160;</td>
+<td>TRADSGI</td>
+<td>&#160;</td>
+<td>GLACIER: Surface incoming thermal radiation on glaciated fraction</td>
+<td>[W/m²]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>257</td>
+<td>&#160;</td>
+<td>TRADSGO</td>
+<td>&#160;</td>
+<td>GLACIER: Surface outgoing thermal radiation on glaciated fraction</td>
+<td>[W/m²]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>258</td>
+<td>&#160;</td>
+<td>AHFLG</td>
+<td>&#160;</td>
+<td>GLACIER: Latent heat flux on glaciated fraction (VDIFF)</td>
+<td>[W/m²]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>259</td>
+<td>&#160;</td>
+<td>GLDLAST</td>
+<td>&#160;</td>
+<td>GLACIER: Ice thickness after last area adjustment (IGLAAM=2)</td>
+<td>[m w.e.]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>260</td>
+<td>1</td>
+<td>APRT</td>
+<td>s</td>
+<td>Total Precipitation</td>
+<td>[mm]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>261</td>
+<td>1</td>
+<td>AHUM2</td>
+<td>m</td>
+<td>2m absolute humidity</td>
+<td>[kg/m**3]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>262</td>
+<td>1</td>
+<td>SRADG</td>
+<td>m</td>
+<td>global radiation</td>
+<td>[W/m**2]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>265</td>
+<td>1</td>
+<td>U10ER</td>
+<td>m y</td>
+<td>10m u-velocity</td>
+<td>[m/s]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>266</td>
+<td>1</td>
+<td>V10ER</td>
+<td>m y</td>
+<td>10m v-velocity</td>
+<td>[m/s]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>271</td>
+<td>1</td>
+<td>GHPBL</td>
+<td>&#160;</td>
+<td>height of the planetary boundary layer</td>
+<td>[m]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>272</td>
+<td>1</td>
+<td>BETA</td>
+<td>i</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>273</td>
+<td>1</td>
+<td>WMINLOK</td>
+<td>i</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>274</td>
+<td>1</td>
+<td>WMAXLOK</td>
+<td>i</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>275</td>
+<td>1</td>
+<td>VBM10M</td>
+<td>&#160;</td>
+<td>maximum of the expected gust velocity near the surface</td>
+<td>[m/s]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>276</td>
+<td>1</td>
+<td>CAPE</td>
+<td>?</td>
+<td>convective available potential energy (CAPE)</td>
+<td>[?]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>281</td>
+<td>nl</td>
+<td>PINT</td>
+<td>&#160;</td>
+<td>non-hydrostatic pressure</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>282</td>
+<td>nl</td>
+<td>DWDT</td>
+<td>&#160;</td>
+<td>non-hydrostatic acceleration</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>283</td>
+<td>nl</td>
+<td>W</td>
+<td>&#160;</td>
+<td>non-hydrostatic vertical velocity</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>284</td>
+<td>1</td>
+<td>SVHCAP</td>
+<td>&#160;</td>
+<td>vol. heat capacity of dry soil</td>
+<td>[J/(m³*K)]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>285</td>
+<td>1</td>
+<td>SLAMBDA</td>
+<td>&#160;</td>
+<td>heat conductivity of dry soil</td>
+<td>[J/(m³*K)]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>296</td>
+<td>nl</td>
+<td>ADVECR</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>kg/[m²*s]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>297</td>
+<td>nl</td>
+<td>ADVECS</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>kg/[m²*s]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>298</td>
+<td>nl</td>
+<td>ADVELR</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>kg/[m²*s]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>299</td>
+<td>nl</td>
+<td>ADVELS</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>kg/[m²*s]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>301</td>
+<td>1</td>
+<td>ESNOW</td>
+<td>&#160;</td>
+<td>Evaporation over snow at the surface</td>
+<td>[mm]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>302</td>
+<td>1</td>
+<td>ESKIN</td>
+<td>&#160;</td>
+<td>Evaporation from skin reservoir at the surface</td>
+<td>[mm]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>303</td>
+<td>1</td>
+<td>ERES</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>317</td>
+<td>1</td>
+<td>VFC</td>
+<td>&#160;</td>
+<td>volumetric soil field capacity</td>
+<td>[m/m]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>318</td>
+<td>1</td>
+<td>VPWP</td>
+<td>&#160;</td>
+<td>volumetric soil permanent wilting point</td>
+<td>[m/m]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>319</td>
+<td>1</td>
+<td>SPSI</td>
+<td>&#160;</td>
+<td>soil pore size distribution index</td>
+<td>[ ]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>334</td>
+<td>nl</td>
+<td>QI</td>
+<td>&#160;</td>
+<td>cloud ice</td>
+<td>[kg/kg]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>336</td>
+<td>1</td>
+<td>QIVI</td>
+<td>&#160;</td>
+<td>vertically integrated cloud ice</td>
+<td>[kg/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>337</td>
+<td>1</td>
+<td>QIBOXS</td>
+<td>&#160;</td>
+<td>horizontal transport of cloud ice</td>
+<td>[kg/m²]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>416</td>
+<td>1</td>
+<td>QDB2</td>
+<td>&#160;</td>
+<td>2m specific humidity</td>
+<td>[kg/kg]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>417</td>
+<td>&#160;</td>
+<td>VAP2</td>
+<td>&#160;</td>
+<td>2m vapour pressure</td>
+<td>[Pa]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>432</td>
+<td>pl</td>
+<td>PTEMP</td>
+<td>&#160;</td>
+<td>potential temperature (not an output variable)</td>
+<td>[K]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>433</td>
+<td>nl</td>
+<td>RPR</td>
+<td>s</td>
+<td>warm cloud rain production</td>
+<td>[?]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>434</td>
+<td>nl</td>
+<td>EVPAC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>435</td>
+<td>nl</td>
+<td>XLEVAC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>436</td>
+<td>nl</td>
+<td>XIEVAC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>437</td>
+<td>nl</td>
+<td>DEPAC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>438</td>
+<td>nl</td>
+<td>SUBAC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>439</td>
+<td>nl</td>
+<td>XISUBAC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>440</td>
+<td>nl</td>
+<td>SMLTAC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>441</td>
+<td>nl</td>
+<td>IMLTAC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>442</td>
+<td>nl</td>
+<td>XIMLTAC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>443</td>
+<td>nl</td>
+<td>FRLAC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>444</td>
+<td>nl</td>
+<td>SPRAC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>445</td>
+<td>nl</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>446</td>
+<td>1</td>
+<td>WINDDIR</td>
+<td>&#160;</td>
+<td>wind direction in 10m</td>
+<td>[°]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>447</td>
+<td>1</td>
+<td>RELHUM2</td>
+<td>&#160;</td>
+<td>relative humidity in 2m</td>
+<td>[%]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>448</td>
+<td>nl</td>
+<td>SACL1AC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>449</td>
+<td>nl</td>
+<td>SACL2AC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>450</td>
+<td>nl</td>
+<td>RAC1AC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>451</td>
+<td>nl</td>
+<td>RAC2AC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>452</td>
+<td>nl</td>
+<td>SAUTAC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>453</td>
+<td>nl</td>
+<td>RAUTAC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>454</td>
+<td>nl</td>
+<td>CLCP1LC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>455</td>
+<td>nl</td>
+<td>CNDAC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>456</td>
+<td>1</td>
+<td>BFLHS</td>
+<td>m</td>
+<td>surface sensible heat flux (=146)</td>
+<td>[W/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-even"><td>457</td>
+<td>1</td>
+<td>BFLQDS</td>
+<td>m</td>
+<td>surface latent heat flux (=147)</td>
+<td>[W/m²]</td>
+<td>m</td>
+</tr>
+<tr class="row-odd"><td>458</td>
+<td>1</td>
+<td>WBT</td>
+<td>m</td>
+<td>wet bulb temperature (not a model variable)</td>
+<td>[K]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>459</td>
+<td>nl</td>
+<td>SACI1AC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>460</td>
+<td>nl</td>
+<td>SACI2AC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>461</td>
+<td>1</td>
+<td>TMCM</td>
+<td>&#160;</td>
+<td>turbulent transfer coefficient of momentum at the surface</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>462</td>
+<td>1</td>
+<td>TMCH</td>
+<td>&#160;</td>
+<td>turbulent transfer coefficient of heat at the surface</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>463</td>
+<td>nl</td>
+<td>SEDAC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>464</td>
+<td>nl</td>
+<td>TTELSAC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>465</td>
+<td>nl</td>
+<td>QTELSAC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>466</td>
+<td>nl</td>
+<td>XTELSAC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>467</td>
+<td>nl</td>
+<td>XITELSAC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>468</td>
+<td>nl</td>
+<td>TTECAC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>469</td>
+<td>nl</td>
+<td>QTECAC</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>614</td>
+<td>1</td>
+<td>PHI</td>
+<td>&#160;</td>
+<td>latitude in real coordinates</td>
+<td>[deg. N]</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>615</td>
+<td>1</td>
+<td>RLA</td>
+<td>&#160;</td>
+<td>longitude in real coordinates</td>
+<td>[deg. E]</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="namelist-of-input-parameters">
+<h2>Namelist of Input Parameters<a class="headerlink" href="#namelist-of-input-parameters" title="Permalink to this headline">¶</a></h2>
+<p>Some variables are version specific. Please mention the dependence on
+specific REMO versions in the variable description below. All namelist
+variables are contained in the routine medea.f (without explanations,
+though).</p>
+<div class="line-block">
+<div class="line">| l | l | p9cm | l | [tab:remo_input] Namelist &amp; Parameter &amp;
+Description &amp; Datatype</div>
+<div class="line">&amp; &amp; &amp;</div>
+</div>
+</div>
+<div class="section" id="namelist-for-the-preprocessor">
+<h2>Namelist for the Preprocessor<a class="headerlink" href="#namelist-for-the-preprocessor" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="constants-in-remo-physics">
+<h2>Constants in REMO Physics<a class="headerlink" href="#constants-in-remo-physics" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="model-domains-and-grids">
+<h2>Model Domains and Grids<a class="headerlink" href="#model-domains-and-grids" title="Permalink to this headline">¶</a></h2>
+<p>REMO was originally developed for the European model domain. Through
+several projects and cooperations, REMO was further developed and used
+in other domains such as South America, Africa, North America, Asia (see
+Table [tab:model_domains]). In the evaluation studies, several model
+parameters were adapted to reproduce the present regional climate (Table
+[tab:model_domains_parameters]).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="17%" />
+<col width="9%" />
+<col width="9%" />
+<col width="8%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Resolution</th>
+<th class="head">Name</th>
+<th class="head">nx</th>
+<th class="head">ny</th>
+<th class="head">nz</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0.44</td>
+<td>CORDEX044</td>
+<td>129</td>
+<td>121</td>
+<td>27</td>
+<td>Eurocordex Domain</td>
+</tr>
+<tr class="row-odd"><td>0.11</td>
+<td>EUROPA011</td>
+<td>433</td>
+<td>433</td>
+<td>27</td>
+<td>Eurocordex Domain</td>
+</tr>
+<tr class="row-even"><td>0.44</td>
+<td>EAS044</td>
+<td>217</td>
+<td>181</td>
+<td>27</td>
+<td>East Asia Cordex Domain</td>
+</tr>
+<tr class="row-odd"><td>0.22</td>
+<td>EAS022</td>
+<td>433</td>
+<td>361</td>
+<td>27</td>
+<td>East Asia Cordex Domain</td>
+</tr>
+<tr class="row-even"><td>0.44</td>
+<td>CLPB044</td>
+<td>151</td>
+<td>181</td>
+<td>31</td>
+<td>South America CLPB Domain</td>
+</tr>
+</tbody>
+</table>
+<p>Table: Available Model Grids</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="35%" />
+<col width="16%" />
+<col width="24%" />
+<col width="24%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Domain</th>
+<th class="head">Res.</th>
+<th class="head">ZDLAND-L</th>
+<th class="head">ZDLAND-O</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Europe</td>
+<td>0.44</td>
+<td>7.5E+3</td>
+<td>7.5E+3</td>
+</tr>
+<tr class="row-odd"><td>Europe</td>
+<td>0.11</td>
+<td>7.5E+3</td>
+<td>7.5E+3</td>
+</tr>
+<tr class="row-even"><td>Africa</td>
+<td>0.44</td>
+<td>2.0E+4</td>
+<td>1.5E+4</td>
+</tr>
+<tr class="row-odd"><td>South Asia</td>
+<td>0.44</td>
+<td>2.5E+4</td>
+<td>3.0E+4</td>
+</tr>
+<tr class="row-even"><td>South America</td>
+<td>0.44</td>
+<td>7.5E+3</td>
+<td>7.5E+3</td>
+</tr>
+<tr class="row-odd"><td>North America</td>
+<td>0.44</td>
+<td>7.5E+3</td>
+<td>7.5E+3</td>
+</tr>
+</tbody>
+</table>
+<p>Table: REMO Model Parameters</p>
+<p>In addition to the tables indicated, some domain-specific functions were
+introduced to reduce model biases in regions such as South America and
+West Asia.</p>
+<div class="section" id="south-america">
+<h3>South America<a class="headerlink" href="#south-america" title="Permalink to this headline">¶</a></h3>
+<p>In vdiff.f, Line 515 is commented out:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">C</span>      <span class="n">ZPLMIN</span><span class="o">=</span><span class="mf">0.35</span>
+<span class="o">&gt;</span> <span class="n">C</span> <span class="n">ARCR</span><span class="p">:</span> <span class="n">changed</span> <span class="n">wilting</span> <span class="n">point</span> <span class="n">to</span> <span class="n">locate</span> <span class="n">forested</span> <span class="n">region</span> <span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">Amazon</span> <span class="n">basin</span>
+</pre></div>
+</div>
+<p>And the following lines were added after Line 783:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">C</span> <span class="n">condition</span> <span class="k">for</span> <span class="n">ZPLMIN</span> <span class="kn">from</span> <span class="mf">0.35</span> <span class="n">to</span> <span class="mf">0.1</span> <span class="p">(</span><span class="ow">in</span> <span class="n">forested</span> <span class="n">region</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">C</span> <span class="n">arcr</span><span class="p">,</span> <span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">19</span> <span class="n">changed</span> <span class="n">the</span> <span class="n">ZPLMIN</span> <span class="n">to</span> <span class="n">lowest</span> <span class="n">possible</span> <span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="o">&gt;</span>           <span class="n">IF</span> <span class="p">(</span><span class="n">PVLT</span><span class="p">(</span><span class="n">JL</span><span class="p">)</span><span class="o">.</span><span class="n">GE</span><span class="o">.</span><span class="mf">8.</span><span class="p">)</span> <span class="n">THEN</span>
+<span class="o">&gt;</span>               <span class="n">ZPLMIN</span><span class="o">=</span><span class="mf">0.01</span>
+<span class="o">&gt;</span>           <span class="n">ELSE</span>
+<span class="o">&gt;</span>               <span class="n">ZPLMIN</span><span class="o">=</span><span class="mf">0.35</span>
+<span class="o">&gt;</span>           <span class="n">ENDIF</span>
+
+<span class="o">&gt;</span> <span class="n">C</span> <span class="n">condition</span> <span class="k">for</span> <span class="n">ZPLMIN</span>
+<span class="o">&gt;</span>           <span class="n">IF</span> <span class="p">(</span><span class="n">PVLT</span><span class="p">(</span><span class="n">JL</span><span class="p">)</span><span class="o">.</span><span class="n">GE</span><span class="o">.</span><span class="mf">8.</span><span class="p">)</span> <span class="n">THEN</span>
+<span class="o">&gt;</span>               <span class="n">ZPLMIN</span><span class="o">=</span><span class="mf">0.1</span>
+<span class="o">&gt;</span>           <span class="n">ELSE</span>
+<span class="o">&gt;</span>               <span class="n">ZPLMIN</span><span class="o">=</span><span class="mf">0.35</span>
+<span class="o">&gt;</span>           <span class="n">ENDIF</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="west-asia">
+<h3>West Asia<a class="headerlink" href="#west-asia" title="Permalink to this headline">¶</a></h3>
+<p>In init.f, Line 108 to 139 were modified:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">108</span><span class="p">,</span><span class="mi">109</span>
+<span class="o">&gt;</span>           <span class="n">RGCGN</span><span class="p">(</span><span class="n">I</span><span class="p">)</span><span class="o">=</span><span class="mf">1.28E+06</span>
+<span class="o">&gt;</span>           <span class="n">TLAMBDA</span><span class="p">(</span><span class="n">I</span><span class="p">)</span><span class="o">=</span><span class="mf">2.34E-7</span>
+<span class="mi">114</span><span class="p">,</span><span class="mi">115</span>
+<span class="o">&gt;</span>           <span class="n">RGCGN</span><span class="p">(</span><span class="n">I</span><span class="p">)</span><span class="o">=</span><span class="mf">1.35E+06</span>
+<span class="o">&gt;</span>           <span class="n">TLAMBDA</span><span class="p">(</span><span class="n">I</span><span class="p">)</span><span class="o">=</span><span class="mf">2.07E-7</span>
+<span class="mi">120</span><span class="p">,</span><span class="mi">121</span>
+<span class="o">&gt;</span>           <span class="n">RGCGN</span><span class="p">(</span><span class="n">I</span><span class="p">)</span><span class="o">=</span><span class="mf">1.42E+06</span>
+<span class="o">&gt;</span>           <span class="n">TLAMBDA</span><span class="p">(</span><span class="n">I</span><span class="p">)</span><span class="o">=</span><span class="mf">1.76E-7</span>
+<span class="mi">126</span><span class="p">,</span><span class="mi">127</span>
+<span class="o">&gt;</span>           <span class="n">RGCGN</span><span class="p">(</span><span class="n">I</span><span class="p">)</span><span class="o">=</span><span class="mf">1.5E+06</span>
+<span class="o">&gt;</span>           <span class="n">TLAMBDA</span><span class="p">(</span><span class="n">I</span><span class="p">)</span><span class="o">=</span><span class="mf">1.4E-7</span>
+<span class="mi">132</span><span class="p">,</span><span class="mi">133</span>
+<span class="o">&gt;</span>           <span class="n">RGCGN</span><span class="p">(</span><span class="n">I</span><span class="p">)</span><span class="o">=</span><span class="mf">1.63E+06</span>
+<span class="o">&gt;</span>           <span class="n">TLAMBDA</span><span class="p">(</span><span class="n">I</span><span class="p">)</span><span class="o">=</span><span class="mf">1.1E-7</span>
+<span class="mi">138</span><span class="p">,</span><span class="mi">139</span>
+<span class="o">&gt;</span>           <span class="n">RGCGN</span><span class="p">(</span><span class="n">I</span><span class="p">)</span><span class="o">=</span><span class="mf">0.58E+06</span>
+<span class="o">&gt;</span>           <span class="n">TLAMBDA</span><span class="p">(</span><span class="n">I</span><span class="p">)</span><span class="o">=</span><span class="mf">1.03E-7</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="grid-decomposition">
+<h2>Grid Decomposition<a class="headerlink" href="#grid-decomposition" title="Permalink to this headline">¶</a></h2>
+<p>(0,0) grid (12,12); (0,0) – (12,0); (0,0) – (0,12); (12,0) – (12,12);
+(0,12) – (12,12);</p>
+</div>
+<div class="section" id="remo-model-parameters">
+<h2>REMO Model Parameters<a class="headerlink" href="#remo-model-parameters" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="possible-domain-sizes">
+<h2>Possible domain sizes<a class="headerlink" href="#possible-domain-sizes" title="Permalink to this headline">¶</a></h2>
+<p>Here you will find a list of possible domain sizes up to 600 gridboxes
+per dimension (these are the so called magic numbers). Due to a fft
+function in REMO only domain sizes with certain characteristics are
+allowed. The formula is the following:</p>
+<div class="math notranslate nohighlight">
+\[l=2^{n} 3^{m} 5^{o} +1
+\label{equ:domain}\]</div>
+<p>with <span class="math notranslate nohighlight">\(l\)</span> the number of gridboxes in x or y direction, <span class="math notranslate nohighlight">\(n\)</span> =
+1,2,3,… , <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(o\)</span> = 0,1,2,3,…</p>
+<p>Possible numbers of gridboxes are:</p>
+<p>3 5 7 9 11 13 17 19 21 25 31 33 37 41 49 51 55 61 65 73 81 91 97 101 109
+121 129 145 151 161 163 181 193 201 217 241 251 257 271 289 301 321 325
+361 385 401 433 451 481 487 501 513 541 577 601 641 649 721 751 769 801
+811 865 901 961 973 1001 1025 1081 1153 1201 1251 1281 1297 1351 1441
+1459 1501 1537 1601 1621 1729 1801 1921 1945 2001 2049 2161 2251 2305
+2401 2431 2501 2561 2593 2701 2881 2917 3001 3073 3201 3241 3457 3601
+3751 3841 3889 4001 4051 4097 4321 4375 4501 4609 4801 4861 5001 5121
+5185 5401 5761 5833 6001 6145 6251 6401 6481 6751 6913 7201 7291 7501
+7681 7777 8001 8101 8641 8749 9001 9217 9601 9721 10001</p>
+<p>(script for creating magic numbers is available in the BodLibKit)</p>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>based on “Running REMO at Ouranos” by Sven Kotlarski</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>based on “Running REMO at Ouranos” by Sven Kotlarski and “Hinweise
+für REMO Datenutzer”</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Lars Buntemeyer.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

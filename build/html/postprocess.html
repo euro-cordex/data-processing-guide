@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Postprocessing &#8212; REMO Documentation and User Guide 0 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.12.4.min.js "></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="_static/bootstrap-3.4.1/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><span><img src="_static/REMO_logo.png"></span>
+          REMO</a>
+        <span class="navbar-text navbar-version pull-left"><b>2</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="http://remo-rcm.de">Homepage</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="syntax-examples.html">1. Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#headings">1.1. Headings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#code">1.2. Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#admonitions">1.3. Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#footnotes">1.4. Footnotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#icons">1.5. Icons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#tables">1.6. Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax-examples.html#code-documentation">1.7. Code Documentation</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Postprocessing</a><ul>
+<li><a class="reference internal" href="#pressure-interpolation">Pressure Interpolation</a><ul>
+<li><a class="reference internal" href="#compilation">Compilation</a></li>
+<li><a class="reference internal" href="#running-the-pressure-interpolator">Running the Pressure Interpolator</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#climate-data-operators">Climate Data Operators</a></li>
+<li><a class="reference internal" href="#pyremo-and-pyplot-tools">PyRemo and PyPlot Tools</a></li>
+<li><a class="reference internal" href="#clidas">Clidas</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/postprocess.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="postprocessing">
+<h1>Postprocessing<a class="headerlink" href="#postprocessing" title="Permalink to this headline">¶</a></h1>
+<p>In this chapter, we describe how some of the REMO postprocessing tools
+work.</p>
+<div class="section" id="pressure-interpolation">
+<h2>Pressure Interpolation<a class="headerlink" href="#pressure-interpolation" title="Permalink to this headline">¶</a></h2>
+<p>It is often necessary to interpolate fields from the hybrid model
+levels, which follow the orographic patterns in the troposphere, to
+quasi-horizontal pressure levels. The pressure interpolator is a suite
+of FORTRAN routines similar to the preprocessor. It gets the (mostly)
+6-hourly t-files which, in the vertical dimension, are defined on model
+levels, and interpolates the basic atmospheric quantities to pressure
+levels. The standard REMO pressure interpolator is called <code class="docutils literal notranslate"><span class="pre">druint</span></code>
+(druint: Druckinterpolation = pressure interpolation). You can also find
+the pressure interpolator in the GERICS gitlab:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">git</span><span class="o">.</span><span class="n">gerics</span><span class="o">.</span><span class="n">de</span><span class="o">/</span><span class="n">REMO</span><span class="o">/</span><span class="n">druintzr</span>
+</pre></div>
+</div>
+<p>The main directory only contains three subfolders:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="nb">bin</span>      <span class="c1"># executable</span>
+<span class="o">/</span><span class="n">build</span>    <span class="c1"># makefile</span>
+<span class="o">/</span><span class="n">namelist</span> <span class="c1"># namelist template</span>
+<span class="o">/</span><span class="n">source</span>   <span class="c1"># source code</span>
+</pre></div>
+</div>
+<div class="section" id="compilation">
+<h3>Compilation<a class="headerlink" href="#compilation" title="Permalink to this headline">¶</a></h3>
+<p>To compile the pressure interpolator, just change to the <code class="docutils literal notranslate"><span class="pre">build</span></code>
+directory. Here, you will find a number of Makefile headers for
+different systems which contain system dependent compiler options and
+flags. The <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> will include the <code class="docutils literal notranslate"><span class="pre">Makfile.h</span></code> which you can
+adapt to your system. You can also replace <code class="docutils literal notranslate"><span class="pre">Makefile.h</span></code> by one the
+other headers if your system fits the compiler options. E.g.,
+<code class="docutils literal notranslate"><span class="pre">Makefile.mistral</span></code> mainly configures the intel compiler and
+<code class="docutils literal notranslate"><span class="pre">Makefile.gfortran</span></code> might be suitable for any Linux system. After
+configuring the Makefile, just type</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make
+</pre></div>
+</div>
+<p>and the executable <code class="docutils literal notranslate"><span class="pre">druint</span></code> should be found in the <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory.</p>
+</div>
+<div class="section" id="running-the-pressure-interpolator">
+<h3>Running the Pressure Interpolator<a class="headerlink" href="#running-the-pressure-interpolator" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The pressure interpolator should be able to create pressure levels
+from REMO input (a-file) and output data (t-file). These files usually
+contain several REMO variables at a certain timestep per file and the
+pressure interpolator creates make a timeseries out of these. In
+addition, the program will create one file per variable and pressure
+level containing all timesteps of the period chosen in the <code class="docutils literal notranslate"><span class="pre">INPUT</span></code>
+file.</div>
+<div class="line">A template namelist file can be found in the <code class="docutils literal notranslate"><span class="pre">namelist</span></code> subdirectory
+of <code class="docutils literal notranslate"><span class="pre">druint</span></code> (see Table [tab:namelist_druint]). The timeperiod is
+defined by the start and stop hour in the namelist <code class="docutils literal notranslate"><span class="pre">PINNLST</span></code>. In
+addition, the template files shows the most common pressure levels
+(<code class="docutils literal notranslate"><span class="pre">PINFL=100,200,500,850,950</span></code>) and variables
+(<code class="docutils literal notranslate"><span class="pre">YVARPIN=’T’,’FI’,’U’,’V’,’QD’,’QW’,’REL_HUM’</span></code>) that are usually
+interpolated during the postprocessing of standard <code class="docutils literal notranslate"><span class="pre">REMO</span></code> run.</div>
+<div class="line">The file containing the namelist has to be named <code class="docutils literal notranslate"><span class="pre">INPUT</span></code> and has to
+be in the same directory from where <code class="docutils literal notranslate"><span class="pre">druint</span></code> is called. However,
+usually the pressure interpolator is not run manually but should be
+used and configured automatically by a REMO run script that manages
+the monthly postprocessing of output data, see also Section
+[sec:job_control].</div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="11%" />
+<col width="79%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Namelist</th>
+<th class="head">Parameter</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>PINNLST</td>
+<td>YUSER</td>
+<td>User Number of the Input file</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>YEMEXPN</td>
+<td>Experiment Number of the Input file</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>HANF</td>
+<td>Start Hour</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>HENDE</td>
+<td>Stop Hour</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>HDERG</td>
+<td>Output Interval in hours</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>ANA</td>
+<td>Switch for data type: .FALSE. REMO output (t-files), .TRUE. REMO input (a-files)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>LPHYEM</td>
+<td>Switch for model physics: .FALSE. ECHAM-physics, .TRUE. DWD-physics</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>LMOMON</td>
+<td>Switch for calender type: .FALSE. real calender, .TRUE. model calendar (360 days)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>LXT</td>
+<td>Switch for also calculating liquid water (it is not present in some a-files)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>YEMCAT</td>
+<td>Path to input, should be 80 characters or less</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>YPICAT</td>
+<td>Path to interpolated output data</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>YVARPIN</td>
+<td>List of internval variables names that should be interpolated (Appendix [cha:code_list])</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>PINFL</td>
+<td>Pressure levels that should be interpolated (from the top of the atmosphere to the surface)</td>
+</tr>
+</tbody>
+</table>
+<p>Table: Namelist Parameters for the Pressure Interpolator</p>
+<p><strong>NOTE:</strong> The pressure interpolator now reads in the resolution directly
+from the file and allocates data internally. This will require some more
+memory on the stack! If you run into trouble with segmentation faults,
+try to set the stack size to unlimited by ,e.g.,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ulimit</span> <span class="o">-</span><span class="n">s</span> <span class="n">unlimited</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="climate-data-operators">
+<h2>Climate Data Operators<a class="headerlink" href="#climate-data-operators" title="Permalink to this headline">¶</a></h2>
+<p>The CDOs are a very useful suite of command line operators to manipulate
+and analyse climate model data. The program package as well as a
+detailed manual can be downloaded from
+<a class="reference external" href="http://www.mpimet.mpg.de/fileadmin/software/cdo">http://www.mpimet.mpg.de/fileadmin/software/cdo</a>. The CDOs can handle
+both the ieg and the srv format, as well as other formats (e.g., NetCDF,
+GRIB). This allows them for instance also to convert ieg or srv to
+NetCDF (using the copy function). It is recommended to locally install
+the CDOs and to use them (maybe in addition to shell scripts and
+dedicated FORTRAN programs) for postprocessing your REMO. Some often
+used CDO commands are for instance</p>
+<ul class="simple">
+<li>copy (including the -f type option): converts the file format, for
+instance from ieg to NetCDF (-f nc) or srv (-f srv)</li>
+<li>info and sinfo: gives some short information on the contents of the
+data file (data fields, grid, date, etc.)</li>
+<li>gradsdes: creates a GrADS control file (.ctl) which can be directly
+opened by the visualisation package GrADS (for example for a quick
+look at the model results)</li>
+<li>selcode and delcode: selects / deletes a specific code number from a
+data file</li>
+<li>seldate: selects all entries within a given date range</li>
+<li>selindexbox: selects a rectangular sub-domain (or even one single
+grid cell)</li>
+<li>timmean: computes the temporal average for each code in the data file</li>
+<li>hourmean, daymean, monmean, seasmean and yearmean: computes hourly /
+daily / monthly / seasonal / annual means for each code in the data
+file</li>
+<li>ydaymean, ymonmean, yseasmean: computes climatological daily /
+monthly / seasonal means for each code in the data file</li>
+<li>remapcon: conservative remapping to another grid (e.g., a regular
+lat/lon grid)</li>
+<li>rotuvb: backward rotation of wind components (to geographic North /
+East) If the CDOs are applied on srv-files the rotation of the grid
+of the original file is not known (since this information is not
+contained in the srv-header). In this case, some of the
+above-mentioned functions (e.g. remapcon) require a grid
+specification file (see CDO manual). For example, in case of the
+can03 domain (see above) this file would look like this:</li>
+</ul>
+</div>
+<div class="section" id="pyremo-and-pyplot-tools">
+<h2>PyRemo and PyPlot Tools<a class="headerlink" href="#pyremo-and-pyplot-tools" title="Permalink to this headline">¶</a></h2>
+<p>A python library that can handel some REMO data manipulation is
+available here:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">git</span><span class="o">.</span><span class="n">gerics</span><span class="o">.</span><span class="n">de</span><span class="o">/</span><span class="n">PyREMO</span><span class="o">/</span><span class="n">PyREMO</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>You can download it and add it to your <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> environment
+variable to import it to your own scripts for using it. On MISTRAL, it
+is available from the GERICS project:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export PYTHONPATH=/work/ch0636/software/python/PyRemo-1.0.0:\${PYTHONPATH}
+</pre></div>
+</div>
+<p>The PyPlot library contains tools for plotting REMO data and is
+available here:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">git</span><span class="o">.</span><span class="n">gerics</span><span class="o">.</span><span class="n">de</span><span class="o">/</span><span class="n">PyREMO</span><span class="o">/</span><span class="n">PyPlotTools</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>Once downloaded, the tools should be added to you <code class="docutils literal notranslate"><span class="pre">PATH</span></code> variable to
+be available on the command line for use in further scripts. Again, on
+MISTRAL, it is available by adding this line to your .profile or
+.bashrrc file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export PATH=/work/ch0636/sw/python/PyPlotTools-1.2.0:\$PATH
+</pre></div>
+</div>
+</div>
+<div class="section" id="clidas">
+<h2>Clidas<a class="headerlink" href="#clidas" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">The Clidas tool (Climate Data Analysing System) is another set of
+shell scripts that utilizes the CDO, PyRemo and PyPlot tools to create
+a number of standard plots of REMO results. The main script provides
+an interactive command interface that allows to create plots for a
+standard REMO experiment. The tool creates scripts from a number of
+templates and is usually configured to work with the same path and
+tape archive conventions as the run scripts. Therefore, it works
+togehther smooothly if the run script stored the REMO output data in
+the same directory structure.</div>
+<div class="line">However, the plot scripts that Clidas creates from a number of
+templates can also easily be adapted to work on any other
+infracstructure.</div>
+<div class="line">There is a documentation available from the developer Torsten Weber .</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Lars Buntemeyer.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
