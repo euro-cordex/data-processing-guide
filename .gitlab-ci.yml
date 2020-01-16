@@ -12,6 +12,8 @@ pages:
   - conda env create -f environment.yml
   - source activate py3-sphinx
   - conda install -c anaconda make
+  - make latexpdf
+  - mv build/latex/DataProcessingGuide.pdf source/pdf
   - make html
   - rm -r /public/DataProcessingGuide/*
   - mv build/html/* /public/DataProcessingGuide

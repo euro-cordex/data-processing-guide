@@ -86,9 +86,9 @@ to -4 deg.
 
     cdo sellonlatbox,8,42,-38,-4 input_file output_file
 
-to change the unit of monthly mean precipitation from [kg m-2 s-1] to
-[mm day-1], the following assumption must be made: 1 [kg m-2 s-1] ≈ 1
-[litre m-2 s-1] ≈ 1 [mm s-1]:
+to change the unit of monthly mean precipitation from `kg m-2 s-1` to
+`mm day-1`, the following assumption must be made: 1 `kg m-2 s-1` = 1
+`litre m-2 s-1` = 1 `mm s-1`:
 
 ::
 

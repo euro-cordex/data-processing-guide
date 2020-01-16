@@ -7,6 +7,10 @@
 Welcome to the Data Processing Guide!
 ==================================================
 
+A pdf version is :download:`here <pdf/DataProcessingGuide.pdf>`
+
+.. _here:
+
 Contents:
 
 .. toctree::
