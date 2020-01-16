@@ -57,8 +57,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'REMO Documentation and User Guide'
-copyright = u'2019, Lars Buntemeyer'
+project = u'Data Processing Guide'
+copyright = u'2020, Lars Buntemeyer'
 author = u'Lars Buntemeyer'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -146,7 +146,7 @@ html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 # theme further.
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "REMO",
+    'navbar_title': "Data Processing Guide",
 
     # Tab name for entire site. (Default: "Site")
     'navbar_site_name': "Site",
@@ -160,7 +160,7 @@ html_theme_options = {
     # an arbitrary url.
     'navbar_links': [
         #("Examples", "examples"),
-        ("Homepage", "http://remo-rcm.de", True),
+        ("Contribute", "http://git.gerics.de/data-processing/DataProcessingGuide", True),
     ],
 
     # Render the next and previous page links in navbar. (Default: true)
@@ -230,7 +230,7 @@ html_theme_options = {
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
 #
-html_logo = 'fig/REMO_logo.png'
+#html_logo = 'fig/REMO_logo.png'
 
 # The name of an image file (relative to this directory) to use as a favicon of
 # the docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -348,7 +348,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'RemoDocumenation.tex', u'REMO Documentation',
+    (master_doc, 'DataProcessingGuide.tex', u'Data Processing Guide',
      u'Lars Buntemeyer', 'manual'),
 ]
 
@@ -390,7 +390,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'sphinxexampleproject', u'REMO Documentation',
+    (master_doc, 'sphinxexampleproject', u'Data Processing Guide',
      [author], 1)
 ]
 
@@ -405,7 +405,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'RemoDocumentation', u'REMO Documentation',
+    (master_doc, 'DataProcessingGuide', u'DataProcessingGuide',
      author, 'SphinxExampleProject', 'One line description of project.',
      'Miscellaneous'),
 ]

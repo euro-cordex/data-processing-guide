@@ -13,11 +13,11 @@ pages:
   - source activate py3-sphinx
   - conda install -c anaconda make
   - make html
-  - rm -r /public/html
-  - mv build/html /public/DataProcessingGuide
+  #- rm -r /public/Datahtml
+  - mv build/html/* /public/DataProcessingGuide
   - ls /public
   artifacts:
     paths:
     - /public
   only:
-  - sphinx
+  - master 
