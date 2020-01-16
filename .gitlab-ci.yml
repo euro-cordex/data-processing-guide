@@ -18,8 +18,6 @@ pages:
   - rm -r /public/DataProcessingGuide/*
   - mv build/html/* /public/DataProcessingGuide
   - ls /public
-  artifacts:
-    paths:
-    - /public
+  
   only:
   - master 
