@@ -2,9 +2,18 @@
 **RST Syntax Examples**
 =======================
 
-Various examples of Bootstrap styling applied to Sphinx constructs. You can
-view the `source <./_sources/examples.txt>`_ of this page to see the specific
-reStructuredText used to create these examples.
+Various examples of Bootstrap styling applied to Sphinx constructs. 
+
+Citations
+=========
+
+Cite with bibtex style like, e.g., :cite:`Jacob2001`!
+
+You have to add the bibliography to the end of the chapter
+::
+
+    .. bibliography:: references.bib
+       :style: plain
 
 Headings
 ========
@@ -204,3 +213,9 @@ An example JavaScript function.
 
    :param string name: The name of the animal
    :param number age: an optional age for the animal
+
+
+.. bibliography:: references.bib
+   :style: plain
+
+
