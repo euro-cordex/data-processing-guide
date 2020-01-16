@@ -1,6 +1,6 @@
 # **Data Processing Guide**
 
-[![pipeline status](http://git.gerics.de/REMO/remo2-doc/badges/master/pipeline.svg)](http://git.gerics.de/REMO/remo2-doc/commits/master)
+[![pipeline status](http://git.gerics.de/data-processing/DataProcessingGuide/badges/master/pipeline.svg)](http://git.gerics.de/data-processing/DataProcessingGuide/commits/master)
 
 The data processing guide is now using [sphinx](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html).
 If you want to build the documentation, you can choose between `html` or `pdf`, using:
