@@ -14,7 +14,7 @@ A pdf version is :download:`here <pdf/DataProcessingGuide.pdf>`
 Contents:
 
 .. toctree::
-   :numbered:
+   :numbered: 2
    :maxdepth: 2
 
    chapter__introduction
