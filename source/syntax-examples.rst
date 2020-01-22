@@ -215,7 +215,3 @@ An example JavaScript function.
    :param number age: an optional age for the animal
 
 
-.. bibliography:: references.bib
-   :style: plain
-
-

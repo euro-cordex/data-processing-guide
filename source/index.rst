@@ -29,10 +29,13 @@ Contents:
    chapter__intro_cdo
    chapter__netcdf
    chapter__pyremo
+   chapter__programming_guide
    chapter__git
    chapter__usefull_shell_commands
    chapter__troubleshooting
    syntax-examples
+   bibliography
+
 
 
 Indices and tables
