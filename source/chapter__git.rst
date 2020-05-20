@@ -101,3 +101,9 @@ Try
 ::
 
     export GIT_SSL_NO_VERIFY=1
+    
+or to make a global configuration, use:
+
+::
+
+    git config --global http.sslVerify false
