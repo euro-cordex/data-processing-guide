@@ -20,7 +20,21 @@ that you encounter with git are probably no "git problems" but merely a problem
 of the development strategy. It you do not stay up to date with what your
 fellow developers to, you will definitley run into problems that are not git related.
 
-However, here are some useful features that can come in handy:
+git.gerics.de
+~~~~~~~~~~~~~
+
+The GERICS gitlab is hosted by the HZG which comes with some restrictions. You might
+want to clone and push using the https protocol, which means you need to use
+the adress under clone with https. You also might need to set your global git configuration
+to disable ssl verification, e.g.
+
+::
+
+    git config --global http.sslVerify false
+
+For a more comprehensive introduction of how to work with git, you should simply browse 
+the web for some introdcution. However, here are some useful features that can come in handy
+from time to time that are more uncommon:
 
 List local and remote branches:
 
