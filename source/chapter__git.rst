@@ -38,6 +38,8 @@ by DKRZ here:
 
 https://www.dkrz.de/up/de-help/de-faq_folder/de-copy_of_faq/how-can-i-use-the-hpss-tape-archive-without-typing-my-password-every-time-e-g-in-scripts-or-jobs
 
+Instead the ``tape.dkrz.de`` you need to use ``git.gerics.de`` and your gitlab credentials.
+
 For a more comprehensive introduction of how to work with git, you should simply browse 
 the web for some introdcution. However, here are some useful features that can come in handy
 from time to time that are more uncommon:
