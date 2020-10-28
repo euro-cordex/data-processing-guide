@@ -20,6 +20,13 @@ You can also click on `source` in the compiled html version to see the `rst` sou
 Note, that with `rst` you can also use citing in bibtex style!
 
 ### Contributors
-Lars Buntemeyer, Katharina Bülow, Lola Kotova, Arne Kriegsmann, Christine Nam, Diana Rechid, Claas Teichmann, Torsten Weber
+* Lars Buntemeyer
+* Katharina Bülow
+* Lola Kotova
+* Arne Kriegsmann
+* Christine Nam
+* Diana Rechid
+* Claas Teichmann
+* Torsten Weber
 
 
