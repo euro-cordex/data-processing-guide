@@ -125,20 +125,28 @@ You can download and add the certificate to your git installation. The following
 
 Generally, you can use:
 
+::
+
     git config --global http.sslVerify true
 
 Detailed instructions
 
 Download certificate:
 
+::
+
     mkdir ~/config/ca-certificates/
     openssl s_client -showcerts -servername git.gerics.de -connect git.gerics.de:443 </dev/null 2>/dev/null | sed -n -e '/BEGIN\ CERTIFICATE/,/END\ CERTIFICATE/ p'  > ~/config/ca-certificates/git.gerics.de.pem
 
 Use certificate for single-user installation:
 
+::
+
     git config --global http."https://git.gerics.de/".sslCAInfo ~/config/ca-certificates/git.gerics.de.pem
 
 Which adds to ``.gitconfig``:
+
+::
 
     [http "https://git.gerics.de/"]
 	    sslCAInfo = ~/config/ca-certificates/git.gerics.de.pem
