@@ -25,12 +25,8 @@ git.gerics.de
 
 The GERICS gitlab is hosted by the HZG which comes with some restrictions. You might
 want to clone and push using the https protocol, which means you need to use
-the adress under clone with https. You also might need to set your global git configuration
-to disable ssl verification, e.g.
-
-::
-
-    git config --global http.sslVerify false
+the adress under clone with https. If you have trouble with the ssl verification, 
+refer to the troubleshooting section below.
     
 If you want to avoid typing in your credentials for each pull and push, the easiest
 solution if using your ``.netrc`` file with the ``git.gerics.de`` server and as describe
@@ -118,6 +114,37 @@ Troubleshooting
 
     server certificate verification failed
 
+The error message might look like this:
+
+    error: SSL certificate problem, verify that the CA cert is OK. Details:
+    error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify failed while accessing http://git.gerics.de/.....
+
+Solution 1 (good)
+~~~~~~~~~~~~~~~~~
+You can download and add the certificate to your git installation. The following instructions are adapted from this post: https://fabianlee.org/2019/01/28/git-client-error-server-certificate-verification-failed/ 
+
+Generally, you can use:
+
+    git config --global http.sslVerify true
+
+Detailed instructions
+
+Download certificate:
+
+    mkdir ~/config/ca-certificates/
+    openssl s_client -showcerts -servername git.gerics.de -connect git.gerics.de:443 </dev/null 2>/dev/null | sed -n -e '/BEGIN\ CERTIFICATE/,/END\ CERTIFICATE/ p'  > ~/config/ca-certificates/git.gerics.de.pem
+
+Use certificate for single-user installation:
+
+    git config --global http."https://git.gerics.de/".sslCAInfo ~/config/ca-certificates/git.gerics.de.pem
+
+Which adds to ``.gitconfig``:
+
+    [http "https://git.gerics.de/"]
+	    sslCAInfo = ~/config/ca-certificates/git.gerics.de.pem
+
+Solution 2 (bad)
+~~~~~~~~~~~~~~~~
 Try
 
 ::
