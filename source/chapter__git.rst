@@ -116,6 +116,8 @@ Troubleshooting
 
 The error message might look like this:
 
+::
+
     error: SSL certificate problem, verify that the CA cert is OK. Details:
     error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify failed while accessing http://git.gerics.de/.....
 
