@@ -5,8 +5,9 @@
 First steps
 ---------------
 When you start a new projekt and new directory, 
-always use git from the first day 
-an overview on many git commands can be found here:
+always use git from the first day.
+
+An overview on many git commands can be found here:
 ::
     https://git-scm.com/doc
 
@@ -76,13 +77,8 @@ take the 'number', which occurs on the screen
     git cat-file -p number
 
 Your file information ist stored in
+
 ./git/objects/
-
-## Branch
-Branch Marke erzeugen
-git branch testing 
-./git/refs/heads
-
 
 Banches
 ~~~~
@@ -91,4 +87,6 @@ Create 'pointer' to branch
 ::
     git branch testing
 
-files are store in ./git/refs/heads
+files are store in 
+
+./git/refs/heads
