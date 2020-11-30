@@ -89,6 +89,6 @@ Create 'pointer' to branch
 ::
     git branch testing
 
-files are store in 
+files are stored in 
 
 ./git/refs/heads
