@@ -18,6 +18,7 @@ Initialize your directory
 ::
     git init
 
+
 Always have a look what the status of your directory is:
 
 ::
