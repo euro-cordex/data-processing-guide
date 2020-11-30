@@ -56,18 +56,20 @@ If you like it in a short way
 
 (you can always use tab to fill up the command)
 
-If the file already exsists and has only been change you can use only one line
+If the file already exsists and has only been change, you can use only one line
 ::
-   commit-am "text"
+    commit-am "text"
 
 Error occurs, if you have added two files with the same name.
-compare the files with
+You can compare the files with
 ::
-     git diff
-If you are sure, you only want to add the new file, do git add again
-You want to see the difference of the file to the one in the repository
+    git diff
+
+If you are sure, you only want to add the new file, do 'git add' again.
+
+You want to see the difference of the file to the one in the repository:
 ::
-git diff --stage ()
+    git diff --stage ()
 
 if you like more information on your file, eg. autor, commiter ..
 ::
