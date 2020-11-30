@@ -14,13 +14,11 @@ an overview on many git commands can be found here:
 getting started
 ~~~~~~~~
 Initialize your directory
-
 ::
     git init
 
 
 Always have a look what the status of your directory is:
-
 ::
     git status
 
@@ -48,19 +46,16 @@ A commit message ("text") should always have 50 signs, it should shortly describ
 You can restore and rm (remove) mv (rename) files.
 
 Information about your last commits:
-
 ::
     git log  
 
 If you like it in a short way
-
 ::
     git log --oneline
 
 (you can always use tab to fill up the command)
 
 If the file already exsists and has only been change you can use only one line
-
 ::
    commit-am "text"
 
