@@ -99,34 +99,34 @@ merge branch
 
 you have to be in master 'git checkout master'
 ::
-git merge testing 'text'
+    git merge testing 'text'
 
 If you want to see what is going on:
 ::
-git log --oneline --all --graph --decorate
+    git log --oneline --all --graph --decorate
 or
 ::
-git reflog
+    git reflog
 
-If a merge conflict occurs, 
+If a merge conflict occurs 
 ::
-git merge --abort 
+   git merge --abort 
 
 you have to edit the 'conflict' file(s) by hand. Afterwards 'git add' 
 the corrected file again followed by a commit.
 
 You can put a tag to your Branch 
 ::
-git tag 1.0.0 
-more information: https://semver.org/
+    git tag 1.0.0 
+    more information: https://semver.org/
 
 
 Create alias
 ~~~~
 create alias:
 ::
- git config --global alias.graph "log --oneline --all --graph"
- git graph
+    git config --global alias.graph "log --oneline --all --graph"
+    git graph
 
 
 
