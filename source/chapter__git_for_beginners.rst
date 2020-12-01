@@ -60,7 +60,7 @@ If you like it in a short way
 
 If the file already exsists and has only been change, you can use only one line
 ::
-    commit-am "text"
+    commit -am "text"
 
 Error occurs, if you have added two files with the same name.
 You can compare the files with
@@ -99,7 +99,7 @@ merge branch
 
 you have to be in master 'git checkout master'
 ::
-git merge testing 'comment'
+git merge testing 'text'
 
 If you want to see what is going on:
 ::
