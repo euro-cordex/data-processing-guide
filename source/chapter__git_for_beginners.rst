@@ -6,6 +6,7 @@ First steps
 ---------------
 When you start a new projekt and new directory, 
 always use git from the first day.
+It helps to reproduce your code. You probably need to publish your code at some stage, to be able to cite ist probably. Git makes it possible to work at the same time with a few people on the code. Git also saves your code and makes your changes traceable.
 
 An overview on many git commands can be found here:
 ::
@@ -44,6 +45,7 @@ A commit message ("text") should always have 50 signs, it should shortly describ
 ::
     git commit -m "text"
 
+Commit early and often !
 You can restore and rm (remove) mv (rename) files.
 
 Information about your last commits:
@@ -85,10 +87,44 @@ Your file information ist stored in
 Banches
 ~~~~
 
-Create 'pointer' to branch
+Create branch
 ::
     git branch testing
+    git checkout testing
+or in oneline both commands together 
+::
+    git checkout -b testing 
 
-files are stored in 
+merge branch
 
-./git/refs/heads
+you have to be in master 'git checkout master'
+::
+git merge testing 'comment'
+
+If you want to see what is going on:
+git log --oneline --all --graph --decorate
+or
+git reflog
+
+If a confilick occurs, you have to edit the file by hand. Afterwards 'git add' 
+the corrected file again followed by a commit.
+
+git tag 
+::
+git tag 1.0.0 
+more information: https://semver.org/
+
+
+Nice
+~~~~
+create alias:
+::
+ git config --global alias.graph "log --oneline --all --graph"
+ git graph
+
+
+merge conflict
+:: git merge testing
+git merge --abort 
+
+
