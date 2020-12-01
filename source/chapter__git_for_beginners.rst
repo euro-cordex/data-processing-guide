@@ -102,29 +102,31 @@ you have to be in master 'git checkout master'
 git merge testing 'comment'
 
 If you want to see what is going on:
+::
 git log --oneline --all --graph --decorate
 or
+::
 git reflog
 
-If a confilick occurs, you have to edit the file by hand. Afterwards 'git add' 
+If a merge conflict occurs, 
+::
+git merge --abort 
+
+you have to edit the 'conflict' file(s) by hand. Afterwards 'git add' 
 the corrected file again followed by a commit.
 
-git tag 
+You can put a tag to your Branch 
 ::
 git tag 1.0.0 
 more information: https://semver.org/
 
 
-Nice
+Create alias
 ~~~~
 create alias:
 ::
  git config --global alias.graph "log --oneline --all --graph"
  git graph
 
-
-merge conflict
-:: git merge testing
-git merge --abort 
 
 
