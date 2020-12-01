@@ -104,8 +104,6 @@ you have to be in master 'git checkout master'
 If you want to see what is going on:
 ::
     git log --oneline --all --graph --decorate
-or
-::
     git reflog
 
 If a merge conflict occurs 
