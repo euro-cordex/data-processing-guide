@@ -31,7 +31,6 @@ Contents:
    chapter__pyremo
    chapter__programming_guide
    chapter__git
-   chapter__git
    chapter__usefull_shell_commands
    chapter__troubleshooting
    syntax-examples
